@@ -2,86 +2,63 @@
 <html>
 <head>
   <title>Acmeca</title>
-  <%= javascript_include_tag :defaults %>
   <%= render 'layouts/layout' %>
-  <%= javascript_include_tag 'jquery-1.4.2' %>
-  <%= javascript_include_tag 'cufon-yui' %>
-  <%= javascript_include_tag 'cufon-replace' %>
-  <%= javascript_include_tag 'Myriad_Pro_300.font' %>
-  <%= javascript_include_tag 'Myriad_Pro_400.font' %>
-  <%= javascript_include_tag 'Myriad_Pro_600.font' %>
-  <%= javascript_include_tag 'flashobject' %>
-  <%= javascript_include_tag 'imagepreloader' %> 
-  <%= csrf_meta_tag %>
+  <%= render 'layouts/style' %>
 </head>
 
 <body id="page1">
-<%= render 'layouts/layout' %>
 	<div class="extra">
-<%= render 'layouts/layout' %>
-
 		<!--header -->
+<div id="header">
+<div class="main">
+                <div class="wrapper">
 
-		<div id="header">
+                <h1><a href="home.html">Acmeca</a></h1>
+                        
+                <form id="form-1" action="" >
+                <div>
 
-			<div class="main">
-
-
-				<div class="wrapper">
-
-					<h1><a href="home.html">Acmeca</a></h1>
-
-					<form id="form-1" action="" >
-
-						<div>
-
-							
-
-						</div>
-
-					</form>
-
-				</div>
-
+                </div>  
+                </form>
 			</div>
+                </div>
+                          
+                <div class="menu-bg">
+                <div class="main">
+                <div class="menu">
 
-			<div class="menu-bg">
-
-				<div>
-
-					<div class="menu">
-
-						<ul>
-
-<li class="first"><a href="home.html" class="active">Home</a></li>
-
+<ul>
+<li class="first"><a href="home.html">Home</a></li>
 <li><a href="services.html">Services</a></li>
-
 <li><a href="gallery.html">Gallery</a></li>
-
 <li><a href="products.html">Products</a></li>
-
 <li><a href="contact.html">Contact</a></li>
 
-							
+</ul>
 
-						</ul>
-
-					</div>
-
-				</div>
-
-			</div>
-
-			
-
-		<!--header end-->
-
-		<div id="content">
-<section>
-<%= yield %>
-</section>
-
+</div>
 	</div>
+</div>
+<!-- start of content -->
+<div id="content">
+<%= yield %>
+</div>
+</div>
+<!-- end of content -->
+<!--{%FOOTER_LINK}-->
+
+<div class="menu1">
+<ul>
+<li class="first"><a href="home.html">Home</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="products.html">Products</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+
+</div>
+</div>
+<!--footer end-->
+    
 </body>
 </html>
