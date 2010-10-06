@@ -41,6 +41,8 @@
 </div>
 <!-- start of content -->
 <div id="content">
+<p class="notice"><%= notice %></p>
+<p class="alert"><%= alert %></p>
 <%= yield %>
 </div>
 </div>
@@ -57,6 +59,13 @@
 </ul>
 
 </div>
+</div>
+<div id="user_nav">
+  <% if user_signed_in? %>
+    Signed in as <%= current_user.email %>. <%= link_to "Sign out", destroy_user_session_path %>
+  <% else %>
+    <%= link_to "Sign in", new_user_session_path %>
+  <% end %>
 </div>
 <!--footer end-->
     
