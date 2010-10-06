@@ -2,7 +2,6 @@ Acmeca::Application.routes.draw do
 
   devise_for :users
 
-  get "pages/home"
   get "pages/services"
   get "pages/gallery"
   get "pages/products"

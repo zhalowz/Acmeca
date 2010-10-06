@@ -1,73 +1,69 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Acmeca</title>
-  <%= render 'layouts/style' %>
-  <%= render 'layouts/layout' %>
-</head>
+  <head>
+    <title>Acmeca</title>
+      <%= render 'layouts/style' %>
+      <%= render 'layouts/layout' %>
+    </head>
+  <body id="page2">
+    <div class="extra">
+    </div>
+    <!--header -->
+    <div id="header">
+      <div class="main">
+	<div class="wrapper">
+	  <h1><%= link_to "Acmeca", root_path %></h1>
+	  <form id="form-1" action="">
+	    <div>
+	    </div>  
+	  </form>        
+	</div>
+      </div>                         
+    <div class="menu-bg">
+      <div class="main">
+	<div class="menu">
+	  <ul>
+	    <li class="first"><%= link_to "Home", root_path %></li>
+	    <li><%= link_to "Services", pages_services_path %></li>
+	    <li><%= link_to "Gallery", pages_gallery_path %></li>
+	    <li><%= link_to "Products", pages_products_path %></li>
+	    <li><%= link_to "Contact", pages_contact_path %></li>
+	  </ul>
+	</div>	
+      </div>
+    </div>
+    <!-- start of content -->
+    <div id="content">
+      <p class="notice"><%= notice %></p>
+      <p class="alert"><%= alert %></p>
+      <%= yield %>
+    </div>
 
-<body id="page2">
-	<div class="extra">
-		<!--header -->
-<div id="header">
-<div class="main">
-                <div class="wrapper">
+    </div>
+    <!-- end of content -->
+    <!--{%FOOTER_LINK}-->
 
-                <h1><a href="home.html">Acmeca</a></h1>
-                        
-                <form id="form-1" action="" >
-                <div>
+    <div class="menu1">
+    <ul>
+      <li class="first"><%= link_to "Home", root_path %></li>
+      <li><%= link_to "Services", pages_services_path %></li>
+      <li><%= link_to "Gallery", pages_gallery_path %></li>
+      <li><%= link_to "Products", pages_products_path %></li>
+      <li><%= link_to "Contact", pages_contact_path %></li>
+    </ul>
 
-                </div>  
-                </form>        
- 		</div>
-		</div>                         
-                <div class="menu-bg">
-                <div class="main">
-                <div class="menu">
+    </div>
+    <div id="user_nav">
+      <% if user_signed_in? %>
+	Signed in as <%= current_user.email %>. 
+	<%= link_to "Sign out", destroy_user_session_path %>
+      <% else %>
+	<%= link_to "Sign in", new_user_session_path %>
+      <% end %>
+    </div>
+    <!--footer end-->
 
-<ul>
-<li class="first"><a href="home.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="products.html">Products</a></li>
-<li><a href="contact.html">Contact</a></li>
-
-</ul>
-
-</div>	
-</div>
-</div>
-<!-- start of content -->
-<div id="content">
-<p class="notice"><%= notice %></p>
-<p class="alert"><%= alert %></p>
-<%= yield %>
-</div>
-
-</div>
-<!-- end of content -->
-<!--{%FOOTER_LINK}-->
-
-<div class="menu1">
-<ul>
-<li class="first"><a href="home.html">Home</a></li>
-<li><a href="services.html">Services</a></li>
-<li><a href="gallery.html">Gallery</a></li>
-<li><a href="products.html">Products</a></li>
-<li><a href="contact.html">Contact</a></li>
-</ul>
-
-
-</div>
-<div id="user_nav">
-  <% if user_signed_in? %>
-    Signed in as <%= current_user.email %>. <%= link_to "Sign out", destroy_user_session_path %>
-  <% else %>
-    <%= link_to "Sign in", new_user_session_path %>
-  <% end %>
-</div>
-<!--footer end-->
-    
-</body>
+  </body>
 </html>
+
+
