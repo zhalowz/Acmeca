@@ -28,7 +28,7 @@ input, select {vertical-align:middle; font-weight:normal;}
 a {color:#80a019; outline:none;}
 a:hover{text-decoration:none;}
 
-p {padding-top:18px;}
+p {padding-top:8px;}
 
 .top {padding-top:4px;}
 .top1 {padding-top:8px;}
@@ -40,7 +40,7 @@ p {padding-top:18px;}
 .top5 {padding-top:30px;}
 
 .bot1 {padding-bottom:9px;}
-.bot2 {padding-bottom:16px;}
+.bot2 {padding-bottom:10px;}
 
 .wrapper {width:100%; overflow:hidden;}
 
@@ -94,10 +94,12 @@ h2 {
 #slideshow DIV.active {
     z-index:10;
     opacity:1.0;
+    float:center;
 }
 
 #slideshow DIV.last-active {
     z-index:9;
+    float:center;
 }
 
 #slideshow DIV IMG {
@@ -105,6 +107,7 @@ h2 {
     display: block;
     border: 0;
     margin-bottom: 10px;
+    float:center;
 }
 
 /* ============================= header ====================== */
@@ -139,9 +142,9 @@ h2 {
 			}
 	.menu .first {background:none;}
 .header {
-	padding:10px 0 0;
+	padding:0px 0 0;
 	overflow:hidden;
-	height:354px;
+	height:350px;
 }
 	.header .col-1 {width:290px !important;}
 	.header .col-2 {width:654px !important;}
@@ -376,7 +379,7 @@ h2 {
 .menu1 {
 	float:right;
 	width:567px;
-	padding:29px 0 0;
+	padding:9px 0 0;
 }
 	.menu1 li {
 		float:left;
