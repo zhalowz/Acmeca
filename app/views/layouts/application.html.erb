@@ -5,7 +5,7 @@
       <%= render 'layouts/style' %>
       <%= render 'layouts/layout' %>
     </head>
-  <body id="page2">
+  <body id="page1">
     <div class="extra">
     </div>
     <!--header -->
@@ -49,18 +49,17 @@
       <li><%= link_to "Services", pages_services_path %></li>
       <li><%= link_to "Gallery", pages_gallery_path %></li>
       <li><%= link_to "Products", pages_products_path %></li>
-      <li><%= link_to "Contact", pages_contact_path %></li>
-    </ul>
-
-    </div>
-    <div id="user_nav">
+      <li><%= link_to "Contact", pages_contact_path %></li> 
+   <li><div id="user_nav">
       <% if user_signed_in? %>
 	Signed in as <%= current_user.email %>. 
 	<%= link_to "Sign out", destroy_user_session_path %>
       <% else %>
 	<%= link_to "Sign in", new_user_session_path %>
       <% end %>
-    </div>
+    </div></li>
+</ul>
+</div>
     <!--footer end-->
 
   </body>
