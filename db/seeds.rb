@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ :name => 'Chicago' }, { :name => 'Copenhagen' }])
 #   Mayor.create(:name => 'Daley', :city => cities.first)
+
+#The below line creates a default email/password login. It is recommended to change the default password after signing in.
+User.create( :email => "acmeca@singnet.com.sg", :password => "foobar", :password_confirmation => "foobar" )

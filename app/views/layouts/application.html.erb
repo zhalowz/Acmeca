@@ -50,16 +50,14 @@
       <li><%= link_to "Gallery", pages_gallery_path %></li>
       <li><%= link_to "Products", pages_products_path %></li>
       <li><%= link_to "Contact", pages_contact_path %></li> 
-   <li><div id="user_nav">
       <% if user_signed_in? %>
-	Signed in as <%= current_user.email %>. 
-	<%= link_to "Sign out", destroy_user_session_path %>
+        <li>Signed in as <%= current_user.email %></li> 
+        <li><%= link_to "Sign out", destroy_user_session_path %></li>
       <% else %>
-	<%= link_to "Sign in", new_user_session_path %>
+        <li><%= link_to "Sign in", new_user_session_path %></li>
       <% end %>
-    </div></li>
-</ul>
-</div>
+    </ul>
+  </div>
     <!--footer end-->
 
   </body>
