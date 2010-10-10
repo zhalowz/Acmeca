@@ -10,7 +10,7 @@ Acmeca::Application.routes.draw do
   root :to => 'pages#home'
 
   resources :products
-map.send_mail 'pages/contact', :controller => 'pages', :action => 'send_mail'
+  post 'pages/contact', :controller => 'pages', :action => 'send_mail'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
