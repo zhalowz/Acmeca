@@ -20,6 +20,7 @@ class ProductsController < ApplicationController
   def create
     @product = Product.new(params[:product])
     if @product.save
+      flash[:success] = "Product created."
       redirect_to @product
     else
       @title = "New product"
@@ -29,7 +30,7 @@ class ProductsController < ApplicationController
 
   def update   
     @product = Product.find(params[:id])
-    if @product.update_attributes(params[:user])
+    if @product.update_attributes(params[:product])
       flash[:success] = "Product updated."
       redirect_to @product
     else
