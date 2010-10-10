@@ -1,6 +1,5 @@
 class Emailer < ActionMailer::Base
     def contact_email(email_params)
-        # You only need to customize @recipients.
         @recipients = "zhalowz@gmail.com"
         @from = email_params[:name] + " <" + email_params[:address] + ">"
         @subject = email_params[:subject]
