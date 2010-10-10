@@ -2,15 +2,15 @@ Acmeca::Application.routes.draw do
 
   devise_for :users
 
+  get "pages/contact"
   get "pages/services"
   get "pages/gallery"
   get "pages/products"
-  get "pages/contact"
 
   root :to => 'pages#home'
 
   resources :products
-
+map.send_mail 'pages/contact', :controller => 'pages', :action => 'send_mail'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

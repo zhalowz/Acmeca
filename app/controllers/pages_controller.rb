@@ -14,4 +14,10 @@ class PagesController < ApplicationController
   def Contact
   end
 
+  def send_mail
+	Emailer::deliver_contact_email(params[:email])
+	flash[:notice] = "Email was sucesfully sent."
+	redirect_to:action => "/"
+   end
+
 end

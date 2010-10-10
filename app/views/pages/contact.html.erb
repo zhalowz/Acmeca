@@ -1,1 +1,25 @@
-<p>This is contact page</p>
+<td>
+                    <% form_tag :action => "send_mail" do %>
+                      <tr><td>
+                          <%= label :email, :name, "Name" %><br />
+                          <%= text_field :email, :name %>
+                      </td></tr>
+                      <tr><td>
+                          <%= label :email, :address, "Your EmailAddress" %><br />
+                          <%= text_field :email, :address %>
+                      </td></tr>
+                      <tr><td>
+                          <%= label :email, :subject, "Subject" %><br />
+                          <%= text_field :email, :subject %>
+                      </td></tr>
+                      <tr><td>
+                          <%= label :email, :body, "Your Message" %><br/>
+                          <%= text_area :email, :body, :rows => 8, :cols=> 50 %>
+                      </td></tr>
+                      <tr><td>
+                          <%= submit_tag "Submit" %>
+                      </td></tr>
+                    <% end %>
+                  </td>
+
+
