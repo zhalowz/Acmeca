@@ -34,5 +34,11 @@ describe ProductsController do
       duplicate_product = Product.new(@attr)
       duplicate_product.should_not be_valid
     end
+
+    it "should not have too long of a description" do
+      long_description = 'a' * 1001
+      long_description_product = Product.new(@attr.merge(:description => long_description))
+      long_description_product.should_not be_valid
+    end
   end
 end
