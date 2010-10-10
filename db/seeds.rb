@@ -8,3 +8,7 @@
 
 #The below line creates a default email/password login. It is recommended to change the default password after signing in.
 User.create( :email => "acmeca@singnet.com.sg", :password => "foobar", :password_confirmation => "foobar" )
+
+#These lines below create categories
+Category.create( :name => "Evaporative Cooler" )
+Category.create( :name => "Misting System" )
