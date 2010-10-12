@@ -1,0 +1,34 @@
+#slideshow {
+    position:relative;
+    height:400px;
+}
+
+#slideshow DIV {
+    position:absolute;
+    top:0;
+    left:0;
+    zindex:8;
+    opacity:0.0;
+    height: 400px;
+    backgroundcolor: #FFF;
+}
+
+#slideshow DIV.active {
+    zindex:10;
+    opacity:1.0;
+    float:center;
+}
+
+#slideshow DIV.lastactive {
+    zindex:9;
+    float:center;
+}
+
+#slideshow DIV IMG {
+    height: 350px;
+    display: block;
+    border: 0;
+    marginbottom: 10px;
+    float:center;
+}
+

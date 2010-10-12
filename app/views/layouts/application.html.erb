@@ -1,66 +1,156 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Acmeca</title>
-      <%= stylesheet_link_tag 'style', :media => 'screen' %>
-      <%= stylesheet_link_tag 'layout', :media => 'screen' %>
-    </head>
-  <body id="page1">
-    <div class="extra">
-    </div>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <title></title>
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
+  <%= stylesheet_link_tag 'style', :media => 'screen' %>
+  <%= stylesheet_link_tag 'layout', :media => 'screen' %>
+  <%= javascript_include_tag 'jquery-1.4.2.js' %>
+  <%= javascript_include_tag 'cufon-yui.js' %>
+  <%= javascript_include_tag 'cufon-replace.js' %>
+  <%= javascript_include_tag 'Myriad_Pro_300.font.js' %>
+  <%= javascript_include_tag 'Myriad_Pro_400.font.js' %>
+  <%= javascript_include_tag 'Myriad_Pro_600.font.js' %>
+  <%= javascript_include_tag 'imagepreloader.js' %>
+  <script type="text/javascript">
+//<![CDATA[
+  preloadImages(['images/bunner-link-hover.png']);
+  //]]>
+  </script>
+</head><!--[if lt IE 7]>
+  <link href="ie_style.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="js/ie_png.js"></script>
+  <script type="text/javascript">
+  ie_png.fix('.png, h1 a, .menu-bg, .bunner-link, h5,  .row-2-link, ');
+  </script>
+  <![endif]-->
+<body id="<%= page_type(yield :page_type) %>">
+  <div class="extra">
     <!--header -->
+
     <div id="header">
       <div class="main">
-	<div class="wrapper">
-	  <h1><%= link_to "Acmeca", root_path %></h1>
-	  <form id="form-1" action="">
-	    <div>
-	    </div>  
-	  </form>        
-	</div>
-      </div>                         
-    <div class="menu-bg">
-      <div class="main">
-	<div class="menu">
-	  <ul>
-	    <li class="first"><%= link_to "Home", root_path %></li>
-	    <li><%= link_to "Services", pages_services_path %></li>
-	    <li><%= link_to "Gallery", pages_gallery_path %></li>
-	    <li><%= link_to "Products", products_path %></li>
-	    <li><%= link_to "Contact", pages_contact_path %></li>
-	  </ul>
-	</div>	
+        <div class="wrapper">
+          <h1><%= link_to "Acmeca", root_path %></h1>
+<!-- Search form disabled
+          <form id="form-1" action="">
+            <div>
+              <label class="left"><span class="input"><input name="name" value=
+              "Searching..." onblur="if(this.value=='') this.value='Searching...'"
+              onfocus="if(this.value =='Searching...' ) this.value=''" /></span></label>
+              <a class="left" href="#" onclick=
+              "document.getElementById('form-1').submit()"><img src="images/button.gif"
+              alt="" /></a>
+            </div>
+          </form>
+End of search form -->
+        </div>
       </div>
-    </div>
-    <!-- start of content -->
+
+      <div class="menu-bg">
+        <div class="main">
+          <div class="menu">
+            <ul>
+                <li class="first"><%= link_to "Home", root_path, :class => "active" %></li>
+                <li><%= link_to "Services", pages_services_path %></li>
+                <li><%= link_to "Gallery", pages_gallery_path %></li>
+                <li><%= link_to "Products", products_path %></li>
+                <li><%= link_to "Contact", pages_contact_path %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    <%= yield :header %>
+    </div><!--header end-->
+
     <div id="content">
-      <p class="notice"><%= notice %></p>
-      <p class="alert"><%= alert %></p>
-      <%= yield %>
-    </div>
+      <div class="row-1">
+        <div class="main">
+          <div class="indent">
+            <div class="wrapper">
+              <%= yield %>
+            </div>
+          </div>
+        </div>
+      </div>
 
-    </div>
-    <!-- end of content -->
-    <!--{%FOOTER_LINK}-->
+      <div class="row-2">
+        <div class="main">
+          <div class="indent">
+            <div class="wrapper">
+              <div class="col-1 col-indent1">
+                <h2 class="h-border">Best Services</h2>
 
-    <div class="menu1">
-    <ul>
-      <li class="first"><%= link_to "Home", root_path %></li>
-      <li><%= link_to "Services", pages_services_path %></li>
-      <li><%= link_to "Gallery", pages_gallery_path %></li>
-      <li><%= link_to "Products", products_path %></li>
-      <li><%= link_to "Contact", pages_contact_path %></li> 
-      <% if user_signed_in? %>
-        <li>Signed in as <%= current_user.email %></li> 
-        <li><%= link_to "Sign out", destroy_user_session_path %></li>
-      <% else %>
-        <li><%= link_to "Sign in", new_user_session_path %></li>
-      <% end %>
-    </ul>
-  </div>
-    <!--footer end-->
+                <ul class="list1 width">
+                  <li><a href="#">Quisque nulla. Vestibulum libe</a></li>
 
-  </body>
+                  <li><a href="#">Jisl porta vel scel</a></li>
+
+                  <li><a href="#">liquam congue fermentum nisl</a></li>
+
+                  <li><a href="#">Vivamus eget nibhtiam</a></li>
+
+                  <li class="last"><a href="#">Vestibulum sed anteonec</a></li>
+                </ul>
+              </div>
+
+              <div class="col-1 col-indent1">
+                <h2 class="h-border">Our standards</h2><strong>Praesent vestibulum
+                molestie lacusenean</strong>
+
+                <p class="top1">Quisque nulla. Vestiblum libero nisl, porta vel,
+                scelerisque eget, malesuada at, neque ivamus eget nibh. Etiam cursus leo
+                vel metusulla.</p><a href="#" class="row-2-link">Read more</a>
+              </div>
+
+              <div class="col-1">
+                <h2 class="h-border">Find us elsewhere:</h2>
+
+                <ul class="join">
+                  <li><a href="#"><strong>RSS Submit</strong><span><img src=
+                  "images/rss.png" alt="" class="png" /></span></a></li>
+
+                  <li><a href="#"><strong>Follow Us On Twitter</strong><span><img src=
+                  "images/twitter.png" alt="" class="png" /></span></a></li>
+
+                  <li><a href="#"><strong>StumbleUpon</strong><span><img src=
+                  "images/stumb.png" alt="" class="png" /></span></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!--footer -->
+
+    <div id="footer">
+      <div class="main">
+        <div class="wrapper">
+          <div class="policy">
+            <strong>Acmeca Pte Ltd</strong> &copy; 2010 &nbsp;|&nbsp; <a href=
+            "index-6.html">Privacy policy</a><br />
+            <!--{%FOOTER_LINK}-->
+          </div>
+
+          <div class="menu1">
+            <ul>
+	      <li class="first"><%= link_to "Home", root_path, :class => "active" %></li>
+	      <li><%= link_to "Services", pages_services_path %></li>
+	      <li><%= link_to "Gallery", pages_gallery_path %></li>
+	      <li><%= link_to "Products", products_path %></li>
+	      <li><%= link_to "Contact", pages_contact_path %></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div><!--footer end-->
+  </div><script type="text/javascript">
+//<![CDATA[
+  Cufon.now(); 
+  //]]>
+  </script>
+</body>
 </html>
-
-

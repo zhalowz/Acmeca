@@ -5,7 +5,7 @@
 	font-size:100%;
 }
 
-body{background:#0066FF; text-align:center; min-width:1000px;}
+body{background:#181818; text-align:center; min-width:1000px;}
 
 img {vertical-align:top;}
 a img {border:0;}
@@ -28,7 +28,7 @@ input, select {vertical-align:middle; font-weight:normal;}
 a {color:#80a019; outline:none;}
 a:hover{text-decoration:none;}
 
-p {padding-top:8px;}
+p {padding-top:18px;}
 
 .top {padding-top:4px;}
 .top1 {padding-top:8px;}
@@ -40,7 +40,7 @@ p {padding-top:8px;}
 .top5 {padding-top:30px;}
 
 .bot1 {padding-bottom:9px;}
-.bot2 {padding-bottom:10px;}
+.bot2 {padding-bottom:16px;}
 
 .wrapper {width:100%; overflow:hidden;}
 
@@ -76,40 +76,6 @@ h2 {
 .h-top {padding-top:60px;}
 .h-top1 {padding-top:40px;}
 .h-top2 {padding-top:64px;}
-#slideshow {
-    position:relative;
-    height:400px;
-}
-
-#slideshow DIV {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:8;
-    opacity:0.0;
-    height: 400px;
-    background-color: #FFF;
-}
-
-#slideshow DIV.active {
-    z-index:10;
-    opacity:1.0;
-    float:center;
-}
-
-#slideshow DIV.last-active {
-    z-index:9;
-    float:center;
-}
-
-#slideshow DIV IMG {
-    height: 350px;
-    display: block;
-    border: 0;
-    margin-bottom: 10px;
-    float:center;
-}
-
 /* ============================= header ====================== */
 .extra {background:url(../images/extra.jpg) top center no-repeat;}
 .menu-bg {
@@ -142,9 +108,9 @@ h2 {
 			}
 	.menu .first {background:none;}
 .header {
-	padding:0px 0 0;
+	padding:10px 0 0;
 	overflow:hidden;
-	height:350px;
+	height:354px;
 }
 	.header .col-1 {width:290px !important;}
 	.header .col-2 {width:654px !important;}
@@ -379,7 +345,7 @@ h2 {
 .menu1 {
 	float:right;
 	width:567px;
-	padding:9px 0 0;
+	padding:29px 0 0;
 }
 	.menu1 li {
 		float:left;
@@ -484,7 +450,7 @@ h2 {
 	margin-top:11px;
 	height:385px;
 	overflow:hidden;
-	background:url(images/contactform-bg.gif) 0 0 repeat-x;
+	background:url(../images/contactform-bg.gif) 0 0 repeat-x;
 }
 	#ContactForm .indent {padding:34px 0 0 25px;}
 	#ContactForm strong {
