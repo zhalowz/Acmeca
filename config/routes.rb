@@ -1,18 +1,17 @@
 Acmeca::Application.routes.draw do
 
   resources :services
+  resources :products
 
   devise_for :users
 
   get "pages/contact"
-  get "services/show"
   get "pages/gallery"
-  get "products/show"
 
   root :to => 'pages#home'
 
-  resources :products
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
+
   # first created -> highest priority.
 
   # Sample of regular route:
