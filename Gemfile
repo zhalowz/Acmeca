@@ -8,6 +8,7 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 gem 'devise', '1.1.2'
 gem 'paperclip', '2.3.4'
+gem 'bhm-google-maps'
 
 group :development do
   gem 'rspec-rails', '2.0.0.beta.18'

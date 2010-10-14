@@ -11,7 +11,6 @@ Acmeca::Application.routes.draw do
 
   resources :products
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
-  # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:

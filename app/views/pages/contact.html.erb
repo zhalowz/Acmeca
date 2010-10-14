@@ -1,14 +1,15 @@
-<table border="1">
+
+<table border="0">
                     <% form_tag :action => "send_mail" do %>
                       		  
 		      <tr align=left>
-		         <td rowspan=5>Google Map of the company will be placed here</td>
+		         <td rowspan=5><%= draw_map_of Location.new("Acmeca", 1.438345, 103.841057) %></td>
                          <td><%= label :email, :name, "Name:" %></td>
                          <td><%= text_field :email, :name %></td>
                       </tr>
 
                       <tr align=left>
-                         <td><%= label :email, :address, "EmailAddress:" %></td>
+                         <td><%= label :email, :address, "Email:" %></td>
                          <td><%= text_field :email, :address %></td>
 			 
                       </tr>
@@ -20,7 +21,7 @@
 
                       <tr align=left>
                          <td><%= label :email, :body, "Message:" %></td>
-                         <td><%= text_area :email, :body, :rows => 8, :cols=> 50 %></td>
+                         <td><%= text_area :email, :body, :rows => 8, :cols=> 40 %></td>
                       </tr>
 
                       <tr>
