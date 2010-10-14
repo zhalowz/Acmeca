@@ -22,6 +22,7 @@ class ServicesController < ApplicationController
 @service = Service.new(params[:service])
 if @service.save
 flash[:success] = "Service Created"
+redirect_to @service
 else
 @title = "New Service"
 render 'new'
