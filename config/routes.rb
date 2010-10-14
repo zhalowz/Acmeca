@@ -1,11 +1,13 @@
 Acmeca::Application.routes.draw do
 
+  resources :services
+
   devise_for :users
 
   get "pages/contact"
-  get "pages/services"
+  get "services/show"
   get "pages/gallery"
-  get "pages/products"
+  get "products/show"
 
   root :to => 'pages#home'
 
