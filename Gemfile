@@ -9,6 +9,8 @@ gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
 gem 'devise', '1.1.2'
 gem 'paperclip', '2.3.4'
 gem 'bhm-google-maps'
+gem 'nifty-generators'
+gem 'mocha'
 
 group :development do
   gem 'rspec-rails', '2.0.0.beta.18'
@@ -40,3 +42,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
+gem "mocha", :group => :test
