@@ -32,6 +32,7 @@ def create
     end
   end
 end 
+
 def edit
   @album = Album.find(params[:id])
   if @album.photos.first.nil?
