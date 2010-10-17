@@ -12,7 +12,6 @@ Acmeca::Application.routes.draw do
 
   root :to => 'pages#home'
 
-  post 'albums/index', :controller => 'albums', :action => 'index'
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
 
   # first created -> highest priority.

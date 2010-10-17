@@ -1,14 +1,16 @@
 <% title "Album" %>
- 
+ <p></p>
+ <p></p>
+ <p></p>
 <p>
   <strong>Name:</strong><%=h @album.name %>
 </p>
- 
+ i am here
 <% for photo in @album.photos %>
-
-  <p><%= image_tag(photo.data(:thumb)) %></p>
+Hello i can reach here!!
+  <%= image_tag photo.data.url(:thumb), :alt => "" %>
 <% end %>
- 
+ i am there
 <p>
   <%= link_to "Edit", edit_album_path(@album) %> |
   <%= link_to "Destroy", @album, :confirm => 'Are you sure?', :method => :delete %> |

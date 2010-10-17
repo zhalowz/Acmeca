@@ -1,8 +1,10 @@
-<% title "Edit Album" %>
+<h1>Editing album</h1>
+ 
+<% form_for @album, :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+  
+<% end %>
+ 
+<%= link_to 'Show', @album %> |
+<%= link_to 'Back', albums_path %>
 
-<%= render 'form' %>
-
-<p>
-  <%= link_to "Show", @album %> |
-  <%= link_to "View All", albums_path %>
-</p>

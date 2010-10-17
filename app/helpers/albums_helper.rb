@@ -1,5 +1,6 @@
 module AlbumsHelper
-  def add_object_link(name, form, object, partial, where)
+
+ def add_object_link(name, form, object, partial, where)
     html = render(:partial => partial, :locals => { :form => form}, :object => object)
     link_to_function name, %{
       var new_object_id = new Date().getTime() ;
@@ -15,4 +16,5 @@ module AlbumsHelper
       data.inspect.to_json
     end
   end
+
 end

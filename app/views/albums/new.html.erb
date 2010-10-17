@@ -1,5 +1,6 @@
-<% title "New Album" %>
+<% form_for @album, :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'form', :locals => {:f => f} %>
+<% end %>
+ 
+<%= link_to 'Back', albums_path %>
 
-<%= render 'form' %>
-
-<p><%= link_to "Back to List", albums_path %></p>
