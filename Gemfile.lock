@@ -46,6 +46,9 @@ GEM
       mime-types
       treetop (>= 1.4.5)
     mime-types (1.16)
+    mocha (0.9.8)
+      rake
+    nifty-generators (0.4.2)
     nokogiri (1.4.3.1)
     paperclip (2.3.4)
       activerecord
@@ -101,6 +104,8 @@ DEPENDENCIES
   RedCloth (= 4.2.3)
   bhm-google-maps
   devise (= 1.1.2)
+  mocha
+  nifty-generators
   paperclip (= 2.3.4)
   rails (= 3.0.0)
   rspec (= 2.0.0.beta.18)

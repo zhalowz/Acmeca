@@ -2,6 +2,7 @@
 # from the project root directory.
 require 'rubygems'
 require 'spork'
+require 'mocha'
 
 Spork.prefork do
   # Loading more in this block will cause your tests to run faster. However, 
@@ -26,6 +27,7 @@ Spork.prefork do
     # config.mock_with :flexmock
     # config.mock_with :rr
     config.mock_with :rspec
+    config.mock_with :mocha
 
     config.fixture_path = "#{::Rails.root}/spec/fixtures"
 

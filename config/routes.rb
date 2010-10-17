@@ -1,5 +1,6 @@
 Acmeca::Application.routes.draw do
 
+  resources :albums
   resources :services
   resources :products
 
@@ -7,6 +8,7 @@ Acmeca::Application.routes.draw do
 
   get "pages/contact"
   get "pages/gallery"
+  get "albums/show"
 
   root :to => 'pages#home'
 
