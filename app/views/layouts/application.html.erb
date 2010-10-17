@@ -3,10 +3,11 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 <head>
-  <title></title>
+  <title>Acmeca - Misting and Cooling Systems</title>
   <meta http-equiv="Content-Type" content="text/html; charset=us-ascii" />
   <%= stylesheet_link_tag 'style', :media => 'screen' %>
   <%= stylesheet_link_tag 'layout', :media => 'screen' %>
+  <%= stylesheet_link_tag 'forms', :media => 'screen' %>
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <%= javascript_include_tag 'jquery-1.4.2.js' %>
   <%= javascript_include_tag 'cufon-yui.js' %>
@@ -35,7 +36,7 @@
     <div id="header">
       <div class="main">
         <div class="wrapper">
-          <h1><%= link_to "Acmeca", root_path %></h1>
+          <h1 class="logo"><%= link_to "Acmeca", root_path %></h1>
 <!-- Search form disabled
           <form id="form-1" action="">
             <div>
@@ -54,7 +55,7 @@ End of search form -->
       <div class="menu-bg">
         <div class="main">
           <div class="menu">
-            <ul>
+            <ul class="nostyle">
               <%= render 'layouts/links' %>
             </ul>
           </div>
@@ -69,6 +70,9 @@ End of search form -->
         <div class="main">
           <div class="indent">
             <div class="wrapper">
+              <% flash.each do |key, value| %>
+                <div class="flash <%= key %>"><%= value %></div>
+              <% end %> 
               <%= yield %>
             </div>
           </div>
@@ -82,7 +86,7 @@ End of search form -->
               <div class="col-1 col-indent1">
                 <h2 class="h-border">Best Services</h2>
 
-                <ul class="list1 width">
+                <ul class="list1 width nostyle">
                   <li><a href="#">Quisque nulla. Vestibulum libe</a></li>
 
                   <li><a href="#">Jisl porta vel scel</a></li>
@@ -107,15 +111,15 @@ End of search form -->
               <div class="col-1">
                 <h2 class="h-border">Find us elsewhere:</h2>
 
-                <ul class="join">
+                <ul class="join nostyle">
                   <li><a href="#"><strong>RSS Submit</strong><span><img src=
-                  "images/rss.png" alt="" class="png" /></span></a></li>
+                  "/images/rss.png" alt="" class="png" /></span></a></li>
 
                   <li><a href="#"><strong>Follow Us On Twitter</strong><span><img src=
-                  "images/twitter.png" alt="" class="png" /></span></a></li>
+                  "/images/twitter.png" alt="" class="png" /></span></a></li>
 
                   <li><a href="#"><strong>StumbleUpon</strong><span><img src=
-                  "images/stumb.png" alt="" class="png" /></span></a></li>
+                  "/images/stumb.png" alt="" class="png" /></span></a></li>
                 </ul>
               </div>
             </div>
@@ -134,7 +138,7 @@ End of search form -->
           </div>
 
           <div class="menu1">
-            <ul>
+            <ul class="nostyle">
               <%= render 'layouts/links' %>
             </ul>
           </div>

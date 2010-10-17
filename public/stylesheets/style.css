@@ -10,7 +10,7 @@ body{background:#181818; text-align:center; min-width:1000px;}
 img {vertical-align:top;}
 a img {border:0;}
 
-ul {list-style:none;}
+.nostyle {list-style:none;}
 
 .left {float:left;}
 .right {float:right;}
@@ -48,25 +48,30 @@ p {padding-top:18px;}
 .phone1 {display:inline-block; width:142px;}
 /* ============================= main layout ====================== */
 .imgindent {margin:0 21px 0 0; float:left;}
-h1 {
+.logo {
 	padding:31px 0 29px 0px;
 	position:relative;
 	float:left;
 }
-	h1 a {
+	.logo a {
 		display:block;
 		height:56px;
 		width:255px;
 		text-indent:-5000px;
 		background:url(../images/logo.png) left top no-repeat;
 	}
-h2 {
+.col-2 h2 {
+padding:16px 0 0;
+}
+h1, h2 {
 	font-size:26px;
 	line-height:1.2em;
 	color:#363636;
 	display:block;
-	padding:16px 0 0;
 	letter-spacing:-1px;
+}
+h3 {
+  font-size: 18px;
 }
 .h-border {
 	background:url(../images/h-border.gif) left bottom repeat-x;

@@ -31,4 +31,8 @@
     marginbottom: 10px;
     float:center;
 }
-
+.wrapper ul {
+}
+p {
+padding: 0;
+}

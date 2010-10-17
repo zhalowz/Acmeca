@@ -1,4 +1,4 @@
-Category: <%= Category.find_by_id(@product.category_id).name %><br />
-Name: <%= @product.name %><br />
-Description: <%= @product.description %><br />
-Image: <%= image_tag @product.photo.url %>
+<h1><%= @product.name %></h1>
+<%= Category.find_by_id(@product.category_id).name %>
+<%= description_html %>
+<%= image_tag @product.photo.url %>
