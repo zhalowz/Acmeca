@@ -36,3 +36,7 @@
 p {
 padding: 0;
 }
+
+sub, sup {
+  font-size: 70%;
+}
