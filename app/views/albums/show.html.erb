@@ -3,12 +3,12 @@
  <p></p>
  <p></p>
 <p>
-  <strong>Name:</strong><%=h @album.name %>
+  <strong>Name:</strong><%= @album.name %>
 </p>
  i am here
 <% for photo in @album.photos %>
 Hello i can reach here!!
-  <%= image_tag photo.data.url(:thumb), :alt => "" %>
+  <%= image_tag photo.data.url, :alt => "" %>
 <% end %>
  i am there
 <p>
