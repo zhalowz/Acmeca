@@ -1,0 +1,13 @@
+<% if c.errors.any? %>
+  <div class="error">
+    <h2><%= pluralize(c.errors.count, "error") %> 
+        prohibited this <%= get_class_name(c) %> from being saved:</h2>
+    <p>there were problems with the following fields:</p>
+    <ul>
+    <% c.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+

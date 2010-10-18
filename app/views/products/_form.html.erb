@@ -1,7 +1,7 @@
-<%= form_for @product, :html => { :multipart => true } do |f| %>
-  <fieldset>
-    <legend>Create a new product</legend>
-    <%= render 'error_messages' %>
+<fieldset>
+  <legend>Create product</legend>
+  <%= form_for @product, :html => { :multipart => true } do |f| %>
+    <%= render :partial => 'layouts/error_messages', :locals => { :c => @product } %>
     <p>
       <%= f.label :category_id %>
       <br />
@@ -20,5 +20,5 @@
       <%= f.file_field :photo %>
     </p>
     <p><%= f.submit "Submit" %></p>
-  </fieldset>
-<% end %>
+  <% end %>
+</fieldset>

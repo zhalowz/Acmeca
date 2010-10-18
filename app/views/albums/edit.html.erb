@@ -1,9 +1,9 @@
-<h1>Editing album</h1>
- 
-<%= form_for @album, :html => { :multipart => true } do |f| %>
-  <%= render :partial => 'form', :locals => {:f => f} %>
-<% end %>
- 
+<fieldset>
+  <legend>Editing album</legend>
+  <%= form_for @album, :html => { :multipart => true } do |f| %>
+    <%= render :partial => 'form', :locals => {:f => f} %>
+  <% end %>
+</fieldset>
 <%= link_to 'Show', @album %> |
 <%= link_to 'Back', albums_path %>
 

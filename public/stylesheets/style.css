@@ -10,7 +10,7 @@ body{background:#181818; text-align:center; min-width:1000px;}
 img {vertical-align:top;}
 a img {border:0;}
 
-.nostyle {list-style:none;}
+.nostyle {list-style:none; margin: 0; padding: 0;}
 
 .left {float:left;}
 .right {float:right;}

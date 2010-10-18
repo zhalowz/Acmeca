@@ -1,7 +1,7 @@
-<%= f.error_messages %>
+<%= render :partial => 'layouts/error_messages', :locals => { :c => @album } %>
 <p>
   <%= f.label :name %><br />
-  <%= f.text_field :name %>
+  <%= f.text_field :name, { :class => 'title' } %>
 </p>
 <div class="album_photos">
   <%= render :partial => 'album_photo', :collection => @album.photos %>
