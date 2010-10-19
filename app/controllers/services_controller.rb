@@ -1,11 +1,11 @@
 class ServicesController < ApplicationController
 
   def index
-
+@service = Service.all
   end
 
   def show
-@service = Service.find(params[:id])
+@service = Service.all
   end
 
   def new
@@ -40,7 +40,9 @@ render 'edit'
   end
 end
 
-  def destroy
+  def destroy  
+    Service.find(params[:id]).destroy
+   redirect_to(services_show_path)
   end
 
 end

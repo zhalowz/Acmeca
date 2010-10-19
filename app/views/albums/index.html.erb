@@ -1,16 +1,14 @@
-<% title "Albums" %>
+<fieldset>
 
-<table>
-  <tr>
-    <th>Name</th>
-  </tr>
+<legend>Gallery</legend>
   <% for album in @albums %>
+    <table>
+  <% for photo in album.photos %>
     <tr>
-      <td><%= album.name %></td>
-      <td><%= link_to "Show", album %></td>
-      <td><%= link_to "Edit", edit_album_path(album) %></td>
+    <td><%= image_tag photo.data.url, :alt => "" %></td>
     </tr>
+   <% end %>
+     </table>
   <% end %>
-</table>
 
-<p><%= link_to "New Album", new_album_path %></p>
+</fieldset>

@@ -2,8 +2,8 @@
   <legend>Creating album</legend>
   <%= form_for @album, :html => { :multipart => true } do |f| %>
     <%= render :partial => 'form', :locals => {:f => f} %>
-  <% end %>
+<% end %>  
 </fieldset>
  
-<%= link_to 'Back', albums_path %>
+<%= link_to 'Show', albums_show_path %> 
 

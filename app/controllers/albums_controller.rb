@@ -4,7 +4,7 @@ class AlbumsController < ApplicationController
   end
   
   def show
-    @album = Album.find(params[:id])
+    @album = Album.all
   end
   
   def new
@@ -36,7 +36,12 @@ class AlbumsController < ApplicationController
       1.upto(3) { @album.photos.build }
     end
   end
- 
+
+  def destroy  
+    Album.find(params[:id]).destroy
+   redirect_to(albums_show_path)
+  end
+
   #update action
   def update
     params[:photo_ids] ||= []

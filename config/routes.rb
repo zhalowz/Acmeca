@@ -7,8 +7,11 @@ Acmeca::Application.routes.draw do
   devise_for :users
 
   get "pages/contact"
-  get "pages/gallery"
+  get "services/show"
+  get "services/new"
   get "albums/show"
+  get "albums/new"
+  get "products/show"
 
   root :to => 'pages#home'
 

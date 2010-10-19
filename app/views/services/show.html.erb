@@ -1,20 +1,17 @@
-<p id="notice"><%= notice %></p>
+<fieldset>
+<legend>Services</legend>
+<% for service in @service %>
+<table>
+<tr>
+	<h1><td><%= service.header %></td></h1>
+</tr>
+<tr>
+	<td><%= service.description %></td>
+</tr>
+</table>
+  <%= link_to 'Edit', edit_service_path(service) %> |
+  <%= link_to "Delete", service, :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+</fieldset>
 
-<p>
-  <b>Id:</b>
-  <%= @service.id %>
-</p>
-
-<p>
-  <b>Description:</b>
-  <%= @service.description %>
-</p>
-
-<p>
-  <b>Header:</b>
-  <%= @service.header %>
-</p>
-
-
-<%= link_to 'Edit', edit_service_path(@service) %> |
-<%= link_to 'Back', services_path %>
+  <%= link_to 'New', services_new_path %> 
