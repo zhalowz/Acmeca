@@ -15,6 +15,7 @@
   <%= stylesheet_link_tag 'forms', :media => 'screen' %>
   <%= stylesheet_link_tag 'custom', :media => 'screen' %>
   <%= javascript_include_tag 'jquery-1.4.2.js' %>
+  <%= javascript_include_tag 'jquery-1.2.6.min.js' %>
   <%= javascript_include_tag 'cufon-yui.js' %>
   <%= javascript_include_tag 'cufon-replace.js' %>
   <%= javascript_include_tag 'Myriad_Pro_300.font.js' %>
@@ -24,6 +25,34 @@
   <%= javascript_include_tag 'gmap.js' %>
   <%= javascript_include_tag :defaults, 'jquery-1.3.2.min' %>
   <script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 5000 );
+});
    jQuery.noConflict();
 //<![CDATA[
   preloadImages(['/images/bunner-link-hover.png']);
