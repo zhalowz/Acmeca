@@ -1,6 +1,6 @@
 module ProductsHelper
-  def description_html
+  def product_description_html
     return if @product.description.nil?
-    @product.description_html = sanitize(RedCloth.new(@product.description).to_html)
+    @product.description_html = RedCloth.new(@product.description).to_html
   end
 end

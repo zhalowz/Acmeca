@@ -1,4 +1,4 @@
 <h1><%= @product.name %></h1>
 <%= Category.find_by_id(@product.category_id).name %>
-<%= description_html %>
+<%= sanitize(product_description_html) %>
 <%= image_tag @product.photo.url %>

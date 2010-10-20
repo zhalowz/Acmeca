@@ -12,3 +12,5 @@ User.create( :email => "acmeca@singnet.com.sg", :password => "foobar", :password
 #These lines below create categories
 Category.create( :name => "Evaporative Cooler" )
 Category.create( :name => "Misting System" )
+Category.create( :name => "Others" )
+

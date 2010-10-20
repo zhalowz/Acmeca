@@ -39,5 +39,4 @@ class ProductsController < ApplicationController
       render 'edit'
     end
   end
-
 end
