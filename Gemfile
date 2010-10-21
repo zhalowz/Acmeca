@@ -12,7 +12,7 @@ gem 'RedCloth', '4.2.3'
 gem 'bhm-google-maps'
 gem 'nifty-generators'
 gem 'mocha'
-gem 'will_paginate'
+gem 'will_paginate', "~> 3.0.pre2"
 
 group :development do
   gem 'rspec-rails', '2.0.0.beta.18'

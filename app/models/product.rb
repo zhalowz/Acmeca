@@ -1,5 +1,8 @@
 class Product < ActiveRecord::Base
 
+  cattr_reader :per_page
+  @@per_page = 10
+
   attr_accessor :description_html
 
   belongs_to :category

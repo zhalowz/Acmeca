@@ -4,6 +4,12 @@ Acmeca::Application.routes.draw do
   resources :services
   resources :products
 
+  namespace :manage do
+    resources :albums
+    resources :services
+    resources :products
+  end
+
   devise_for :users
 
   get "pages/contact"

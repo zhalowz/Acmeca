@@ -1,1 +1,11 @@
-
+<%= will_paginate @products %>
+<div class="products">
+<% for product in @products %>
+  <div class="product">
+    <h3>
+      <%= link_to product.name, product %>
+    </h3>
+  </div>
+<% end %>
+</div>
+<%= will_paginate @products %>
