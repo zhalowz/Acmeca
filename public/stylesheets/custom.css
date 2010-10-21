@@ -44,3 +44,5 @@ p {
 sub, sup {
   font-size: 70%;
 }
+
+.fadein img { position:absolute; }

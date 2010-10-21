@@ -1,24 +1,21 @@
-<fieldset>
-  <legend>Create product</legend>
-  <%= form_for @product, :html => { :multipart => true } do |f| %>
-    <%= render :partial => 'layouts/error_messages', :locals => { :c => @product } %>
-    <p>
-      <%= f.label :category_id %>
-      <br />
-      <%= f.collection_select :category_id, Category.all, :id, :name %>
-    <p>
-      <%= f.label :name %>
-      <br />
-      <%= f.text_field :name, { :class => 'title' }  %>
-    </p>
-    <p>
-      <%= f.label :description %>
-      <br />
-      <%= f.text_area :description %>
-    </p>
-    <p>
-      <%= f.file_field :photo %>
-    </p>
-    <p><%= f.submit "Submit" %></p>
-  <% end %>
-</fieldset>
+<%= form_for @product, :url => manage_product_path(@product), :html => { :multipart => true } do |f| %>
+  <%= render :partial => 'layouts/error_messages', :locals => { :c => @product } %>
+  <p>
+    <%= f.label :category_id %>
+    <br />
+    <%= f.collection_select :category_id, Category.all, :id, :name %>
+  <p>
+    <%= f.label :name %>
+    <br />
+    <%= f.text_field :name, { :class => 'title' }  %>
+  </p>
+  <p>
+    <%= f.label :description %>
+    <br />
+    <%= f.text_area :description %>
+  </p>
+  <p>
+    <%= f.file_field :photo %>
+  </p>
+  <p><%= f.submit "Submit" %></p>
+<% end %>

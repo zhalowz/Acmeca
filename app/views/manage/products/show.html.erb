@@ -2,3 +2,7 @@
 <%= Category.find_by_id(@product.category_id).name %>
 <%= sanitize(product_description_html) %>
 <%= image_tag @product.photo.url %>
+<div class="actions">
+  <%= link_to "Edit", edit_manage_product_path(@product) %>
+  <%= link_to "Destroy", manage_product_path(@product), {:method => :delete, :confirm => "asd"} %>
+</div>

@@ -1,5 +1,20 @@
 <% content_for :page_type do %>page1<% end %>
+<% content_for :head do %>
+<script> 
+setInterval(function(){
+  var imgs = $$('.fadein img'), 
+   visible = imgs.findAll(function(img){ return img.visible(); });
+  if(visible.length>1) visible.last().fade({ duration: .3 });
+    else imgs.last().appear({ duration: .3, 
+      afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+}, 3000);
+</script> 
+<style> 
+.fadein img { position:absolute; }
+</style> 
+<% end %>
 <% content_for :header do %>
+
   <div class="main">
     <div class="header">
       <div class="wrapper">
@@ -7,51 +22,6 @@
           <div class="bunners">
             <div class="bunner1 bg1">
               <div class="indent">
- 
-<script type="text/javascript">
-function slideSwitch() {
-    var $active = $('#slideshow IMG.active');
-    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
-    var $next =  $active.next().length ? $active.next()
-        : $('#slideshow IMG:first');
-    $active.addClass('last-active');
-    $next.css({opacity: 0.0})
-        .addClass('active')
-        .animate({opacity: 1.0}, 1000, function() {
-            $active.removeClass('active last-active');
-        });
-}
-$(function() {
-    setInterval( "slideSwitch()",3000 );
-});
-</script>
-<style type="text/css">
-
-/*** set the width and height to match your images **/
-
-#slideshow {
-    position:relative;
-    height:350px;
-}
-
-#slideshow IMG {
-    position:absolute;
-    top:0;
-    left:0;
-    z-index:8;
-    opacity:0.0;
-}
-
-#slideshow IMG.active {
-    z-index:10;
-    opacity:1.0;
-}
-
-#slideshow IMG.last-active {
-    z-index:9;
-}
-
-</style>
                 <h5>Product</h5>
                 <h4>Proin dictum elementum</h4><a href="#" class="bunner-link">Read
                 More</a>
@@ -75,15 +45,11 @@ $(function() {
             </div>
           </div>
         </div>
-
   	<div class="col-2">
-<div id="slideshow">
-    <img src="/images/header1.0.png" class="active" />
-    <img src="/images/header1.1.png" />
-    <img src="/image3.jpg" />
-    <img src="/image4.jpg" />
-    <img src="/image5.jpg" class="last-active" />
-</div>
+          <div class="fadein">
+            <img src="/images/header1.0.png" />
+            <img src="/images/header1.1.png" />
+          </div>
 	</div>
       </div>
     </div>
@@ -187,4 +153,3 @@ $(function() {
       </div>
     </div>
   </div>
-
