@@ -3,6 +3,10 @@ class AlbumsController < ApplicationController
     @albums = Album.all
   end
   
+  def view
+    @albums = Album.find(params[:id])
+  end
+
   def show
     @album = Album.all
   end

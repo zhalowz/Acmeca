@@ -1,0 +1,10 @@
+
+<h1><%= @albums.name %></h1>
+
+       <td><%= link_to album.name, albums_index2_path %></td>
+    </tr>
+  <% for photo in album.photos %>
+    <tr>
+    <td><%= image_tag photo.data.url, :alt => "" %></td>
+    </tr>
+   <% end %>

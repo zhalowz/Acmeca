@@ -16,5 +16,5 @@ module AlbumsHelper
       data.inspect.to_json
     end
   end
-
+  
 end
