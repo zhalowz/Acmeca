@@ -15,10 +15,12 @@ Acmeca::Application.routes.draw do
   get "pages/contact"
   get "services/show"
   get "services/new"
+  get "albums/view"
   get "albums/show"
   get "albums/new"
   get "products/show"
-
+  get "products/new"
+  
   root :to => 'pages#home'
 
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'

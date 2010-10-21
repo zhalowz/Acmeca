@@ -7,7 +7,52 @@
           <div class="bunners">
             <div class="bunner1 bg1">
               <div class="indent">
-                <h5>Easy Access</h5>
+ 
+<script type="text/javascript">
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+    $active.addClass('last-active');
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+$(function() {
+    setInterval( "slideSwitch()",3000 );
+});
+</script>
+<style type="text/css">
+
+/*** set the width and height to match your images **/
+
+#slideshow {
+    position:relative;
+    height:350px;
+}
+
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+</style>
+               <h5>Product</h5>
 
                 <h4>Proin dictum elementum</h4><a href="#" class="bunner-link">Read
                 More</a>
@@ -16,7 +61,7 @@
 
             <div class="bunner bg2">
               <div class="indent">
-                <h5>Transportation</h5>
+                <h5>Installation</h5>
 
                 <h4>gravida at, cursusec</h4><a href="#" class="bunner-link">Read
                 More</a>
@@ -25,7 +70,7 @@
 
             <div class="bunner bg3">
               <div class="indent">
-                <h5>Packaging tips</h5>
+                <h5>Service</h5>
 
                 <h4>Neque porro quam est</h4><a href="#" class="bunner-link">Read
                 More</a>
@@ -34,7 +79,15 @@
           </div>
         </div>
 
-        <div class="col-2"><img src="images/header.jpg" alt="" /></div>
+  	<div class="col-2">
+<div id="slideshow">
+    <img src="../images/header1.0.png" class="active" />
+    <img src="../images/header1.1.png" />
+    <img src="../image3.jpg" />
+    <img src="../image4.jpg"  />
+    <img src="../image5.jpg" class="last-active" />
+</div>
+	</div>
       </div>
     </div>
   </div>

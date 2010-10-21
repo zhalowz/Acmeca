@@ -1,8 +1,9 @@
 <fieldset>
  <legend>Create Services</legend>
+
 <%= form_for(@service) do |f| %>
   <% if @service.errors.any? %>
-    <div id="error_explanation">
+    <div class="error">
       <h2><%= pluralize(@service.errors.count, "error") %> prohibited this service from being saved:</h2>
 
       <ul>
@@ -12,7 +13,6 @@
       </ul>
     </div>
   <% end %>
-
   <div class="field">
     <%= f.label :header %><br />
     <%= f.text_field :header %>
