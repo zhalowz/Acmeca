@@ -12,6 +12,7 @@ Acmeca::Application.routes.draw do
 
   devise_for :users
 
+  get "pages/warranty"
   get "pages/contact"
   get "manage/services/show"
   get "manage/services/new"

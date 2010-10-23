@@ -19,7 +19,7 @@ class Manage::ServicesController < ApplicationController
   end
 
   def create
-@service = Service.new(params[:service])
+@service = Service.new(params[@service])
 if @service.save
 flash[:success] = "Service Created"
 redirect_to @service
