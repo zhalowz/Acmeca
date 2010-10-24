@@ -1,4 +1,6 @@
+<%= form_for @product, :url => manage_product_path(@product), :html => { :multipart => true } do |f| %>
 <fieldset>
   <legend>Edit product</legend>
-  <%= render "form" %>
+  <%= render :partial => "form", :locals => { :f => f } %>
 </fieldset>
+<% end %>
