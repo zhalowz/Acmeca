@@ -9,9 +9,9 @@
 	<td><%= service.description %></td>
 </tr>
 </table>
-  <%= link_to 'Edit', edit_service_path(service) %> |
+  <%= link_to 'Edit', edit_manage_service_path(service) %> |
   <%= link_to "Delete", service, :confirm => 'Are you sure?', :method => :delete %>
 <% end %>
 </fieldset>
 
-  <%= link_to 'New', services_new_path %> 
+  <%= link_to 'New', manage_services_new_path %> 

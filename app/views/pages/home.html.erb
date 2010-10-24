@@ -21,7 +21,7 @@ setInterval(function(){
               <div class="indent">
                 <h5>Products</h5>
                 <h4>Take a look at our machines</h4>
-                <a href="#" class="bunner-link">Read More</a>
+                <%= link_to "Read More", products_path, :class => "bunner-link" %>
               </div>
             </div>
 
@@ -29,15 +29,15 @@ setInterval(function(){
               <div class="indent">
                 <h5>Installation</h5>
                 <h4>See how we do what we do</h4>
-                <a href="#" class="bunner-link">Read More</a>
+                <%= link_to "Read More", pages_installation_path, :class => "bunner-link" %>
               </div>
             </div>
 
             <div class="bunner bg3">
               <div class="indent">
-                <h5>Services</h5>
+                <h5>Warranty</h5>
                 <h4>Learn what we have to offer</h4>
-                <a href="#" class="bunner-link">Read More</a>
+                <%= link_to "Read More", pages_warranty_path, :class => "bunner-link" %>
               </div>
             </div>
           </div>

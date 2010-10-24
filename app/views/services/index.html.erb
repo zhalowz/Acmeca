@@ -1,12 +1,10 @@
-<fieldset>
 
-<legend>Listing Services</legend>
+<h1>Listing Services</h1>
   <% for service in @service %> 
     <tr>
-	<h1><td><%= service.header %></td></h1>
+	<h4><td><%= service.header %></td></h4>
 	<td><br/><%= service.description %><br/></td><br/>
    </tr>
   <% end %>
 
-</fieldset>
 
