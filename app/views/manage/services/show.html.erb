@@ -1,17 +1,17 @@
 <fieldset>
-<legend>Services</legend>
-<% for service in @service %>
-<table>
-<tr>
-	<h1><td><%= service.header %></td></h1>
-</tr>
-<tr>
-	<td><%= service.description %></td>
-</tr>
-</table>
-  <%= link_to 'Edit', edit_manage_service_path(service) %> |
-  <%= link_to "Delete", service, :confirm => 'Are you sure?', :method => :delete %>
-<% end %>
+  <legend>Services</legend>
+  <% for service in @service %>
+    <table>
+      <tr>
+        <h1><td><%= service.header %></td></h1>
+      </tr>
+        <tr>
+        <td><%= service.description %></td>
+        </tr>
+    </table>
+    <%= link_to 'Edit', edit_manage_service_path(service) %> |
+    <%= link_to "Delete", service, :confirm => 'Are you sure?', :method => :delete %>
+  <% end %>
 </fieldset>
 
-  <%= link_to 'New', manage_services_new_path %> 
+<%= link_to 'New', manage_services_new_path %> 

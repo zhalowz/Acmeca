@@ -1,5 +1,7 @@
-<h1>Editing service</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', manage_services_show_path %> 
+<%= form_for @service, :url => manage_service_path(@service), :html => { :multipart => true } do |f| %>
+<fieldset>
+  <legend>Edit services</legend>
+  <%= render :partial => "form", :locals => { :f => f } %>
+</fieldset>
+<% end %>
+<%= link_to 'Show', manage_services_path %> 

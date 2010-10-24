@@ -1,48 +1,47 @@
 class Manage::ServicesController < ApplicationController
 
   def index
-@service = Service.all
+    @service = Service.all
   end
 
   def show
-@service = Service.all
+    @service = Service.all
   end
 
   def new
-@title = "New Service"
-@service = Service.new
+    @title = "New Service"
+    @service = Service.new
   end
 
   def edit
-@title = "Edit Service"
-@service = Service.find(params[:id])
+    @title = "Edit Service"
+    @service = Service.find(params[:id])
   end
 
   def create
-@service = Service.new(params[@service])
-if @service.save
-flash[:success] = "Service Created"
-redirect_to @service
-else
-@title = "New Service"
-render 'new'
+    @service = Service.new(params[@service])
+    if @service.save
+      flash[:success] = "Service Created"
+      redirect_to @service
+    else
+      @title = "New Service"
+      render 'new'
+    end
   end
-end
 
   def update
-@service = Service.find(params[:id])
-if @service.update_attributes(params[:service])
-flash[:success] = "Service updated"
-redirect_to @service
-else
-@title = "Edit service"
-render 'edit'
+    @service = Service.find(params[:id])
+    if @service.update_attributes(params[:service])
+      flash[:success] = "Service updated"
+      redirect_to @service
+    else
+      @title = "Edit service"
+      render 'edit'
+    end
   end
-end
 
   def destroy  
     Service.find(params[:id]).destroy
-   redirect_to(manage_services_show_path)
+    redirect_to(manage_services_show_path)
   end
-
 end

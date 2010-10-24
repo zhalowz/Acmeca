@@ -1,10 +1,7 @@
-
 <h1>Listing Services</h1>
-  <% for service in @service %> 
-    <tr>
-	<h4><td><%= service.header %></td></h4>
-	<td><br/><%= service.description %><br/></td><br/>
-   </tr>
-  <% end %>
-
-
+<% for service in @service %> 
+  <tr>
+    <h4><td><%= service.header %></td></h4>
+    <td><br/><%= service.description %><br/></td><br/>
+  </tr>
+<% end %>
