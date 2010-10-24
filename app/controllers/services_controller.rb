@@ -1,7 +1,6 @@
 class ServicesController < ApplicationController
 
   def index
-@service = Service.all
+    @service = Service.all
   end
-
 end

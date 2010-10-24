@@ -1,13 +1,9 @@
 Acmeca::Application.routes.draw do
 
-  resources :albums, :only => [:index, :show]
-  resources :services, :only => [:index, :show]
-  resources :products, :only => [:index, :show]
+  resources :albums, :services, :products, :only => [:index, :show]
 
   namespace "manage" do
-    resources :albums
-    resources :services
-    resources :products
+    resources :albums, :services, :products
   end
 
   devise_for :users
@@ -15,14 +11,6 @@ Acmeca::Application.routes.draw do
   get "pages/installation"
   get "pages/warranty"
   get "pages/contact"
-  get "manage/services/show"
-  get "manage/services/new"
-  get "albums/view"
-  get "albums/show"
-  get "manage/albums/show"
-  get "manage/albums/new"
-  get "manage/products/show"
-  get "manage/products/new"
   
   root :to => 'pages#home'
 
