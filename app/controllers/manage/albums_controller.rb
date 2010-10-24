@@ -3,12 +3,8 @@ class Manage::AlbumsController < ApplicationController
     @albums = Album.all
   end
   
-  def view
-    @albums = Album.find(params[:id])
-  end
-
   def show
-    @album = Album.all
+    @album = Album.find(params[:id])
   end
   
   def new
@@ -25,7 +21,7 @@ class Manage::AlbumsController < ApplicationController
     respond_to do |format|
       if @album.save
         flash[:notice] = 'Album was successfully created.'
-        format.html { redirect_to(@album) }
+        format.html { redirect_to manage_album_path(@album) }
         format.xml  { render :xml => @album, :status => :created, :location => @album }
       else
         format.html { render :action => "new" }
@@ -43,7 +39,7 @@ class Manage::AlbumsController < ApplicationController
 
   def destroy  
     Album.find(params[:id]).destroy
-   redirect_to(albums_show_path)
+    redirect_to manage_albums_path
   end
 
   #update action
@@ -57,7 +53,7 @@ class Manage::AlbumsController < ApplicationController
     respond_to do |format|
       if @album.update_attributes(params[:album])
         flash[:notice] = 'Album was successfully updated.'
-        format.html { redirect_to(@album) }
+        format.html { redirect_to manage_album_path(@album) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }

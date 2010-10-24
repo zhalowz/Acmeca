@@ -1,20 +1,14 @@
 <fieldset>
-<legend>Gallery</legend>
-
-<% for album in @album %>
-
-<p>
-  <strong>Name:</strong><%= album.name %>
-</p>
-<% for photo in album.photos %>
-  <%= image_tag photo.data.url, :alt => "" %>
-<% end %>
-<p>
-  <%= link_to "Edit", edit_manage_album_path(album) %> |
-  <%= link_to "Delete", album, :confirm => 'Are you sure?', :method => :delete %>
-</p>
-<% end %>
+  <legend>Gallery</legend>
+  <p>
+    <strong>Name:</strong><%= @album.name %>
+  </p>
+  <% for photo in @album.photos %>
+    <%= image_tag photo.data.url, :alt => "" %>
+  <% end %>
+  <p>
+    <%= link_to "Edit", edit_manage_album_path(@album) %> |
+    <%= link_to "Delete", manage_album_path(@album), :confirm => 'Are you sure?', :method => :delete %>
+  </p>
 </fieldset>
-
-
-  <%= link_to "New", manage_albums_new_path %> 
+<%= link_to "New", new_manage_album_path %> 

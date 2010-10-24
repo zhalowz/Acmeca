@@ -1,14 +1,10 @@
 <fieldset>
 <legend>Gallery</legend>
-
 <p>
   <strong>Name:</strong><%= @album.name %>
 </p>
 <% for photo in @album.photos %>
   <%= image_tag photo.data.url, :alt => "" %>
 <% end %>
-<p>
-</p>
-
 </fieldset>
 
