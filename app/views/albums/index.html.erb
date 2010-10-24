@@ -1,7 +1,7 @@
 <h1>Gallery</h1>
 <% for album in @albums %>
   <%= link_to album.name, album %> 
-  <%= get_first_image(album) %>
+  <%= get_first_image(album, :small) %>
 <% end %>
 
 

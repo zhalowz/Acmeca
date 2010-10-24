@@ -17,10 +17,10 @@ module AlbumsHelper
     end
   end
 
-  def get_first_image(album)
+  def get_first_image(album, size)
     photo = album.photos.first
     unless photo.nil?
-      tag :img, { :src => photo.data.url }
+      tag :img, { :src => photo.data.url(size) }
     end
   end
 end

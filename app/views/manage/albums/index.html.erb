@@ -3,7 +3,7 @@
 <% for album in @albums %>
   <p class="album">
     <%= link_to album.name, manage_album_path(album) %>
-    <%= get_first_image(album) %>
+    <%= get_first_image(album, :small) %>
   </p>
 <% end %>
 </div>
