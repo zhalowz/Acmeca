@@ -16,5 +16,11 @@ module AlbumsHelper
       data.inspect.to_json
     end
   end
-  
+
+  def get_first_image(album)
+    photo = album.photos.first
+    unless photo.nil?
+      tag :img, { :src => photo.data.url }
+    end
+  end
 end

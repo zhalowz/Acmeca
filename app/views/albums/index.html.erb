@@ -1,14 +1,7 @@
 <h1>Gallery</h1>
-  <% for album in @albums %>
-    <table>
-    <tr>
-       <td><%= link_to album.name, album %></td>
-    </tr>
- 
-    <tr>
-    <td><%= image_tag album.photos.first.data.url, :alt => "" %></td>
-    </tr>
-      </table>
-  <% end %>
+<% for album in @albums %>
+  <%= link_to album.name, album %> 
+  <%= get_first_image(album) %>
+<% end %>
 
 

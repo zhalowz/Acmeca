@@ -1,14 +1,9 @@
 <h1>Gallery</h1>
-  <% for album in @albums %>
-    <table>
-    <tr>
-       <td><%= link_to album.name, albums_view_path %></td>
-    </tr>
- 
-    <tr>
-    <td><%= image_tag album.photos.first.data.url, :alt => "" %></td>
-    </tr>
-      </table>
-  <% end %>
-
-
+<div class="albums">
+<% for album in @albums %>
+  <p class="album">
+    <%= link_to album.name, manage_album_path(album) %>
+    <%= get_first_image(album) %>
+  </p>
+<% end %>
+</div>

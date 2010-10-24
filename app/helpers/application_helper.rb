@@ -5,4 +5,8 @@ module ApplicationHelper
   def get_class_name(object)
     object.class.name.downcase
   end
+  def redcloth(object)
+    return if object.nil?
+    RedCloth.new(object).to_html
+  end
 end

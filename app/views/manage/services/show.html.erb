@@ -3,7 +3,7 @@
   <% for service in @services %>
       <p class="service">
         <%= service.header %>
-        <%= service.description %>
+        <%= sanitize(redcloth(service.description)) %>
       </p>
     <div class="actions">
     <%= link_to 'Edit', edit_manage_service_path(service) %> |
