@@ -1,11 +1,11 @@
 class Manage::ServicesController < ApplicationController
 
   def index
-    @service = Service.all
+    @services = Service.all
   end
 
   def show
-    @service = Service.all
+    @services = Service.all
   end
 
   def new
@@ -19,10 +19,10 @@ class Manage::ServicesController < ApplicationController
   end
 
   def create
-    @service = Service.new(params[@service])
+    @service = Service.new(params[:service])
     if @service.save
       flash[:success] = "Service Created"
-      redirect_to @service
+      redirect_to manage_service_path(@service)
     else
       @title = "New Service"
       render 'new'
@@ -33,7 +33,7 @@ class Manage::ServicesController < ApplicationController
     @service = Service.find(params[:id])
     if @service.update_attributes(params[:service])
       flash[:success] = "Service updated"
-      redirect_to @service
+      redirect_to manage_service_path(@service)
     else
       @title = "Edit service"
       render 'edit'
@@ -42,6 +42,6 @@ class Manage::ServicesController < ApplicationController
 
   def destroy  
     Service.find(params[:id]).destroy
-    redirect_to(manage_services_show_path)
+    redirect_to manage_services_path
   end
 end
