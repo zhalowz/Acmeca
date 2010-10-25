@@ -7,7 +7,7 @@
       </p>
     <div class="actions">
     <%= link_to 'Edit', edit_manage_service_path(service) %> |
-    <%= link_to "Delete", service, :confirm => 'Are you sure?', :method => :delete %>
+    <%= link_to "Delete", manage_service_path(service), :confirm => 'Are you sure?', :method => :delete %>
     </div>
   <% end %>
 </div>

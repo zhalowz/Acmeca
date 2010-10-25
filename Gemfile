@@ -12,6 +12,7 @@ gem 'RedCloth', '4.2.3'
 gem 'bhm-google-maps'
 gem 'nifty-generators'
 gem 'mocha'
+gem 'cancan'
 gem 'will_paginate', "~> 3.0.pre2"
 
 group :development do
