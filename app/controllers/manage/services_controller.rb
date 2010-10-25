@@ -1,4 +1,4 @@
-class Manage::ServicesController < ApplicationController
+class Manage::ServicesController < Manage::BaseController
 
   def index
     @services = Service.all

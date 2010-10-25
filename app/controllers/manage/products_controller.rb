@@ -1,4 +1,4 @@
-class Manage::ProductsController < ApplicationController
+class Manage::ProductsController < Manage::BaseController
 
   def index
     @products = Product.paginate :page => params[:page], :order => 'created_at DESC'
