@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ProductsController do
+describe Manage::ProductsController do
 
   describe "GET 'new'" do
     it "should be successful" do

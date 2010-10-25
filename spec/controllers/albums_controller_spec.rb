@@ -51,7 +51,7 @@ describe AlbumsController do
   it "destroy action should destroy model and redirect to index action" do
     album = Album.first
     delete :destroy, :id => album
-    response.should redirect_to(albums_url)
+    response.should redirect_to(manage_albums_path)
     Album.exists?(album.id).should be_false
   end
 end

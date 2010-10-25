@@ -3,10 +3,13 @@ Acmeca::Application.routes.draw do
   resources :albums, :services, :products, :only => [:index, :show]
 
   namespace "manage" do
-    resources :albums, :services, :products
+    resources :albums, :services, :products, :categories
   end
 
-  devise_for :users
+  devise_for :users do
+    get "sign_in", :to => "devise/sessions#new"
+    get "sign_out", :to => "devise/sessions#destroy"
+  end
 
   get "pages/installation"
   get "pages/warranty"

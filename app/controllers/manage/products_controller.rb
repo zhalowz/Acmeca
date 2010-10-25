@@ -1,6 +1,7 @@
 class Manage::ProductsController < Manage::BaseController
 
   def index
+    @categories = Category.all
     @products = Product.paginate :page => params[:page], :order => 'created_at DESC'
   end
 

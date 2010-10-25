@@ -5,8 +5,10 @@ module Manage
 
     private
     def verify_admin
-      flash[:notice] = "You are not authorized to view this page. Please sign in."
-      redirect_to root_url unless user_signed_in?
+      unless user_signed_in?
+        flash[:notice] = "You are not authorized to view that page. Please sign in."
+        redirect_to root_url
+      end
     end
   end
 end
