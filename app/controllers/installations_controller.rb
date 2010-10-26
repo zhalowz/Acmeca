@@ -1,6 +1,6 @@
 class InstallationsController < ApplicationController
   def index
-    @installations = Installation.all
+    @installation = Installation.all
   end
 
 end

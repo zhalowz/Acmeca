@@ -1,9 +1,9 @@
 
 <div class="photo">
   <p>
-    <%= form.fields_for :photos, iphoto, :child_index => (iphoto.new_record? ? "index_to_replace_with_js" : nil) do |iphoto_form| %>    
+    <%= form.fields_for :iphotos, iphoto, :child_index => (iphoto.new_record? ? "index_to_replace_with_js" : nil) do |iphoto_form| %>    
       <%= iphoto_form.file_field :data %>
-      <%= link_to_function "delete", "remove_field($(this), ('.photo'))" %><br/>
+      <%= link_to_function "delete", "remove_field($(this), ('.iphoto'))" %><br/>
     <% end %>
   </p>
 </div>
