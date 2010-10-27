@@ -1,10 +1,12 @@
 Acmeca::Application.routes.draw do
 
-  resources :albums, :services, :products, :installations, :manage, :only => [:index, :show]
+  resources :albums, :services, :products, :installations, :only => [:index, :show]
 
   namespace "manage" do
     resources :albums, :services, :products, :categories, :installations
   end
+
+  resources :manage
 
   devise_for :users do
     get "sign_in", :to => "devise/sessions#new"

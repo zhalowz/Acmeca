@@ -133,12 +133,21 @@
           <div class="policy">
             <strong>Acmeca Pte Ltd</strong> &copy; 2010 &nbsp;|&nbsp; <a href=
             "index-6.html">Privacy policy</a><br />
+              <% if user_signed_in? %>
+                Signed in as: <%= current_user.email %>
+              <% end %>
             <!--{%FOOTER_LINK}-->
           </div>
 
           <div class="menu1">
             <ul class="nostyle">
               <%= render 'layouts/links' %>
+              <% unless user_signed_in? %>
+                <li><%= link_to "Login", sign_in_path %></li>
+              <% else %>
+                <li><%= link_to "Manage", manage_index_path %>
+                <li><%= link_to "Logout", sign_out_path %></li>
+              <% end %>
             </ul>
           </div>
         </div>

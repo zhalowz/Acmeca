@@ -1,4 +1,4 @@
-View: 
+Categories: 
 <% for category in @categories %>
 <%= link_to category.name, manage_category_path(category) %>
 <% end %>
@@ -13,6 +13,6 @@ View:
 <% end %>
 </div>
 <%= will_paginate @products %>
-<p><%= link_to "Back", manage_manage_index_path %></p>
+<p><%= link_to "Back", manage_index_path %></p>
  
 
