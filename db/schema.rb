@@ -40,6 +40,8 @@ ActiveRecord::Schema.define(:version => 20101026095812) do
     t.datetime "data_updated_at"
   end
 
+  add_index "iphotos", ["installation_id"], :name => "index_iphotos_on_installation_id"
+
   create_table "photos", :force => true do |t|
     t.integer  "album_id"
     t.datetime "created_at"

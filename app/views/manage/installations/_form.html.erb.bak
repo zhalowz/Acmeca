@@ -1,4 +1,16 @@
-<%= render :partial => 'layouts/error_messages', :locals => { :c => @installation} %>
+<%= form_for(@installation) do |f| %>
+  <% if @installation.errors.any? %>
+    <div class="error">
+      <h2><%= pluralize(@installation.errors.count, "error") %> prohibited this installation from being saved:</h2>
+
+      <ul>
+      <% @installation.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -13,6 +25,7 @@
   <% end %>
 </div>
 <%= add_object_link("New Photo", f, @installation.iphotos.build, "iphoto", "iphotos") %>
-   
+    
 <p><%= f.submit %></p>
   </div>
+<% end %>
