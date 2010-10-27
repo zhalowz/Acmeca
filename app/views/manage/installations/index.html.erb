@@ -1,0 +1,9 @@
+<h1>Listing installations</h1>
+
+<% for installation in @installation %>
+  
+    <%= link_to installation.name, edit_manage_installation_path(installation) %></td>
+  
+<% end %>
+
+<%= link_to 'Back', manage_index_path %> 

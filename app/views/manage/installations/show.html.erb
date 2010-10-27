@@ -1,0 +1,14 @@
+<h1>Installation Display</h1>
+<div class="albuma">
+<% for installation in @installation %>
+    <p><%= installation.name %>
+    <%= get_first_image(installation, :small) %>
+  </p>
+</div>
+
+    <%= link_to "Edit", edit_manage_installation_path(installation) %> |
+    <%= link_to "Delete", manage_installation_path(installation), :confirm => 'Are you sure?', :method => :delete %>
+<% end %>
+
+<br/>
+<%= link_to "Back", manage_installation_path %> 
