@@ -3,7 +3,7 @@ Acmeca::Application.routes.draw do
   resources :albums, :services, :products, :installations, :only => [:index, :show]
 
   namespace "manage" do
-    resources :albums, :services, :products, :categories, :installations
+    resources :albums, :services, :products, :categories, :installations, :manage
   end
 
   devise_for :users do
@@ -13,7 +13,6 @@ Acmeca::Application.routes.draw do
 
   get "pages/warranty"
   get "pages/contact"
-  
   root :to => 'pages#home'
 
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
