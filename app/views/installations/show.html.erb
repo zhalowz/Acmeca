@@ -1,0 +1,6 @@
+<h1><%= @installation.name %></h1>
+<% for installation in @installation.iphotos %>
+  <%= image_tag installation.data.url, :alt => "" %>
+<% end %>
+
+

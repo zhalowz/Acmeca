@@ -15,11 +15,4 @@ module InstallationsHelper
       data.inspect.to_json
     end
   end
-
-  def get_first_image(installation, size)
-    iphoto = installation.iphotos.first
-    unless iphoto.nil?
-      tag :img, { :src => iphoto.data.url(size) }
-    end
-  end
 end

@@ -1,19 +1,7 @@
-<h1>Listing installations</h1>
+<h1>Installations Guides</h1>
 
-<table>
-  <tr>
-    <th>Name</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @installation.each do |installation| %>
-  <tr>
-    <td><%= installation.name %></td>
-  </tr>
+<% for installation in @installation %>
+  <%= link_to installation.name, installation %> 
 <% end %>
-</table>
 
-<br />
 

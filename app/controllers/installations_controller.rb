@@ -3,4 +3,7 @@ class InstallationsController < ApplicationController
     @installation = Installation.all
   end
 
+  def show
+    @installation = Installation.find(params[:id])
+  end
 end
