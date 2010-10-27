@@ -1,6 +1,6 @@
 <%= form_for @installation, :url => { :action => :create }, :html => { :multipart => true } do |f| %>
   <fieldset>
-    <legend>New Installation</legend>
+    <legend>Create Installation</legend>
       <%= render :partial => 'form', :locals => {:f => f} %>
   </fieldset>
 <% end %>  

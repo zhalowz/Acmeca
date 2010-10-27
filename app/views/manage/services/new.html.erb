@@ -1,7 +1,7 @@
 <%= form_for @service, :url => { :action => :create }, :html => { :multipart => true } do |f| %>
   <fieldset>
-    <legend>Create service</legend>
+    <legend>Create Service</legend>
     <%= render :partial => "form", :locals => { :f => f } %>
   </fieldset>
 <% end %>
-<%= link_to 'View All', manage_services_path %> 
+<%= link_to 'Back', manage_index_path %> 

@@ -1,9 +1,8 @@
 <%= render :partial => 'layouts/error_messages', :locals => { :c => @installation} %>
-  <div class="field">
+<p>   
     <%= f.label :name %><br />
     <%= f.text_field :name %>
-  </div>
-
+</p>
 <div class="album_photos">
   <%= render :partial => 'installation_iphoto', :collection => @installation.iphotos %>
 </div>
@@ -12,7 +11,6 @@
     <%= render :partial => 'iphoto', :locals => { :form => f, :iphoto => @installation.iphotos.build } %>
   <% end %>
 </div>
-<%= add_object_link("New Photo", f, @installation.iphotos.build, "iphoto", "iphotos") %>
    
 <p><%= f.submit %></p>
-  </div>
+  
