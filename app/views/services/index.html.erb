@@ -1,5 +1,9 @@
 <h1>Services</h1>
+<br/>
 <% for service in @service %> 
-    <h4><%= service.header %></h4>
-    <br/><%= sanitize(redcloth(service.description)) %><br/><br/>
+
+  <strong><h3><%= service.header %></h3></strong>
+    <br/><p><%= sanitize(redcloth(service.description)) %></p><br/>
+
 <% end %>
+

@@ -1,6 +1,4 @@
-<h1>Gallery</h1>
-<p>
-  <strong>Name:</strong><%= @album.name %>
+<h1><%= @album.name %></h1>
 </p>
 <% for photo in @album.photos %>
   <%= image_tag photo.data.url, :alt => "" %>

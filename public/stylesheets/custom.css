@@ -46,3 +46,32 @@ sub, sup {
 }
 
 .fadein img { position:absolute; }
+
+div.img 
+{
+ margin: 2px;
+ border: 2px;
+ border-style: solid;
+ border-color: black;
+ height: auto;
+ width: auto;
+ float: left;
+ text-align: right;
+}
+
+div.desc
+{
+text-align: center;
+font-weight: normal;
+width: 120px;
+margin: 2px;
+}
+
+
+
+
+
+
+
+
+
