@@ -1,19 +1,18 @@
-Categories:
-<%= link_to "All", products_path %>
+Categories: 
 <% for category in @categories %>
-<%= link_to category.name, category %>
+<%= link_to category.name, manage_category_path(category) %>
 <% end %>
 <%= will_paginate @products %>
 <div class="products">
 <% for product in @products %>
   <div class="product">
     <h3>
-      <%= link_to product.name, product %>
+      <%= link_to product.name, manage_product_path(product) %>
     </h3>
   </div>
 <% end %>
 </div>
 <%= will_paginate @products %>
+<p><%= link_to "Back", manage_index_path %></p>
  
-
 

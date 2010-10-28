@@ -1,12 +1,3 @@
-<h1>Products</h1>
-<%= will_paginate @products %>
-<div class="products">
-<% for product in @products %>
-  <div class="product">
-    <h3>
-      <%= link_to product.name, product %>
-    </h3>
-  </div>
-<% end %>
-</div>
-<%= will_paginate @products %>
+<h1>Our Products</h1>
+<%= render "shared/product_list" %>
+
