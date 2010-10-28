@@ -2,5 +2,5 @@
 <br/>
 <% for service in @service %> 
   <strong><h3><%= service.header %></h3></strong>
-    <br/><p><%= sanitize(redcloth(service.description)) %></p><br/>
+   <p><%= sanitize(redcloth(service.description)) %></p><br/>
 <% end %>

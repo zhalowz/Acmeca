@@ -28,7 +28,10 @@ input, select {vertical-align:middle; font-weight:normal;}
 a {color:#80a019; outline:none;}
 a:hover{text-decoration:none;}
 
-p {padding-top:18px;}
+p {
+padding-top:18px;
+font-size: 1.275em;
+}
 
 .top {padding-top:4px;}
 .top1 {padding-top:8px;}
@@ -71,9 +74,9 @@ h1, h2 {
 	letter-spacing:-1px;
 }
 h3 {
-	font-size:26px;
+	font-size:20px;
 	line-height:1.2em;
-	color:#363636;
+	color:Black;
 	display:block;
 	letter-spacing:-1px;
         text-align: left;
