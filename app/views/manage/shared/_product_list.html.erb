@@ -1,4 +1,5 @@
 Categories: 
+<%= link_to "All", manage_products_path %>
 <% for category in @categories %>
 <%= link_to category.name, manage_category_path(category) %>
 <% end %>

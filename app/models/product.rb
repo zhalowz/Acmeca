@@ -12,6 +12,5 @@ class Product < ActiveRecord::Base
                     :length => { :maximum => 50 }
   validates :description, :length => { :maximum => 1000 }
 
-  has_attached_file :photo #:styles => { :small => "150x150>",
-                            #             :large => "500x500>" }
+  has_attached_file :photo, :styles => { :small => "150x150>" }
 end

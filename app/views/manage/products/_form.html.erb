@@ -14,6 +14,12 @@
   <%= f.text_area :description %>
 </p>
 <p>
+  <%= f.label :photo %>
+  <% unless @product.new_record? %>
+    <br />
+    <%= image_tag @product.photo.url %>
+  <% end %>
+  <br />
   <%= f.file_field :photo %>
 </p>
 <p><%= f.submit %></p>
