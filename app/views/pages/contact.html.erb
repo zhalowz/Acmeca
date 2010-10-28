@@ -1,9 +1,20 @@
 <h3> Contact Us </h3>
 <table border="0">
                     <% form_tag :action => "send_mail" do %>
-                      		  
-		      <tr align=left>
-		         <td rowspan=5><%= draw_map_of Location.new("Acmeca", 1.438345, 103.841057) %></td>
+                       <tr align=left>
+			<td>1 Yishun ST 23 #03-25</td>
+		      </tr>
+                       <tr align=left>
+			<td>YS-One Singapore 768441</td>
+		      </tr>
+                       <tr align=left>
+			<td>Office: (65)-67553933 </td>
+		      </tr>
+                       <tr align=left>
+			<td>Fax: (65)-67555319</td>
+		      </tr>
+		      <tr align=left>                        
+		         <td rowspan=5; heigh=150px; width=150px;><%= draw_map_of Location.new("Acmeca", 1.438345, 103.841057) %></td>
                          <td><%= label :email, :name, "Name:" %></td>
                          <td><%= text_field :email, :name %></td>
                       </tr>
@@ -26,7 +37,7 @@
 
                       <tr>
 			 <td></td>
-                         <td><%= submit_tag "Submit" %></td>
+                         <td><%= submit_tag "Send" %></td>
                       </tr>
                     <% end %>
                   </table>
