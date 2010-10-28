@@ -1,10 +1,10 @@
 <h1>Gallery</h1>
 <% for album in @albums %>
-<div class="img">
-  <%= get_first_image(album, :small) %>
-</div>
 <div class="desc">
   <%= link_to album.name, album %>
+</div>
+<div class="img">
+  <%= get_first_image(album, :small) %>
 </div>
 <% end %>
 

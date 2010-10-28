@@ -56,12 +56,12 @@ div.img
  height: auto;
  width: auto;
  float: left;
- text-align: right;
 }
 
 div.desc
 {
-text-align: center;
+text-align: right;
+float: left;
 font-weight: normal;
 width: 120px;
 margin: 2px;
