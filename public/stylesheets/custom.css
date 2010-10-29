@@ -67,3 +67,28 @@ width: 120px;
 margin: 2px;
 }
 
+.products {
+  margin-top: 1em;
+  background: #fff;
+}
+
+.product {
+  float: left;
+  width: 213px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.product img {
+  width: 213px;
+}
+
+.pagination {
+  clear: both;
+}
+

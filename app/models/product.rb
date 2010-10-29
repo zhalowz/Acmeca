@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 
   cattr_reader :per_page
-  @@per_page = 10
+  @@per_page = 12
 
   attr_accessor :description_html
 
