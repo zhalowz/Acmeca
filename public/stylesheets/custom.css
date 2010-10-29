@@ -60,16 +60,15 @@ div.img
 
 div.desc
 {
-text-align: right;
-float: left;
-font-weight: normal;
-width: 120px;
-margin: 2px;
+  text-align: right;
+  float: left;
+  font-weight: normal;
+  width: 120px;
+  margin: 2px;
 }
 
 .products {
   margin-top: 1em;
-  background: #fff;
 }
 
 .product {
@@ -85,17 +84,11 @@ margin: 2px;
 }
 
 .product img {
-  width: 200px;
   margin-bottom: 1em;
-}
-
-.pagination {
-  clear: both;
 }
 
 .product_details {
   margin-top: 1em;
-  
 }
 
 .product_details img, .product_img {
@@ -104,6 +97,7 @@ margin: 2px;
   margin-bottom: 1em;
   float: left;
 }
-.actions {
+
+.pagination, .action {
   clear: both;
-  }
+}

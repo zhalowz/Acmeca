@@ -1,0 +1,9 @@
+<h1><%= @product.name %></h1>
+<% @category = Category.find_by_id(@product.category_id) %>
+<%= link_to @category.name, manage_category_path(@category) %>
+<div class="product_details">
+  <%= image_tag @product.photo.url(:large) %>
+  <div class="prod_description">
+    <%= sanitize(redcloth(@product.description)) %>
+  </div>
+</div>
