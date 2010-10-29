@@ -14,6 +14,6 @@ class PagesController < ApplicationController
   def send_mail
     Emailer::deliver_contact_email(params[:email])
     flash.now[:notice]="Email was succesfully sent."
-    redirect_to('/')
+    redirect_to ('/')
   end
 end
