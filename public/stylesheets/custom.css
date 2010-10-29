@@ -85,10 +85,24 @@ margin: 2px;
 }
 
 .product img {
-  width: 213px;
+  width: 200px;
 }
 
 .pagination {
   clear: both;
 }
 
+.product_details {
+  margin-top: 1em;
+  
+}
+
+.product_details img, .product_img {
+  border: 1px solid #ccc;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  float: left;
+}
+.actions {
+  clear: both;
+  }

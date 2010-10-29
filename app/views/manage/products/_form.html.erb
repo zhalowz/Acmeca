@@ -17,9 +17,9 @@
   <%= f.label :photo %>
   <% unless @product.new_record? %>
     <br />
-    <%= image_tag @product.photo.url %>
+    <%= image_tag @product.photo.url, { :class => "product_img" } %>
   <% end %>
   <br />
   <%= f.file_field :photo %>
 </p>
-<p><%= f.submit %></p>
+<p class="actions"><%= f.submit %></p>
