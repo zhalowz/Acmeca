@@ -58,17 +58,18 @@ div.desc
   float: left;
 }
 
+/********************/
 .catalog1, .catalog2 {
   margin-top: 1em;
 }
 
 .catalog1-item {
-  float: left;
+  display: inline-block;
+  vertical-align: middle;
   width: 200px;
-  height: 230px;
   border: 1px solid #ccc;
   background: #fff;
-  margin-right: 32px;
+  margin-right: 31px;
   margin-bottom: 20px;
   padding-bottom: 10px;
   text-align: center;
@@ -78,13 +79,13 @@ div.desc
 .catalog1-item img {
   margin-bottom: 1em;
 }
-
+/********************/
 .catalog2-item {
   margin-bottom: 10px;
-  border: 1px solid #ccc;
   display: block;
   overflow: auto;
   background: #fff;
+  border: 1px solid #ccc;
 }
 
 .catalog2-item img {
@@ -92,8 +93,8 @@ div.desc
 }
 
 .catalog2-item .details {
-  margin-top: 10px;
   float: left;
+  margin-top: 10px;
 }
 
 .catalog2-item a {
