@@ -13,7 +13,7 @@ class Product < ActiveRecord::Base
   validates :description, :length => { :maximum => 10000 }
 
   has_attached_file :photo, 
-                    :styles => { :small => "200x200>", :large => "350x350>" },
+                    :styles => { :tiny => "100x100>", :small => "200x200>", :large => "350x350>" },
                     :storage => :s3,
                     :s3_credentials => File.join(Rails.root,'config','amazon_s3.yml'),
                     :path => ":attachment/:id/:style.:extension"

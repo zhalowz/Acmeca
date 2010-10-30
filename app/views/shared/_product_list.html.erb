@@ -4,11 +4,15 @@ Categories:
 <%= link_to category.name, category %>
 <% end %>
 <%= will_paginate @products %>
-<div class="products">
+<div class="catalog2">
 <% for product in @products %>
-  <div class="product">
-      <%= link_to image_tag(product.photo.url(:small)), product  %>
+  <div class="catalog2-item">
+    <%= link_to image_tag(product.photo.url(:small)), product, { :class => "catalog2-img"}  %>
+    <div class="details">
       <%= link_to product.name, product %>
+      <br />
+      <%= sanitize(redcloth(product.description)) %>
+    </div>
   </div>
 <% end %>
 </div>

@@ -1,7 +1,7 @@
 <h1>Gallery</h1>
-<div class="products">
+<div class="catalog1">
 <% for album in @albums %>
-  <div class="product">
+  <div class="catalog1-item">
     <%= link_to get_first_image(album, :small), album  %>
     <%= link_to album.name, album %>
   </div>

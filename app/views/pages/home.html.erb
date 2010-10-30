@@ -9,38 +9,23 @@ setInterval(function(){
       afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
 }, 3000);
 {
-
-main1 = new Image(654,354);
-
-main1.src = "/images/header1.0.png";
-
-
-product1 = new Image(654,354);
-
-product1.src = "/images/logo.png";
-
-
-installation1 = new Image(654,354);
-
-installation1.src = "/images/header1.1.png";
-
-warranty1 = new Image(654,354);
-
-warranty1.src = "/images/rails.png";
-
+  main1 = new Image(654,354);
+  main1.src = "/images/header1.0.png";
+  product1 = new Image(654,354);
+  product1.src = "/images/header1.0.png";
+  installation1 = new Image(654,354);
+  installation1.src = "/images/header1.1.png";
+  warranty1 = new Image(654,354);
+  warranty1.src = "/images/header1.0.png";
 }
 
 function hiLite(img, imgObjName, comment) {
-
-{
-
-document.images[img].src = eval(imgObjName + ".src");
-
-window.status = comment;
-
-return true;
-
-}}
+  {
+    document.images[img].src = eval(imgObjName + ".src");
+    window.status = comment;
+    return true;
+  }
+}
 </script> 
 <% end %>
 <% content_for :header do %>
