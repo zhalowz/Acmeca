@@ -6,8 +6,20 @@ Acmeca::Application.configure do
   config.cache_classes = true
 
   # Full error reports are disabled and caching is turned on
-  config.consider_all_requests_local       = false
+  config.consider_all_requests_local       = true
+  config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = true
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+    :address => 'smtp.gmail.com',
+    :port => 587,
+    :authentication => 'plain',
+    :user_name => "zhalowz@gmail.com",
+    :password => "online90937114"
+}
+config.action_mailer.perform_deliveries = true
+config.action_mailer.raise_delivery_errors = false
+config.action_mailer.default_charset = "utf-8"
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
@@ -47,4 +59,5 @@ Acmeca::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
+  config.action_mailer.default_url_options = { :host => 'Acmeca.heroku' }
 end
