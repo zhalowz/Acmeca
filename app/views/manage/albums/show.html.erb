@@ -1,13 +1,11 @@
-  <h1><%= @album.name %></h1>
-  
+<h1><%= @album.name %></h1>
 <div class="dhonishow thumbnails_true">
 <% for photo in @album.photos %>
   <%= image_tag photo.data.url(:medium), :alt => "" %>
 <% end %>
 </div>
-  <p>
-    <%= link_to "Edit", edit_manage_album_path(@album) %> |
-    <%= link_to "Delete", manage_album_path(@album), :confirm => 'Are you sure?', :method => :delete %>
-  </p>
-
+<p class="actions">
+  <%= link_to "Edit", edit_manage_album_path(@album) %> |
+  <%= link_to "Delete", manage_album_path(@album), :confirm => 'Are you sure?', :method => :delete %>
+</p>
 <p><%= link_to 'Back', manage_index_path %></p>
