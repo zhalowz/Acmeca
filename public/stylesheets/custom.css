@@ -49,22 +49,13 @@ sub, sup {
 
 div.img 
 {
- margin: 2px;
- border: 2px;
- border-style: solid;
- border-color: black;
- height: auto;
- width: auto;
+ border: 1px solid #ccc;
  float: left;
 }
 
 div.desc
 {
-  text-align: right;
   float: left;
-  font-weight: normal;
-  width: 120px;
-  margin: 2px;
 }
 
 .products {
@@ -108,5 +99,9 @@ div.desc
   float: left;
   margin-right: 10px;
   padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.dhonishow {
   border: 1px solid #ccc;
 }

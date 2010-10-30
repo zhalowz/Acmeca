@@ -1,7 +1,7 @@
 <h1><%= @album.name %></h1>
 </p>
+<div class="dhonishow thumbnails_true">
 <% for photo in @album.photos %>
   <%= image_tag photo.data.url, :alt => "" %>
 <% end %>
-
-
+</div>
