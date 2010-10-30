@@ -1,4 +1,1 @@
-<h1><%= @product.name %></h1>
-<%= Category.find_by_id(@product.category_id).name %>
-<%= sanitize(redcloth(@product.description)) %>
-<%= image_tag @product.photo.url %>
+<%= render "shared/product_show" %>

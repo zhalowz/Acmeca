@@ -7,13 +7,12 @@ Categories:
 <div class="products">
 <% for product in @products %>
   <div class="product">
-    <h3>
+      <%= link_to image_tag(product.photo.url(:small)), manage_product_path(product)  %>
       <%= link_to product.name, manage_product_path(product) %>
-    </h3>
   </div>
 <% end %>
 </div>
 <%= will_paginate @products %>
-<p><%= link_to "Back", manage_index_path %></p>
+<p><%= link_to "Back to Manage", manage_index_path %></p>
  
 

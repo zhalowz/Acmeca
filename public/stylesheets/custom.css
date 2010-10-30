@@ -49,21 +49,59 @@ sub, sup {
 
 div.img 
 {
- margin: 2px;
- border: 2px;
- border-style: solid;
- border-color: black;
- height: auto;
- width: auto;
+ border: 1px solid #ccc;
  float: left;
 }
 
 div.desc
 {
-text-align: right;
-float: left;
-font-weight: normal;
-width: 120px;
-margin: 2px;
+  float: left;
 }
 
+.products {
+  margin-top: 1em;
+}
+
+.product {
+  float: left;
+  width: 200px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-right: 32px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.product img {
+  margin-bottom: 1em;
+}
+
+.product_details {
+  margin-top: 1em;
+}
+
+.product_details img, .product_img {
+  border: 1px solid #ccc;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  float: left;
+}
+
+.pagination, .actions {
+  clear: both;
+}
+
+.manage_box {
+  height: 150px;
+  width: 280px;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.dhonishow {
+  border: 1px solid #ccc;
+}

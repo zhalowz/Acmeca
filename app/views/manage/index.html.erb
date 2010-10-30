@@ -1,25 +1,33 @@
-<h1>Admin Home Page</h1>
+<h1>Management Control Panel</h1>
 
-Products:
-<br/>
-<%= link_to "New", new_manage_product_path %> |
-<%= link_to "Show All", manage_products_path %> 
-<br/>
+<div class="manage_box">
+<h3>Products Management</h3>
+<%= link_to "Create Product", new_manage_product_path %>
+<br />
+<%= link_to "Manage Products", manage_products_path %>
+</div>
 
+<div class="manage_box">
+<h3>Gallery Management</h3>
+<%= link_to "Create Gallery", new_manage_album_path %>
+<br />
+<%= link_to "Manage Galleries", manage_albums_path %> 
+</div>
+
+<div class="manage_box">
+<h3>Miscellaneous</h3>
+Installation:
+<br />
+<%= link_to "Create Installation Page", new_manage_installation_path %>
+<br />
+<%= link_to "Manage Installation Pages", manage_installations_path %> 
+<br/>
 Services:
 <br/>
-<%= link_to "New", new_manage_service_path %> |
-<%= link_to "Show All", manage_services_path %> 
+<%= link_to "Create Service", new_manage_service_path %>
+<br />
+<%= link_to "Manage Services", manage_services_path %> 
 <br/>
+</div>
 
-Gallery:
-<br/>
-<%= link_to "New", new_manage_album_path %> |
-<%= link_to "Show All", manage_albums_path %> 
-<br/>
 
-Installation:
-<br/>
-<%= link_to "New", new_manage_installation_path %> |
-<%= link_to "Show All", manage_installations_path %> 
-<br/>

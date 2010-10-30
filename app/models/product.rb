@@ -1,7 +1,7 @@
 class Product < ActiveRecord::Base
 
   cattr_reader :per_page
-  @@per_page = 10
+  @@per_page = 12
 
   attr_accessor :description_html
 
@@ -10,7 +10,11 @@ class Product < ActiveRecord::Base
   validates :name,  :presence => true,
                     :uniqueness => true,
                     :length => { :maximum => 50 }
-  validates :description, :length => { :maximum => 1000 }
+  validates :description, :length => { :maximum => 10000 }
 
-  has_attached_file :photo, :styles => { :small => "150x150>" }
+  has_attached_file :photo, 
+                    :styles => { :small => "200x200>", :large => "350x350>" },
+                    :storage => :s3,
+                    :s3_credentials => File.join(Rails.root,'config','amazon_s3.yml'),
+                    :path => ":attachment/:id/:style.:extension"
 end
