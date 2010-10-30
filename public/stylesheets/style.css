@@ -26,6 +26,7 @@ html, input, textarea {font-family:Arial, Helvetica, sans-serif; font-size:13px;
 input, select {vertical-align:middle; font-weight:normal;}
 
 a {color:#80a019; outline:none;}
+a.home {color:white; outline:none;}
 a:hover{text-decoration:none;}
 
 p {
