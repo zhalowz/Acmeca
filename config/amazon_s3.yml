@@ -5,10 +5,10 @@ development:
 
 test:
   bucket: acmeca-test
-  access_key_id: <AKIAIIR473Y7YVGUZPJ
+  access_key_id: AKIAIIR473Y7YVGUZPJQ
   secret_access_key: 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 
 
 production:
   bucket: acmeca-production
-  access_key_id: <AKIAIIR473Y7YVGUZPJ
+  access_key_id: AKIAIIR473Y7YVGUZPJQ
   secret_access_key: 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 
