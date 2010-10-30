@@ -65,6 +65,7 @@ div.desc
 .catalog1-item {
   float: left;
   width: 200px;
+  height: 230px;
   border: 1px solid #ccc;
   background: #fff;
   margin-right: 32px;
