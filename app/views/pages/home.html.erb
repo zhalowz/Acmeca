@@ -10,20 +10,23 @@ setInterval(function(){
 }, 3000);
 {
 
-a1 = new Image(654,354);
+main1 = new Image(654,354);
 
-a1.src = "/images/header1.0.png";
-
-
-a2 = new Image(654,354);
-
-a2.src = "/images/header1.1.png";
-a2.src = "/images/logo.png"
+main1.src = "/images/header1.0.png";
 
 
-a3 = new Image(654,354);
+product1 = new Image(654,354);
 
-a3.src = "img/hotel.bmp";
+product1.src = "/images/logo.png";
+
+
+installation1 = new Image(654,354);
+
+installation1.src = "/images/header1.1.png";
+
+warranty1 = new Image(654,354);
+
+warranty1.src = "/images/rails.png";
 
 }
 
@@ -48,7 +51,7 @@ return true;
         <div class="col-1">
           <div class="bunners">
 <div class="fadein"
-<a class="home" onMouseOver="hiLite('a','a2','Products')" onMouseOut="hiLite('a','a1','')">
+<a class="home" onMouseOver="hiLite('main','product1','Products')" onMouseOut="hiLite('main','main1','')">
             <div class="bunner1 bg1">
               <div class="indent">
                 <h5>Products</h5>
@@ -58,7 +61,7 @@ return true;
             </div>
 </a>
 </div>
-<a class="home" onMouseOver="hiLite('a','a2','Installation')" onMouseOut="hiLite('a','a1','')">
+<a class="home" onMouseOver="hiLite('main','installation1','Installation')" onMouseOut="hiLite('main','main1','')">
             <div class="bunner bg2">
               <div class="indent">
                 <h5>Installation</h5>
@@ -68,7 +71,7 @@ return true;
             </div>
 </a>
 
-<a class="home" onMouseOver="hiLite('a','a2','Warranty')" onMouseOut="hiLite('a','a1','')">
+<a class="home" onMouseOver="hiLite('main','warranty1','Warranty')" onMouseOut="hiLite('main','main1','')">
             <div class="bunner bg3">
               <div class="indent">
                 <h5>Warranty</h5>
@@ -81,11 +84,8 @@ return true;
         </div>
   	<div class="col-2">
 
-	  <div class="fadein">
-<img name="a" src="/images/header1.0.png" border="0" width=654 height=354 id="ImageHome"/>
-            <img src="/images/header1.1.png" alt="header1"/>
-            <img src="" alt="header2"/>
-          </div>
+<img name="main" src="/images/header1.0.png" border="0" width=654 height=354 alt="HeaderHome"/>
+<img name="main" src="/images/header1.1.png" border="0" width=654 height=354 alt="Header1"/>
 	</div>
       </div>
     </div>
