@@ -58,11 +58,11 @@ div.desc
   float: left;
 }
 
-.products {
+.catalog1, .catalog2 {
   margin-top: 1em;
 }
 
-.product {
+.catalog1-item {
   float: left;
   width: 200px;
   border: 1px solid #ccc;
@@ -74,8 +74,31 @@ div.desc
   font-weight: bold;
 }
 
-.product img {
+.catalog1-item img {
   margin-bottom: 1em;
+}
+
+.catalog2-item {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  display: block;
+  overflow: auto;
+  background: #fff;
+}
+
+.catalog2-item img {
+  margin: 10px;
+}
+
+.catalog2-item .details {
+  margin-top: 10px;
+  float: left;
+}
+
+.catalog2-item a {
+  float: left;
+  font-size: 18pt;
+  text-decoration: none;
 }
 
 .product_details {

@@ -9,38 +9,23 @@ setInterval(function(){
       afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
 }, 3000);
 {
-
-main1 = new Image(654,354);
-
-main1.src = "/images/header1.0.png";
-
-
-product1 = new Image(654,354);
-
-product1.src = "/images/logo.png";
-
-
-installation1 = new Image(654,354);
-
-installation1.src = "/images/header1.1.png";
-
-warranty1 = new Image(654,354);
-
-warranty1.src = "/images/rails.png";
-
+  main1 = new Image(654,354);
+  main1.src = "/images/header1.0.png";
+  product1 = new Image(654,354);
+  product1.src = "/images/header1.0.png";
+  installation1 = new Image(654,354);
+  installation1.src = "/images/header1.1.png";
+  warranty1 = new Image(654,354);
+  warranty1.src = "/images/header1.0.png";
 }
 
 function hiLite(img, imgObjName, comment) {
-
-{
-
-document.images[img].src = eval(imgObjName + ".src");
-
-window.status = comment;
-
-return true;
-
-}}
+  {
+    document.images[img].src = eval(imgObjName + ".src");
+    window.status = comment;
+    return true;
+  }
+}
 </script> 
 <% end %>
 <% content_for :header do %>
@@ -50,36 +35,27 @@ return true;
       <div class="wrapper">
         <div class="col-1">
           <div class="bunners">
-<div class="fadein"
-<a class="home" onMouseOver="hiLite('main','product1','Products')" onMouseOut="hiLite('main','main1','')">
-            <div class="bunner1 bg1">
+            <div class="bunner1 bg1" onMouseOver="hiLite('main','product1','Products')">
               <div class="indent">
                 <h5>Products</h5>
                 <h4>Take a look at our machines</h4>
                 <%= link_to "Read More", products_path, :class => "bunner-link" %>
               </div>
             </div>
-</a>
-</div>
-<a class="home" onMouseOver="hiLite('main','installation1','Installation')" onMouseOut="hiLite('main','main1','')">
-            <div class="bunner bg2">
+            <div class="bunner bg2" onMouseOver="hiLite('main','installation1','Installation')">
               <div class="indent">
                 <h5>Installation</h5>
                 <h4>See how it work</h4>
                 <%= link_to "Read More", installations_path, :class => "bunner-link" %>
               </div>
             </div>
-</a>
-
-<a class="home" onMouseOver="hiLite('main','warranty1','Warranty')" onMouseOut="hiLite('main','main1','')">
-            <div class="bunner bg3">
+            <div class="bunner bg3" onMouseOver="hiLite('main','warranty1','Warranty')">
               <div class="indent">
                 <h5>Warranty</h5>
                 <h4>Learn what we have to offer</h4>
                 <%= link_to "Read More", pages_warranty_path, :class => "bunner-link" %>
               </div>
             </div>
-</a>
           </div>
         </div>
   	<div class="col-2">
