@@ -1,5 +1,11 @@
 class Emailer < ActionMailer::Base
-  def contact_email(email_params)
+ 
+  validates :body,  :presence => true
+  validates :name,  :presence => true
+  validates :subject,  :presence => true
+  validates :address,  :presence => true
+
+ def contact_email(email_params)
     @recipients = "hu_kai_yuan@hotmail.com"
     @from = email_params[:name] + " <" + email_params[:address] + ">"
     @subject = email_params[:subject]

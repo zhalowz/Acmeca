@@ -14,7 +14,7 @@ gem 'nifty-generators'
 gem 'mocha'
 gem 'will_paginate', "~> 3.0.pre2"
 gem 'aws-s3'
-
+gem 'validatable'
 group :development do
   gem 'rspec-rails', '2.0.0.beta.18'
 end
