@@ -8,6 +8,7 @@ class Emailer < ActionMailer::Base
         @sent_on = Time.now
         @body["email_body"] = email_params[:body]
         @body["email_name"] = email_params[:name]
+        @body["email_contact"] = email_params[:contact]
         @body["email_subject"] = email_params[:subject]
 	@body["email_address"] = email_params[:address]
 	@body["email_time"] = Time.now
