@@ -1,4 +1,5 @@
 <% content_for :page_type do %>page1<% end %>
+
 <% content_for :head do %>
 <script> 
 setInterval(function(){
@@ -10,13 +11,13 @@ setInterval(function(){
 }, 3000);
 {
   main1 = new Image(654,354);
-  main1.src = "/images/header1.0.png";
+  main1.src = "/images/header.jpg";
   product1 = new Image(654,354);
-  product1.src = "/images/header1.0.png";
+  product1.src = "/images/header.jpg";
+  service1 = new Image(654,354);
+  service1.src = "/images/header1.jpg";
   installation1 = new Image(654,354);
-  installation1.src = "/images/header1.1.png";
-  warranty1 = new Image(654,354);
-  warranty1.src = "/images/header1.0.png";
+  installation1.src = "/images/header2.jpg";
 }
 
 function hiLite(img, imgObjName, comment) {
@@ -35,21 +36,21 @@ function hiLite(img, imgObjName, comment) {
       <div class="wrapper">
         <div class="col-1">
           <div class="bunners">
-            <div class="bunner1 bg1" onMouseOver="hiLite('main','product1','Products')">
+            <div class="bunner1 bg1" onMouseOver="hiLite('main','product1','Products')" onMouseOut="hiLite('main','main1','')">
               <div class="indent">
                 <h5>Products</h5>
                 <h4>Take a look at our machines</h4>
                 <%= link_to "Read More", products_path, :class => "bunner-link" %>
               </div>
             </div>
-            <div class="bunner bg2" onMouseOver="hiLite('main','installation1','Installation')">
+            <div class="bunner bg2" onMouseOver="hiLite('main','service1','Service')" onMouseOut="('main','main1','')">
               <div class="indent">
                 <h5>Services</h5>
                 <h4>What we proovide</h4>
                 <%= link_to "Read More", services_path, :class => "bunner-link" %>
               </div>
             </div>
-            <div class="bunner bg3" onMouseOver="hiLite('main','warranty1','Warranty')">
+            <div class="bunner bg3" onMouseOver="hiLite('main','installation1','Installation')" onMouseOut="('main','main1','')">
               <div class="indent">
                 <h5>Installations</h5>
                 <h4>How it work</h4>
@@ -59,7 +60,7 @@ function hiLite(img, imgObjName, comment) {
           </div>
         </div>
   	<div class="col-2">
-<img name="main" src="/images/header1.0.png" border="0" width=654 height=354 alt="MainHome"/>
+<img name="main" src="/images/header.jpg" border="0" width=654 height=354 alt="MainHome"/>
 	</div>
       </div>
     </div>
