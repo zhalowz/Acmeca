@@ -1,4 +1,5 @@
 class Emailer < ActionMailer::Base
+
   default :from => "from@example.com"
 
     def contact_email(email_params)

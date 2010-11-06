@@ -1,32 +1,33 @@
 <% content_for :page_type do %>page1<% end %>
-<% content_for :head do %>
-<script> 
-setInterval(function(){
-  var imgs = $$('.fadein img'), 
-   visible = imgs.findAll(function(img){ return img.visible(); });
-  if(visible.length>1) visible.last().fade({ duration: .3 });
-    else imgs.last().appear({ duration: .3, 
-      afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
-}, 3000);
-{
-  main1 = new Image(654,354);
-  main1.src = "/images/header1.0.png";
-  product1 = new Image(654,354);
-  product1.src = "/images/header1.0.png";
-  installation1 = new Image(654,354);
-  installation1.src = "/images/header1.1.png";
-  warranty1 = new Image(654,354);
-  warranty1.src = "/images/header1.0.png";
-}
 
-function hiLite(img, imgObjName, comment) {
-  {
-    document.images[img].src = eval(imgObjName + ".src");
-    window.status = comment;
-    return true;
-  }
-}
-</script> 
+<% content_for :head do %>
+  <script> 
+    setInterval(function(){
+      var imgs = $$('.fadein img'), 
+      visible = imgs.findAll(function(img){ return img.visible(); });
+      if(visible.length>1) visible.last().fade({ duration: .3 });
+      else imgs.last().appear({ duration: .3, 
+        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+    }, 3000);
+    {
+      main1 = new Image(654,354);
+      main1.src = "/images/header.jpg";
+      product1 = new Image(654,354);
+      product1.src = "/images/header.jpg";
+      service1 = new Image(654,354);
+      service1.src = "/images/header1.jpg";
+      installation1 = new Image(654,354);
+      installation1.src = "/images/header2.jpg";
+    }
+
+    function hiLite(img, imgObjName, comment) {
+      {
+        document.images[img].src = eval(imgObjName + ".src");
+        window.status = comment;
+        return true;
+      }
+    }
+  </script> 
 <% end %>
 <% content_for :header do %>
 
@@ -35,115 +36,128 @@ function hiLite(img, imgObjName, comment) {
       <div class="wrapper">
         <div class="col-1">
           <div class="bunners">
-            <div class="bunner1 bg1" onMouseOver="hiLite('main','product1','Products')">
+            <div class="bunner1 bg1" onMouseOver="hiLite('main','product1','Products')" onMouseOut="hiLite('main','main1','')">
               <div class="indent">
                 <h5>Products</h5>
-                <h4>Take a look at our machines</h4>
+                <h4>See what we offer</h4>
                 <%= link_to "Read More", products_path, :class => "bunner-link" %>
               </div>
             </div>
-            <div class="bunner bg2" onMouseOver="hiLite('main','installation1','Installation')">
+            <div class="bunner bg2" onMouseOver="hiLite('main','service1','Service')" onMouseOut="('main','main1','')">
               <div class="indent">
                 <h5>Services</h5>
-                <h4>What we proovide</h4>
+                <h4>Learn how we can help</h4>
                 <%= link_to "Read More", services_path, :class => "bunner-link" %>
               </div>
             </div>
-            <div class="bunner bg3" onMouseOver="hiLite('main','warranty1','Warranty')">
+            <div class="bunner bg3" onMouseOver="hiLite('main','installation1','Installation')" onMouseOut="('main','main1','')">
               <div class="indent">
                 <h5>Installations</h5>
-                <h4>How it work</h4>
+                <h4>Find out how we work</h4>
                 <%= link_to "Read More", installations_path, :class => "bunner-link" %>
               </div>
             </div>
           </div>
         </div>
-  	<div class="col-2">
-<img name="main" src="/images/header1.0.png" border="0" width=654 height=354 alt="MainHome"/>
-	</div>
+        <div class="col-2">
+          <img name="main" src="/images/header.jpg" border="0" width=654 height=354 alt="MainHome"/>
+        </div>
       </div>
     </div>
   </div>
 <% end %>
-  <div class="col-1 col-indent">
-    <div class="box">
-      <h3>About Us</h3>
+<div class="col-1 col-indent">
+  <div class="box">
+    <h3>Our Capabilities</h3>
 
-      <div class="indent">
-        <p>Acmeca Electrical Trading, was established in 1991 by Mr Phua Ee Sen as an Original Equipment Manufacturer. Our Research and Development efforts have resulted in a number of proprietary designs catered for commercial and industrial cooling needs. Acmeca Electrical Trading's products are high pressure misting fans and air cooler designed for a wide variety of various use. Islandfog® products are designed with flexibility and robustness.</p>
-        <p>Our goal is to "Defeat the Heat" by guarantee the highest quality systems and components at the lowest price. Islandfog® products provide you with tools to cool even the most hostile environment.</p>
-      </div>
+    <div class="indent">
+
+      <ul class="list nostyle">
+        <li><a>Set-up done in a day</a><span>We are able to set up the event area and delivery can also be made using the shortest possible time. </span></li>
+
+        <li><a>Best Solution</a><span>We will always provide the best cost andbest proposal to solve our clients air quality issues.</span></li>
+
+        <li><a>High Quality</a><span>We will only provide the best quality products and best service to our clients.</span></li>
+
+        <li><a>High Quantity</a><span>Our products stock would always be sufficient to meet our clients needs.</span></li>
+      </ul>
     </div>
-<!--
-    <form id="form-2" action="">
-      <div class="indent">
-        <strong>Newsletter sign up!</strong>
-
-        <div>
-          <label class="left"><input name="name" value="" /></label>
-          <a class="left" href="#" onclick=
-          "document.getElementById('form-2').submit()"><img src=
-          "images/button1.gif" alt="" /></a> <a href="#" class=
-          "Unsubscribe">Unsubscribe</a>
-        </div>
-      </div>
-    </form>
-  -->
   </div>
+</div>
 
-  <div class="col-2">
-    <h2>The best way to cool down in town</h2>
+<div class="col-2">
+  <h2>The best way to cool down in town</h2>
 
-    <div class="wrapper top4">
-<%#       <a href="#"><img src="images/page1-img1.jpg" alt="" class= %>
+  <div class="wrapper top4">
+    <%#       <a href="#"><img src="images/page1-img1.jpg" alt="" class= %>
       <%# "imgindent" /></a> %>
 
-      <p class="top1"><strong>Great performance, great value</strong></p>
+    <p class="top1"><strong>Great performance, great value</strong></p>
 
-      <p class="top1">Our vast experience and with the fact of customer comments, we try to find the best solution for your Commercial, Industrial, Residential, Agriculture or Sports related applications. We, Acmeca, are committed to satisfy customers needs by providing them quality products and service commitments. Our goal is to become the world-class, leading Manufacturer/Distributor of business and other products, serving land and cyberspace resellers. We expect to achieve this by making fulfillment excellence our above central operating strategy.</p>
-    </div>
+    <p class="top1">Our vast experience and with the fact of customer comments, we try to find the best solution for your Commercial, Industrial, Residential, Agriculture or Sports related applications. We, Acmeca, are committed to satisfy customers needs by providing them quality products and service commitments. Our goal is to become the world-class, leading Manufacturer/Distributor of business and other products, serving land and cyberspace resellers. We expect to achieve this by making fulfillment excellence our above central operating strategy.</p>
+  </div>
 
-    <div class="wrapper top2">
+  <div class="wrapper top2">
     <%#   <a href="#"><img src="images/page1-img2.jpg" alt="" class= %>
       <%# "imgindent" /></a> %>
 
-      <p class="top1"><strong>We strive for perfection</strong></p>
+    <p class="top1"><strong>We strive for perfection</strong></p>
 
-      <p class="top1">We constantly challenge ourselves to continue to be a step ahead in terms of quality products and personalized service. We appreciate your continued support and comments.</p>
-    </div>
-<!--
-    <h2 class="h-top">Storage space for domestic and business needs</h2>
-
-    <div class="wrapper top3-1">
-      <div class="col-indent col-1">
-        <ul class="list2 nostyle">
-          <li><a href="#">At vero eos et accusmus et</a></li>
-
-          <li><a href="#">Idio dignissimos</a></li>
-
-          <li><a href="#">Wolore massa astumed</a></li>
-        </ul>
-      </div>
-
-      <div class="col-indent col-1">
-        <ul class="list2 nostyle">
-          <li><a href="#">Praesent vestibulu</a></li>
-
-          <li><a href="#">Tolestie lacusenean nonumy</a></li>
-
-          <li><a href="#">Cendrerit mauris hasellu</a></li>
-        </ul>
-      </div>
-
-      <div class="col-1">
-        <ul class="list2 nostyle">
-          <li><a href="#">Quisque nullaestibulum</a></li>
-
-          <li><a href="#">Ubero nisl porta vel scelersq</a></li>
-
-          <li><a href="#">Sget malesuada at</a></li>
-        </ul>
-      </div>
-    </div>
--->
+    <p class="top1">We constantly challenge ourselves to continue to be a step ahead in terms of quality products and personalized service. We appreciate your continued support and comments.</p>
   </div>
+  <div class="wrapper top2">
+    <p class="top1"><strong>About us</strong></p>
+    <p class="top1">Acmeca Electrical Trading, was established in 1991 by Mr Phua Ee Sen as an Original Equipment Manufacturer. Our Research and Development efforts have resulted in a number of proprietary designs catered for commercial and industrial cooling needs. Acmeca Electrical Trading's products are high pressure misting fans and air cooler designed for a wide variety of various use. Islandfog® products are designed with flexibility and robustness.</p>
+    <p class="top1">Our goal is to "Defeat the Heat" by guarantee the highest quality systems and components at the lowest price. Islandfog® products provide you with tools to cool even the most hostile environment.</p>
+  </div>
+  <!--
+  <form id="form-2" action="">
+    <div class="indent">
+      <strong>Newsletter sign up!</strong>
+
+      <div>
+        <label class="left"><input name="name" value="" /></label>
+        <a class="left" href="#" onclick=
+          "document.getElementById('form-2').submit()"><img src=
+          "images/button1.gif" alt="" /></a> <a href="#" class=
+          "Unsubscribe">Unsubscribe</a>
+      </div>
+    </div>
+  </form>
+  -->
+  <!--
+  <h2 class="h-top">Storage space for domestic and business needs</h2>
+
+  <div class="wrapper top3-1">
+    <div class="col-indent col-1">
+      <ul class="list2 nostyle">
+        <li><a href="#">At vero eos et accusmus et</a></li>
+
+        <li><a href="#">Idio dignissimos</a></li>
+
+        <li><a href="#">Wolore massa astumed</a></li>
+      </ul>
+    </div>
+
+    <div class="col-indent col-1">
+      <ul class="list2 nostyle">
+        <li><a href="#">Praesent vestibulu</a></li>
+
+        <li><a href="#">Tolestie lacusenean nonumy</a></li>
+
+        <li><a href="#">Cendrerit mauris hasellu</a></li>
+      </ul>
+    </div>
+
+    <div class="col-1">
+      <ul class="list2 nostyle">
+        <li><a href="#">Quisque nullaestibulum</a></li>
+
+        <li><a href="#">Ubero nisl porta vel scelersq</a></li>
+
+        <li><a href="#">Sget malesuada at</a></li>
+      </ul>
+    </div>
+  </div>
+  -->
+</div>
