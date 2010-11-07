@@ -45,7 +45,7 @@ padding-top:18px;
 .bot1 {padding-bottom:9px;}
 .bot2 {padding-bottom:16px;}
 
-.wrapper {width:100%; overflow:hidden;}
+.wrapper {width:100%; overflow:hidden; position: relative;}
 
 .phone {display:inline-block; width:81px;}
 .phone1 {display:inline-block; width:142px;}
@@ -58,11 +58,17 @@ padding-top:18px;
 }
 	.logo a {
 		display:block;
-		height:38px;
+		height:48px;
 		width:255px;
 		text-indent:-5000px;
 		background:url(../images/logo.png) left top no-repeat;
 	}
+.tagline {
+  position: absolute;
+  left: 0px;
+  top: 70px;
+  color: #eee;
+}
 .col-2 h2 {
 padding:16px 0 0;
 }
