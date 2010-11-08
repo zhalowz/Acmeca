@@ -2,6 +2,22 @@
 
 <% content_for :head do %>
   <script> 
+    function hideAll() {
+    $('main1').addClassName('hidden');
+    $('main1').removeClassName('fadein');
+    $('main2').addClassName('hidden');
+    $('main2').removeClassName('fadein');
+    $('main3').addClassName('hidden');
+    $('main3').removeClassName('fadein');
+    };
+
+    function show(item) {
+    hideAll();
+    item.toggleClassName('hidden');
+    item.toggleClassName('fadein');
+    };
+
+    document.observe('dom:loaded',function() {
     setInterval(function(){
       var imgs = $$('.fadein img'), 
       visible = imgs.findAll(function(img){ return img.visible(); });
@@ -9,24 +25,21 @@
       else imgs.last().appear({ duration: .3, 
         afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
     }, 3000);
-    {
-      main1 = new Image(654,354);
-      main1.src = "/images/header.jpg";
-      product1 = new Image(654,354);
-      product1.src = "/images/header.jpg";
-      service1 = new Image(654,354);
-      service1.src = "/images/header1.jpg";
-      installation1 = new Image(654,354);
-      installation1.src = "/images/header2.jpg";
-    }
 
-    function hiLite(img, imgObjName, comment) {
-      {
-        document.images[img].src = eval(imgObjName + ".src");
-        window.status = comment;
-        return true;
-      }
-    }
+    show($('main1'));
+
+    Event.observe($('bg1'), 'mouseover', function(){show($('main1'));});
+    Event.observe($('bg2'), 'mouseover', function(){show($('main2'));});
+    Event.observe($('bg3'), 'mouseover', function(){show($('main3'));});
+
+    setInterval(function(){
+      var imgs = $$('.fadein img'), 
+      visible = imgs.findAll(function(img){ return img.visible(); });
+      if(visible.length>1) visible.last().fade({ duration: .3 });
+      else imgs.last().appear({ duration: .3, 
+        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+    }, 3000);
+  });
   </script> 
 <% end %>
 <% content_for :header do %>
@@ -36,21 +49,21 @@
       <div class="wrapper">
         <div class="col-1">
           <div class="bunners">
-            <div class="bunner1 bg1" onMouseOver="hiLite('main','product1','Products')" onMouseOut="hiLite('main','main1','')">
+            <div id="bg1" class="bunner1 bg1">
               <div class="indent">
                 <h5>Products</h5>
                 <h4>See what we offer</h4>
                 <%= link_to "Read More", products_path, :class => "bunner-link" %>
               </div>
             </div>
-            <div class="bunner bg2" onMouseOver="hiLite('main','service1','Service')" onMouseOut="('main','main1','')">
+            <div id="bg2" class="bunner bg2">
               <div class="indent">
                 <h5>Services</h5>
                 <h4>Learn how we can help</h4>
                 <%= link_to "Read More", services_path, :class => "bunner-link" %>
               </div>
             </div>
-            <div class="bunner bg3" onMouseOver="hiLite('main','installation1','Installation')" onMouseOut="('main','main1','')">
+            <div id="bg3" class="bunner bg3">
               <div class="indent">
                 <h5>Installations</h5>
                 <h4>Find out how we work</h4>
@@ -60,7 +73,21 @@
           </div>
         </div>
         <div class="col-2">
-          <img name="main" src="/images/header.jpg" border="0" width=654 height=354 alt="MainHome"/>
+          <div id="main1" class="fadein"> 
+            <img src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg"> 
+            <img src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg"> 
+            <img src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg"> 
+          </div> 
+          <div id="main2" class="fadein"> 
+            <img src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg"> 
+            <img src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg"> 
+            <img src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg"> 
+          </div> 
+          <div id="main3" class="fadein"> 
+            <img src="http://farm3.static.flickr.com/2531/4121218751_ac8bf49d5d.jpg"> 
+            <img src="http://farm3.static.flickr.com/2597/4121218611_040cd7b3f2.jpg"> 
+            <img src="http://farm3.static.flickr.com/2610/4148988872_990b6da667.jpg"> 
+          </div> 
         </div>
       </div>
     </div>
