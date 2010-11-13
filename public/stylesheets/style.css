@@ -5,7 +5,8 @@
 	font-size:100%;
 }
 
-body{background:#01182a; text-align:center; min-width:1000px;}
+body{background:#01182a; text-align:center; min-width:1000px;
+}
 
 img {vertical-align:top;}
 a img {border:0;}
@@ -92,6 +93,7 @@ h3 {
 	padding-bottom:11px;
 	margin-bottom:18px;
 }
+
 .h-top {padding-top:60px;}
 .h-top1 {padding-top:40px;}
 .h-top2 {padding-top:64px;}

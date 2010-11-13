@@ -45,7 +45,10 @@ p {
   padding-top: 0.5em;
   padding-bottom: 0.5em;
 }
-
+img.grass {
+	background:url(../images/GrassFooter.jpg);
+        background-repeat:repeat-x;
+}
 sub, sup {
   font-size: 70%;
 }
@@ -62,6 +65,8 @@ div.desc
 {
   float: left;
 }
+
+
 
 /********************/
 .catalog1, .catalog2 {
