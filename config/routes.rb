@@ -1,9 +1,9 @@
 Acmeca::Application.routes.draw do
 
-  resources :albums, :services, :products, :installations, :categories, :only => [:index, :show]
+  resources :albums, :services, :products, :installations, :categories, :sales, :rentals, :only => [:index, :show]
 
   namespace "manage" do
-    resources :albums, :services, :products, :categories, :installations
+    resources :albums, :services, :products, :categories, :installations, :rentals, :sales
   end
 
   resources :manage

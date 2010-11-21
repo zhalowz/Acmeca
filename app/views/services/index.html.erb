@@ -1,5 +1,10 @@
 <h1>Services</h1>
 <br/>
+<%= link_to "Rental", rentals_path %>
+<%= link_to "Sales/Purchase", sales_path %>
+<%= link_to "Service & Maintenance", services_path %>
+<%= link_to "Warranty", pages_warranty_path %><br/>
+<br/>
 <% for service in @service %> 
   <strong><h3><%= service.header %></h3></strong>
    <p><%= sanitize(redcloth(service.description)) %></p><br/>
