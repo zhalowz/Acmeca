@@ -1,0 +1,15 @@
+<h1>Rentals Display</h1>
+<div class="services">
+  <% for rental in @rentals %>
+      <p class="service">
+        <%= rental.header %>
+        <%= sanitize(redcloth(rental.description)) %>
+      </p>
+    <div class="actions">
+    <%= link_to 'Edit', edit_manage_rental_path(rental) %> |
+    <%= link_to "Delete", manage_rental_path(rental), :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  <% end %>
+</div>
+<p><%= link_to 'Back', manage_index_path %></p>
+

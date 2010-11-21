@@ -1,0 +1,14 @@
+<h1>Sales Display</h1>
+<div class="services">
+  <% for sale in @sales %>
+      <p class="service">
+        <%= sale.header %>
+        <%= sanitize(redcloth(sale.description)) %>
+      </p>
+    <div class="actions">
+    <%= link_to 'Edit', edit_manage_sale_path(sale) %> |
+    <%= link_to "Delete", manage_sale_path(sale), :confirm => 'Are you sure?', :method => :delete %>
+    </div>
+  <% end %>
+</div>
+<p><%= link_to 'Back', manage_index_path %></p>

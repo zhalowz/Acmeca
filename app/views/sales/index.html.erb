@@ -1,0 +1,11 @@
+<h1>Sales/Purchase</h1>
+<br/>
+<%= link_to "Rental", rentals_path %>
+<%= link_to "Sales/Purchase", sales_path %>
+<%= link_to "Service & Maintenance", services_path %>
+<%= link_to "Warranty", pages_warranty_path %><br/>
+<br/>
+<% for sales in @sales %> 
+  <strong><h3><%= sales.header %></h3></strong>
+   <p><%= sanitize(redcloth(sales.description)) %></p><br/>
+<% end %>

@@ -1,0 +1,12 @@
+<%= render :partial => 'layouts/error_messages', :locals => { :c => @rental } %>
+<div class="field">
+  <%= f.label :header %><br />
+  <%= f.text_field :header, { :class => "title" } %>
+</div>
+<div class="field">
+  <%= f.label :description %><br />
+  <%= f.text_area :description %>
+</div>
+<div class="actions">
+  <%= f.submit %>
+</div>

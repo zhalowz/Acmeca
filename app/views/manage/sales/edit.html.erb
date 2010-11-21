@@ -1,0 +1,7 @@
+<%= form_for @sale, :url => manage_sale_path(@sale), :html => { :multipart => true } do |f| %>
+<fieldset>
+  <legend>Edit sales</legend>
+  <%= render :partial => "form", :locals => { :f => f } %>
+</fieldset>
+<% end %>
+<%= link_to 'Back', manage_sales_path %>

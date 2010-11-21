@@ -1,0 +1,7 @@
+<%= form_for @rental, :url => { :action => :create }, :html => { :multipart => true } do |f| %>
+  <fieldset>
+    <legend>Create Rental</legend>
+    <%= render :partial => "form", :locals => { :f => f } %>
+  </fieldset>
+<% end %>
+<%= link_to 'Back', manage_index_path %> 
