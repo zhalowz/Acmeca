@@ -145,3 +145,9 @@ div.desc
 font-size: 115%; 
 line-height: 25px;
 }
+
+.categories {
+  padding: 20px;
+  line-height: 24px;
+  font-size: 14px;
+}

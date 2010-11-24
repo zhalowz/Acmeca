@@ -1,19 +1,27 @@
-Categories:
-<%= link_to "All", products_path %>
-<% for category in @categories %>
-<%= link_to category.name, category %>
-<% end %>
-<%= will_paginate @products %>
-<div class="catalog2">
-<% for product in @products %>
-  <div class="catalog2-item">
-    <%= link_to image_tag(product.photo.url(:small)), product, { :class => "catalog2-img"}  %>
-    <div class="details">
-      <%= link_to product.name, product %>
-      <br />
-      <%= sanitize(redcloth(product.description)) %>
-    </div>
+<div class="col-1 col-indent">
+  <div class="box">
+    <h3>Categories</h3>
+    <ul class="nostyle categories">
+      <li><%= link_to "All", products_path %></li>
+      <% for category in @categories %>
+        <li>
+        <%= link_to category.name, category %>
+        </li>
+      <% end %>
+    </ul>
   </div>
-<% end %>
+</div>
+<%= will_paginate @products %>
+<div class="col-2">
+  <% for product in @products %>
+    <div class="catalog2-item">
+      <%= link_to image_tag(product.photo.url(:small)), product, { :class => "catalog2-img"}  %>
+      <div class="details">
+        <%= link_to product.name, product %>
+        <br />
+        <%= sanitize(redcloth(product.description)) %>
+      </div>
+    </div>
+  <% end %>
 </div>
 <%= will_paginate @products %>
