@@ -151,3 +151,9 @@ line-height: 25px;
   line-height: 24px;
   font-size: 14px;
 }
+
+.contacts-left { width: 420px; float: left; }
+
+.field_with_errors > input,
+.field_with_errors > textarea { background: #FBE3E4; }
+.field_with_errors > label:before { content: "*"; color: red }

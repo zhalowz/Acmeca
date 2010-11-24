@@ -12,7 +12,7 @@ class Emailer < ActionMailer::Base
         @body["email_contact"] = email_params[:contact]
         @body["email_subject"] = email_params[:subject]
 	@body["email_address"] = email_params[:address]
-	@body["email_time"] = Time.now
+	@body["email_time"] = @sent_on
         content_type "text/html"
     end
 end

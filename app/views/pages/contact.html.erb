@@ -1,63 +1,49 @@
-<h1> Contact Us </h1>
+<%= render :partial => 'layouts/error_messages', :locals => { :c => @email } %>
+<div class="contacts-left">
+  <h1> Contact Us </h1>
 
-<table>
-<%= form_tag :action => "send_mail" do %>      
-<tr align=left>  
-<td>
-	<table>	        
-	<tr>1 Yishun St 23 #03-25</tr><br/>
-	<tr>YS-One Singapore 768441</tr><br/>
-	<tr>Office: (65)-67553933</tr><br/>
-	<tr>Fax: (65)- 67555319</tr><br/>
-	<tr>Directions: Bus 811 from Yishun Bus interchange</tr>
-	<tr>
-		<td>
-	<iframe width="300" height="300" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=Yishun+St+23,+Singapore&amp;sll=37.0625,-95.677068&amp;sspn=41.818029,92.8125&amp;ie=UTF8&amp;s=ABQIAAAA8wxcNXL5MYluvSTN5quHhRR5SAI2ndD6iMe-P7c1-pJihDhXxQeoYpQOaVjfMXbcWvrQizE6BA&amp;ll=1.449097,103.84655&amp;spn=0.025741,0.025749&amp;z=14&amp;iwloc=addr&amp;output=embed"></iframe>
-		</td>
-	</tr>
-	</table>
-</td>
+  <h3>Where to find us:</h3>
+  <p>
+  1 Yishun St 23 #03-25<br/>
+  YS-One Singapore 768441<br/>
+  Office: (65)-67553933<br/>
+  Fax: (65)- 67555319<br/>
+  Directions: Bus 811 from Yishun Bus interchange
+  </p>
 
-<td>
-<table>
-	<tr>
-	<td><strong>Enquiry Form</strong></td>
-	</tr>
-<br/>
-	<tr>
-	<td><%= label :email, :name, "Name:" %></td>
-	<td><%= text_field :email, :name %></td>
-	</tr>
-<br/>
-	<tr>
-	<td><%= label :email, :contact, "Contact:" %></td>
-	<td><%= text_field :email, :contact %></td>
-	</tr>
-<br/>
-	<tr>
-	<td><%= label :email, :address, "Email:" %></td>
-	<td><%= text_field :email, :address %></td>
-	</tr>
-<br/>
-	<tr>
-	<td><%= label :email, :subject, "Subject:" %></td>
-	<td><%= text_field :email, :subject %></td>
-	</tr>
-<br/>   
-	<tr>
-        <td><%= label :email, :body, "Message:" %></td>
-        <td><%= text_area :email, :body, :rows => 8, :cols=> 20 %></td>
-	</tr>
-<br/>
+  <iframe width="400" height="400" frameborder="1" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;hl=en&amp;geocode=&amp;q=Yishun+St+23,+Singapore&amp;sll=37.0625,-95.677068&amp;sspn=41.818029,92.8125&amp;ie=UTF8&amp;s=ABQIAAAA8wxcNXL5MYluvSTN5quHhRR5SAI2ndD6iMe-P7c1-pJihDhXxQeoYpQOaVjfMXbcWvrQizE6BA&amp;ll=1.449097,103.84655&amp;spn=0.025741,0.025749&amp;z=14&amp;iwloc=addr&amp;output=embed"></iframe>
+</div>
+<div class="contacts-right">
+  <%= form_tag :action => "send_mail" do %>      
+    <fieldset>
+      <strong>Enquiry Form</strong>
 
-        <tr>
-	<td></td>
-        <td><%= submit_tag "Send"%></td>
-        </tr>
-        <% end %>
-</table>
-</td>
-</tr>
-                  </table>
+      <p>
+      <%= label :email, :name, "Name:" %><br />
+      <%= text_field :email, :name, { :class => "title" }%>
+      </p>
 
+      <p>
+      <%= label :email, :contact, "Contact:" %><br />
+      <%= text_field :email, :contact, { :class => "text" } %>
+      </p>
 
+      <p>
+      <%= label :email, :address, "Email:" %><br />
+      <%= text_field :email, :address, { :class => "text" } %>
+      </p>
+
+      <p>
+      <%= label :email, :subject, "Subject:" %><br />
+      <%= text_field :email, :subject, { :class => "text" } %>
+      </p>
+
+      <p>
+      <%= label :email, :body, "Message:" %><br />
+      <%= text_area :email, :body, :rows => 8, :cols=> 20 %>
+      </p>
+
+      <p class="actions"><%= submit_tag "Send"%></p>
+    </fieldset>
+  <% end %>
+</div>
