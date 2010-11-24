@@ -16,11 +16,11 @@
 <div class="contacts-right">
   <%= form_tag :action => "send_mail" do %>      
     <fieldset>
-      <strong>Enquiry Form</strong>
+      <legend>Enquiry Form</legend>
 
       <p>
       <%= label :email, :name, "Name:", { :class => "required" } %><br />
-      <%= text_field :email, :name, { :class => "title " }%>
+      <%= text_field :email, :name, { :class => "title" }%>
       </p>
 
       <p>
@@ -30,7 +30,7 @@
 
       <p>
       <%= label :email, :address, "Email:", { :class => "required" } %><br />
-      <%= text_field :email, :address, { :class => "text " } %>
+      <%= text_field :email, :address, { :class => "text" } %>
       </p>
 
       <p>
