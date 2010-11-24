@@ -156,4 +156,4 @@ line-height: 25px;
 
 .field_with_errors > input,
 .field_with_errors > textarea { background: #FBE3E4; }
-.field_with_errors > label:before { content: "*"; color: red }
+.required:before { content: "*"; color: red }

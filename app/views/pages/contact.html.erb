@@ -19,8 +19,8 @@
       <strong>Enquiry Form</strong>
 
       <p>
-      <%= label :email, :name, "Name:" %><br />
-      <%= text_field :email, :name, { :class => "title" }%>
+      <%= label :email, :name, "Name:", { :class => "required" } %><br />
+      <%= text_field :email, :name, { :class => "title " }%>
       </p>
 
       <p>
@@ -29,17 +29,17 @@
       </p>
 
       <p>
-      <%= label :email, :address, "Email:" %><br />
-      <%= text_field :email, :address, { :class => "text" } %>
+      <%= label :email, :address, "Email:", { :class => "required" } %><br />
+      <%= text_field :email, :address, { :class => "text " } %>
       </p>
 
       <p>
-      <%= label :email, :subject, "Subject:" %><br />
+      <%= label :email, :subject, "Subject:", { :class => "required" } %><br />
       <%= text_field :email, :subject, { :class => "text" } %>
       </p>
 
       <p>
-      <%= label :email, :body, "Message:" %><br />
+      <%= label :email, :body, "Message:", { :class => "required" } %><br />
       <%= text_area :email, :body, :rows => 8, :cols=> 20 %>
       </p>
 
