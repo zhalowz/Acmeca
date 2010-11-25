@@ -1,11 +1,19 @@
 <h1>Sales/Purchase</h1>
 <br/>
-<%= link_to "Rental", rentals_path %>
-<%= link_to "Sales/Purchase", sales_path %>
-<%= link_to "Service & Maintenance", services_path %>
-<%= link_to "Warranty", pages_warranty_path %><br/>
-<br/>
+<div class="col-1 col-indent">
+  <div class="box">
+    <h3>Menu</h3>
+    <ul class="nostyle categories">
+<li><%= link_to "Rental", rentals_path %></li>
+<li><%= link_to "Sales/Purchase", sales_path %></li>
+<li><%= link_to "Service & Maintenance", services_path %></li>
+<li><%= link_to "Warranty", pages_warranty_path %></li><br/>
+    </ul>
+</div>
+</div>
+<div class="col-2">
 <% for sales in @sales %> 
   <strong><h3><%= sales.header %></h3></strong>
    <p><%= sanitize(redcloth(sales.description)) %></p><br/>
 <% end %>
+</div>

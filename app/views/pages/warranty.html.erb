@@ -1,11 +1,17 @@
 <h1>Warranty</h1>
 <br/>
-<%= link_to "Rentals", rentals_path %>
-<%= link_to "Sales/Purchase", sales_path %>
-<%= link_to "Service & Maintenance", services_path %>
-<%= link_to "Warranty", pages_warranty_path %>
-<br/>
-<br/>
+<div class="col-1 col-indent">
+  <div class="box">
+    <h3>Menu</h3>
+    <ul class="nostyle categories">
+<li><%= link_to "Rental", rentals_path %></li>
+<li><%= link_to "Sales/Purchase", sales_path %></li>
+<li><%= link_to "Service & Maintenance", services_path %></li>
+<li><%= link_to "Warranty", pages_warranty_path %></li><br/>
+    </ul>
+</div>
+</div>
+<div class="col-2">
 <Strong>LIMITED WARRANTY</strong>
 <br/>
 <p>This warranty is extended to the original purchaser of an evaporative cooler installed and used under normal conditions. It does not cover damages incurred through accident, neglect, or abuse by the owner. We do not authorize any person or representative to assume for us any other or different liability in connection with this product.</p>
@@ -20,4 +26,4 @@ For One Year from date of installation, we will replace any original component p
 <p>We are not responsible for replacement of cooler pads. These are disposable components and should be replaced periodically.
 We are not responsible for any incidental or consequential damage resulting from any malfunction.
 We are not responsible for any damage received from the use of water softeners, chemicals, descale material, plastic wrap, or if a motor of a higher horsepower than what is shown on the serial plate is used in the unit.</p>
-
+</div>
