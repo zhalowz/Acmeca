@@ -14,6 +14,8 @@
 <div class="col-2">
 <% for sales in @sales %> 
   <strong><h3><%= sales.header %></h3></strong>
+  <div class="prod_description">
    <p><%= sanitize(redcloth(sales.description)) %></p><br/>
+  </div>	
 <% end %>
 </div>

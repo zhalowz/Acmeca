@@ -14,6 +14,8 @@
 <div class="col-2">
 <% for rental in @rentals %> 
   <strong><h3><%= rental.header %></h3></strong>
+  <div class="prod_description">
    <p><%= sanitize(redcloth(rental.description)) %></p><br/>
+   </div>
 <% end %>
 </div>

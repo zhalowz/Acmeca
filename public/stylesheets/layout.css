@@ -21,7 +21,7 @@
 #page1 #header {height:530px;}
 #page1 #content {margin-top:10px;}
 #page1 .col-1 {width:285px;}
-#page1 .col-2 {width:618px;}
+#page1 .col-2 {width:618px; height:auto;}
 #page1 .col-2 .col-1 {width:178px;}
 #page1 .row-2 .col-1 {width:263px}
 /* ============================= page2 ===========================*/
