@@ -15,7 +15,9 @@
 <div class="col-2">
 <% for service in @service %> 
   <strong><h3><%= service.header %></h3></strong>
+<br/>
+  <div class="prod_description">
    <p><%= sanitize(redcloth(service.description)) %></p><br/>
+</div>
 <% end %>
 </div>
-
