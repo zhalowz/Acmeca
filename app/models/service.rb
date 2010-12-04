@@ -4,4 +4,5 @@ class Service < ActiveRecord::Base
 	    :presence => true,
 	    :uniqueness => true
 
+  validates :description, :length => { :maximum => 10000 }
 end

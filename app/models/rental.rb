@@ -4,4 +4,5 @@ class Rental < ActiveRecord::Base
   validates :header, 
 	    :presence => true,
 	    :uniqueness => true
+  validates :description, :length => { :maximum => 10000 }
 end
