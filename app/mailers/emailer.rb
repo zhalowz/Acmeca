@@ -4,14 +4,14 @@ class Emailer < ActionMailer::Base
 
     def contact_email(email_params)
         @recipients = "hu_kai_yuan@hotmail.com"
-        @from = email_params[:name] + " <" + email_params[:address] + ">"
-        @subject = email_params[:subject]
+        @from = email_params.name + " <" + email_params.address + ">"
+        @subject = email_params.subject
         @sent_on = Time.now
-        @body["email_body"] = email_params[:body]
-        @body["email_name"] = email_params[:name]
-        @body["email_contact"] = email_params[:contact]
-        @body["email_subject"] = email_params[:subject]
-	@body["email_address"] = email_params[:address]
+        @body["email_body"] = email_params.body
+        @body["email_name"] = email_params.name
+        @body["email_contact"] = email_params.contact
+        @body["email_subject"] = email_params.subject
+	@body["email_address"] = email_params.address
 	@body["email_time"] = @sent_on
         content_type "text/html"
     end

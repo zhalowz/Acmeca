@@ -6,11 +6,11 @@ class PagesController < ApplicationController
   end
 
   def contact
-    @email = Email.new
+    @email = Email.new("","","","","")
   end
 
   def send_mail
-    @email = Email.new(params[:email])
+    @email = Email.new(params[:email][:name],params[:email][:address],params[:email][:contact],params[:email][:subject],params[:email][:body])
     if @email.valid?
       Emailer::deliver_contact_email(@email)
       flash[:success]="Email was succesfully sent."
