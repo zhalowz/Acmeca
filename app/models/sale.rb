@@ -4,5 +4,5 @@ class Sale < ActiveRecord::Base
   validates :header, 
 	    :presence => true,
 	    :uniqueness => true
-  validates :description, :length => { :maximum => 10000 }
+  validates :description, :length => { :maximum => 1000 }
 end

@@ -3,7 +3,7 @@ class Emailer < ActionMailer::Base
   default :from => "from@example.com"
 
     def contact_email(email_params)
-        @recipients = "hu_kai_yuan@hotmail.com"
+        @recipients = "acmeca@singnet.com.sg"
         @from = email_params.name + " <" + email_params.address + ">"
         @subject = email_params.subject
         @sent_on = Time.now
