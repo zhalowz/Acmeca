@@ -1,7 +1,7 @@
 class CreateSales < ActiveRecord::Migration
   def self.up
     create_table :sales do |t|
-      t.text :description
+      t.string :description
       t.string :header
 
       t.timestamps
