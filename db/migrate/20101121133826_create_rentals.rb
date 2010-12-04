@@ -1,8 +1,8 @@
 class CreateRentals < ActiveRecord::Migration
   def self.up
     create_table :rentals do |t|
-      t.string :header
-      t.string :description
+     t.string :header
+      t.text :description
 
       t.timestamps
     end
