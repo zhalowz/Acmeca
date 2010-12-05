@@ -51,9 +51,9 @@ padding-top:18px;
 .phone {display:inline-block; width:81px;}
 .phone1 {display:inline-block; width:142px;}
 #rightname {
-	float:right;
+	float:left;
 	margin:44px 0px 0px 0;	
-	width:300px;
+	width:400px;
  	color: #eee;
 	font-size:20px;
 }
