@@ -36,6 +36,8 @@ padding-top:18px;
 
 .top {padding-top:4px;}
 .top1 {padding-top:8px;}
+.top6 {padding-top:8px;
+	color:#515151;}
 .top1-1 {padding-top:14px;}
 .top2 {padding-top:19px;}
 .top3-1 {padding-top:23px;}
@@ -276,9 +278,15 @@ h3 {
 		font-size:12px;
 		line-height:28px;
 		background:url(../images/list1-li-bg.gif) 0 bottom repeat-x;
+			color:#7FFF00;
+	}
+	.list11 li {
+		font-size:12px;
+		line-height:28px;
+		color:#7FFF00;
 	}
 		.list1 a {
-			color:#7c7c7c;
+			color:#7FFF00;
 			text-decoration:none;
 			background:url(../images/list1-a-bg.gif) 0 5px no-repeat;
 			padding-left:12px;
