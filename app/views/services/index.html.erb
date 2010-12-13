@@ -1,37 +1,14 @@
 <% content_for :head do %>
-
- <script> 
-    function hideAll() {
-    $('main1').addClassName('hidden');
-    $('main1').removeClassName('fadein');
-    };
-
-    function show(item) {
-    hideAll();
-    item.toggleClassName('hidden');
-    item.toggleClassName('fadein');
-    };
-document.observe('dom:loaded',function() {
-    setInterval(function(){
-      var imgs = $$('.fadein img'), 
-      visible = imgs.findAll(function(img){ return img.visible(); });
-      if(visible.length>1) visible.last().fade({ duration: .3 });
-      else imgs.last().appear({ duration: .3, 
-        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
-    }, 3000);
-
-    show($('main1'));
- Event.observe($('bg1'), function(){show($('main1'));});
-
-
-    setInterval(function(){
-      var imgs = $$('.fadein img'), 
-      visible = imgs.findAll(function(img){ return img.visible(); });
-      if(visible.length>1) visible.last().fade({ duration: .3 });
-      else imgs.last().appear({ duration: .3, 
-        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
- }, 3000);
-  });
+  <script> 
+    document.observe('dom:loaded',function() {
+      setInterval(function(){
+        var imgs = $$('.fadein img'), 
+        visible = imgs.findAll(function(img){ return img.visible(); });
+        if(visible.length>1) visible.last().fade({ duration: .3 });
+        else imgs.last().appear({ duration: .3, 
+          afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+      }, 3000);
+    });
   </script>
 <% end %>
 
@@ -42,26 +19,26 @@ document.observe('dom:loaded',function() {
   <div class="box">
     <h3>Menu</h3>
     <ul class="nostyle categories">
-<li><%= link_to "Rental", rentals_path %></li>
-<li><%= link_to "Sales/Purchase", sales_path %></li>
-<li><%= link_to "Service & Maintenance", services_path %></li>
-<li><%= link_to "Warranty", pages_warranty_path %></li><br/>
+      <li><%= link_to "Rental", rentals_path %></li>
+      <li><%= link_to "Sales/Purchase", sales_path %></li>
+      <li><%= link_to "Service & Maintenance", services_path %></li>
+      <li><%= link_to "Warranty", pages_warranty_path %></li><br/>
     </ul>
   </div>
-	<div class="col-2">
-          <div id="main1" class="fadein">
-            <img src="images/header.jpg">
-            <img src="images/Air-Cooler.jpg">
-            <img src="images/MistingLine.jpg">
-          </div>
-	</div>
+  <div class="col-2">
+    <div id="main1" class="fadein">
+      <img src="images/header.jpg">
+      <img src="images/Air-Cooler.jpg">
+      <img src="images/MistingLine.jpg">
+    </div>
+  </div>
 </div> 
 <div class="col-2">
-<% for service in @service %> 
-  <strong><h3><%= service.header %></h3></strong>
-<br/>
-  <div class="prod_description">
-   <p><%= sanitize(redcloth(service.description)) %></p><br/>
-</div>
-<% end %>
+  <% for service in @service %> 
+    <strong><h3><%= service.header %></h3></strong>
+    <br/>
+    <div class="prod_description">
+      <p><%= sanitize(redcloth(service.description)) %></p><br/>
+    </div>
+  <% end %>
 </div>
