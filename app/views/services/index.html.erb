@@ -1,3 +1,40 @@
+<% content_for :head do %>
+
+ <script> 
+    function hideAll() {
+    $('main1').addClassName('hidden');
+    $('main1').removeClassName('fadein');
+    };
+
+    function show(item) {
+    hideAll();
+    item.toggleClassName('hidden');
+    item.toggleClassName('fadein');
+    };
+document.observe('dom:loaded',function() {
+    setInterval(function(){
+      var imgs = $$('.fadein img'), 
+      visible = imgs.findAll(function(img){ return img.visible(); });
+      if(visible.length>1) visible.last().fade({ duration: .3 });
+      else imgs.last().appear({ duration: .3, 
+        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+    }, 3000);
+
+    show($('main1'));
+ Event.observe($('bg1'), function(){show($('main1'));});
+
+
+    setInterval(function(){
+      var imgs = $$('.fadein img'), 
+      visible = imgs.findAll(function(img){ return img.visible(); });
+      if(visible.length>1) visible.last().fade({ duration: .3 });
+      else imgs.last().appear({ duration: .3, 
+        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+ }, 3000);
+  });
+  </script>
+<% end %>
+
 <h1>Service & Maintenance</h1>
 <br/>
 
@@ -11,7 +48,14 @@
 <li><%= link_to "Warranty", pages_warranty_path %></li><br/>
     </ul>
   </div>
-</div>
+	<div class="col-2">
+          <div id="main1" class="fadein">
+            <img src="images/header.jpg">
+            <img src="images/Air-Cooler.jpg">
+            <img src="images/MistingLine.jpg">
+          </div>
+	</div>
+</div> 
 <div class="col-2">
 <% for service in @service %> 
   <strong><h3><%= service.header %></h3></strong>
