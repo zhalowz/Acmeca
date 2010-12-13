@@ -1,0 +1,53 @@
+<% content_for :head do %>
+  <script> 
+    document.observe('dom:loaded',function() {
+      setInterval(function(){
+        var imgs = $$('.fadein img'), 
+        visible = imgs.findAll(function(img){ return img.visible(); });
+        if(visible.length>1) visible.last().fade({ duration: .3 });
+        else imgs.last().appear({ duration: .3, 
+          afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+      }, 3000);
+    });
+  </script>
+<% end %>
+
+<h1>How it Work - Misting System</h1>
+<br/>
+<div class="col-1 col-indent">
+  <div class="box">
+    <h3>Menu</h3>
+    <ul class="nostyle categories">
+<li><%= link_to "Air Cooler", installations_path %></li>
+<li><%= link_to "Misting System", installations_index2_path %></li>
+    </ul>
+</div>
+</div>
+<div class="col-1 col-indent">
+<h3>Misting Line:</h3>
+<p>Misting line is designed to create a cooling effect of a specific area. To be able to include any amount of noozles to increase the cooling effective.</p>
+<p> The cooling effect is provided through 'flash evaporation', where the noozles would produced tiny droplets that would create a fog to cool the specific area surrounding. These fog would absorb the surrounding heat and evaporate to create the cooling effect. </p>
+</div>
+        <div class="col-5">
+<div id="main1" class="fadein">
+      <img src="/images/islandfoglogo.jpg">
+      <img src="/images/islandfoglogo.jpg">
+      <img src="/images/islandfoglogo.jpg">
+</div>
+	</div>
+
+<br/>
+<div class="col-4 col-indent3">
+<br/>
+<h3>Misting Fans:</h3>
+<p>Misting fans is designed to be installed in the sidewalls of a buildings. It uses the 'Evaporative cooling' technique which the tiny water droplet would evaporate to lower the surrounding temperature.</p>
+<p> The advantages of using a misting fans is that it is less expensive than air conditioning environment and people are able to enjoy fresher air. 
+<p></div>
+
+	<div class="col-5">
+<div id="main1" class="fadein">
+      <img src="/images/islandfoglogo.jpg">
+      <img src="/images/islandfoglogo.jpg">
+      <img src="/images/islandfoglogo.jpg">
+</div>
+	</div>
