@@ -1,3 +1,17 @@
+<% content_for :head do %>
+  <script> 
+    document.observe('dom:loaded',function() {
+      setInterval(function(){
+        var imgs = $$('.fadein img'), 
+        visible = imgs.findAll(function(img){ return img.visible(); });
+        if(visible.length>1) visible.last().fade({ duration: .3 });
+        else imgs.last().appear({ duration: .3, 
+          afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
+      }, 3000);
+    });
+  </script>
+<% end %>
+
 <h1>Sales/Purchase</h1>
 <br/>
 <div class="col-1 col-indent">
@@ -10,6 +24,13 @@
 <li><%= link_to "Warranty", pages_warranty_path %></li><br/>
     </ul>
 </div>
+<div class="col-2">
+    <div id="main1" class="fadein">
+      <img src="/images/islandfoglogo.jpg">
+      <img src="/images/islandfoglogo.jpg">
+      <img src="/images/islandfoglogo.jpg">
+    </div>
+  </div>
 </div>
 <div class="col-2">
 <% for sales in @sales %> 

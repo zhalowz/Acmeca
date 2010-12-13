@@ -6,4 +6,8 @@ class InstallationsController < ApplicationController
   def show
     @installation = Installation.find(params[:id])
   end
+
+  def index2
+    @installation = Installation.all
+  end
 end
