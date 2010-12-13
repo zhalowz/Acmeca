@@ -7,7 +7,6 @@ class CreateRentals < ActiveRecord::Migration
       t.timestamps
     end
   end
-end
 
   def self.down
     drop_table :rentals
