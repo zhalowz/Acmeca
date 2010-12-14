@@ -36,6 +36,7 @@
 <div class="col-2">
 <% for sales in @sales %> 
   <strong><h3><%= sales.header %></h3></strong>
+  <br/>
   <div class="prod_description">
    <p><%= sanitize(redcloth(sales.description)) %></p><br/>
   </div>	
