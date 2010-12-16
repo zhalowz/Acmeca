@@ -4,7 +4,7 @@ class Emailer < ActionMailer::Base
 
     def contact_email(email_params)
         @recipients = "acmeca@singnet.com.sg"
-        @from = email_params.name + " <" + email_params.address + ">"
+        @from = email_params.name
         @subject = email_params.subject
         @sent_on = Time.now
         @body["email_body"] = email_params.body
