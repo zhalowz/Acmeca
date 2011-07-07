@@ -1,0 +1,15 @@
+<div class="col-1 col-indent">
+  <div class="box">
+    <h3>Categories</h3>
+    <ul class="nostyle categories">
+      <li><%= link_to "All", manage_albums_path %>
+      </li>
+      <% for gcategory in @gcategories %>
+        <li>
+        <%= link_to gcategory.name, manage_gcategory_path(gcategory) %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+

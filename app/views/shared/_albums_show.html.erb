@@ -1,0 +1,9 @@
+<h1><%= @album.name %></h1>
+<% @gcategory = gcategory.find_by_id(@album.gcategory_id) %>
+<%= link_to @gcategory.name, manage_gcategory_path(@gcategory) %>
+<div class="product_details">
+  <%= image_tag @album.photo.url(:large) %>
+  <div class="prod_description">
+    <%= sanitize(redcloth(@album.description)) %>
+  </div>
+</div>

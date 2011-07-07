@@ -26,7 +26,7 @@ html, input, textarea {font-family:Arial, Helvetica, sans-serif; font-size:13px;
 
 input, select {vertical-align:middle; font-weight:normal;}
 
-a {color:#80a019; outline:none;}
+a {color:#80A019; outline:none;}
 a.home {color:white; outline:none;}
 a:hover{text-decoration:none;}
 
@@ -239,6 +239,7 @@ h3 {
 .col-indent1 {padding-right:53px;}
 .col-indent2 {padding-right:27px;}
 .col-indent3 {padding-left:250px; padding-right:41px;}
+.col-indent4 {padding-right:18px;}
 
 .box {
 	background:#ebebeb;
@@ -279,15 +280,15 @@ h3 {
 		font-size:12px;
 		line-height:28px;
 		background:url(../images/list1-li-bg.gif) 0 bottom repeat-x;
-			color:#7FFF00;
+			color:white;
 	}
 	.list11 li {
 		font-size:12px;
 		line-height:28px;
-		color:#7FFF00;
+		color:white;
 	}
 		.list1 a {
-			color:#7FFF00;
+			color:white;
 			text-decoration:none;
 			background:url(../images/list1-a-bg.gif) 0 5px no-repeat;
 			padding-left:12px;
@@ -551,3 +552,41 @@ h3 {
 		overflow:auto; 
 		color:#5d5d60; 
 	}
+
+/* ============================= Pagination ============================= */
+div.pagination {
+                padding: 3px;
+                margin: 3px;
+                text-align:center;
+                color:#a0a0a0;
+                font-size:80%;
+        }
+        div.pagination a {
+                border: 1px solid #909090;
+                margin-right:3px;
+                padding:2px 5px;
+                background-image:url(bar.gif);
+                background-position:bottom;
+                text-decoration: none;
+                color: #c0c0c0;
+        }
+        div.pagination a:hover, div.meneame a:active {
+                border: 1px solid #f0f0f0; 
+                background-image:url(barinv.gif);
+                background-color:#404040;
+                color: #ffffff;
+        }
+        div.pagination span.current {
+                margin-right:3px;
+                padding:2px 5px;
+                border: 1px solid #ffffff;
+                font-weight: bold;
+                background-color: #606060;
+                color: #ffffff;
+        }
+        div.pagination span.disabled {
+                margin-right:3px;
+                padding:2px 5px;
+                border: 1px solid #606060;
+                color: #808080;
+        }

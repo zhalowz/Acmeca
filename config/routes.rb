@@ -2,10 +2,10 @@ Acmeca::Application.routes.draw do
 
   get "installations/index2"
 
-  resources :albums, :services, :products, :installations, :categories, :sales, :rentals, :only => [:index, :show]
+  resources :gcategories, :albums, :services, :products, :installations, :categories, :sales, :rentals, :only => [:index, :show]
 
   namespace "manage" do
-    resources :albums, :services, :products, :categories, :installations, :rentals, :sales
+    resources :gcategories, :albums, :services, :products, :categories, :installations, :rentals, :sales
   end
 
   resources :manage

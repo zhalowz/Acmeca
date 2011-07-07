@@ -16,3 +16,10 @@ Category.create( :name => "Air Cooler" )
 Category.create( :name => "Misting System" )
 Category.create( :name => "Others" )
 
+#These lines below create gcategories
+
+Gcategory.create( :name => "Aircon" )
+Gcategory.create( :name => "Air Cooler" )
+Gcategory.create( :name => "Misting System" )
+
+

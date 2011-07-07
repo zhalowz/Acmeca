@@ -1,6 +1,7 @@
 class Manage::AlbumsController < Manage::BaseController
 
   def index
+    @gcategories = Gcategory.all
     @albums = Album.all
   end
   

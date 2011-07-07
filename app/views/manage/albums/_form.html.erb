@@ -1,5 +1,10 @@
 <%= render :partial => 'layouts/error_messages', :locals => { :c => @album } %>
 <p>
+  <%= f.label :gcategory_id %>
+  <br />
+  <%= f.collection_select :gcategory_id, Gcategory.all, :id, :name %>
+<p>
+<p>
   <%= f.label :name %><br />
   <%= f.text_field :name, { :class => 'title' } %>
 </p>
