@@ -1,4 +1,4 @@
-class Manage::GcategoriesController < Manage::ApplicationController
+class Manage::GcategoriesController < Manage::BaseController
   
   def show
     @gcategories = Gcategory.all
