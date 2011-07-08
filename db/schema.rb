@@ -13,105 +13,105 @@
 ActiveRecord::Schema.define(:version => 20110502124629) do
 
   create_table "albums", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "gcategory_id"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.integer   "gcategory_id"
   end
 
   add_index "albums", ["gcategory_id"], :name => "index_albums_on_gcategory_id"
 
   create_table "categories", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "gcategories", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "installations", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "name"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "iphotos", :force => true do |t|
-    t.integer  "installation_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "data_file_name"
-    t.string   "data_content_type"
-    t.integer  "data_file_size"
-    t.datetime "data_updated_at"
+    t.integer   "installation_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "data_file_name"
+    t.string    "data_content_type"
+    t.integer   "data_file_size"
+    t.timestamp "data_updated_at"
   end
 
   add_index "iphotos", ["installation_id"], :name => "index_iphotos_on_installation_id"
 
   create_table "photos", :force => true do |t|
-    t.integer  "album_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "data_file_name"
-    t.string   "data_content_type"
-    t.integer  "data_file_size"
-    t.datetime "data_updated_at"
+    t.integer   "album_id"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "data_file_name"
+    t.string    "data_content_type"
+    t.integer   "data_file_size"
+    t.timestamp "data_updated_at"
   end
 
   add_index "photos", ["album_id"], :name => "index_photos_on_album_id"
 
   create_table "products", :force => true do |t|
-    t.string   "name"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.string   "photo_file_name"
-    t.string   "photo_content_type"
-    t.integer  "photo_file_size"
-    t.datetime "photo_updated_at"
-    t.integer  "category_id"
+    t.string    "name"
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
+    t.string    "photo_file_name"
+    t.string    "photo_content_type"
+    t.integer   "photo_file_size"
+    t.timestamp "photo_updated_at"
+    t.integer   "category_id"
   end
 
   add_index "products", ["category_id"], :name => "index_products_on_category_id"
 
   create_table "rentals", :force => true do |t|
-    t.string   "header"
-    t.text     "description", :limit => 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "header"
+    t.text      "description"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "sales", :force => true do |t|
-    t.text     "description", :limit => 255
-    t.string   "header"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text      "description"
+    t.string    "header"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "services", :force => true do |t|
-    t.text     "description", :limit => 255
-    t.string   "header"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.text      "description"
+    t.string    "header"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   create_table "users", :force => true do |t|
-    t.string   "email",                               :default => "", :null => false
-    t.string   "encrypted_password",   :limit => 128, :default => "", :null => false
-    t.string   "password_salt",                       :default => "", :null => false
-    t.string   "reset_password_token"
-    t.string   "remember_token"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                       :default => 0
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip"
-    t.string   "last_sign_in_ip"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string    "email",                               :default => "", :null => false
+    t.string    "encrypted_password",   :limit => 128, :default => "", :null => false
+    t.string    "password_salt",                       :default => "", :null => false
+    t.string    "reset_password_token"
+    t.string    "remember_token"
+    t.timestamp "remember_created_at"
+    t.integer   "sign_in_count",                       :default => 0
+    t.timestamp "current_sign_in_at"
+    t.timestamp "last_sign_in_at"
+    t.string    "current_sign_in_ip"
+    t.string    "last_sign_in_ip"
+    t.timestamp "created_at"
+    t.timestamp "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email", :unique => true

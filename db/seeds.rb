@@ -19,7 +19,7 @@ Category.create( :name => "Others" )
 #These lines below create gcategories
 
 Gcategory.create( :name => "Aircon" )
-Gcategory.create( :name => "Air Cooler" )
+Gcategory.create( :name => "Air Cooler (Rental)" )
+Gcategory.create( :name => "Air Cooler (Purchase)" )
 Gcategory.create( :name => "Misting System" )
-
 

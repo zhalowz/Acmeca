@@ -1,7 +1,7 @@
 class Album < ActiveRecord::Base
 
   cattr_reader :per_page
-  @@per_page = 15
+  @@per_page = 23
 
   attr_accessible :name, :photos_attributes, :gcategory_id
  
