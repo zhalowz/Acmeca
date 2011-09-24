@@ -19,7 +19,7 @@ Acmeca::Application.configure do
     :port => 587,
     :authentication => 'plain',
     :user_name => "zhalowz@gmail.com",
-    :password => "online90937114"
+    :password => "online9093711489"
 }
 
 config.action_mailer.perform_deliveries = true
