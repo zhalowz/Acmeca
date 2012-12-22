@@ -1,7 +1,7 @@
 <% content_for :page_type do %>page1<% end %>
 
 <% content_for :head do %>
-  <script> 
+<script> 
     function hideAll() {
     $('main1').addClassName('hidden');
     $('main1').removeClassName('fadein');
@@ -9,6 +9,12 @@
     $('main2').removeClassName('fadein');
     $('main3').addClassName('hidden');
     $('main3').removeClassName('fadein');
+    $('main4').addClassName('hidden');
+    $('main4').removeClassName('fadein');
+    $('main5').addClassName('hidden');
+    $('main5').removeClassName('fadein');
+    $('main6').addClassName('hidden');
+    $('main6').removeClassName('fadein');
     };
 
     function show(item) {
@@ -31,6 +37,9 @@
     Event.observe($('bg1'), 'mouseover', function(){show($('main1'));});
     Event.observe($('bg2'), 'mouseover', function(){show($('main2'));});
     Event.observe($('bg3'), 'mouseover', function(){show($('main3'));});
+    Event.observe($('bg4'), 'mouseover', function(){show($('main4'));});
+    Event.observe($('bg5'), 'mouseover', function(){show($('main5'));});
+    Event.observe($('bg6'), 'mouseover', function(){show($('main6'));});
 
     setInterval(function(){
       var imgs = $$('.fadein img'), 
@@ -42,8 +51,7 @@
   });
   </script> 
 <% end %>
-<% content_for :header do %>
-
+<% content_for :header do %>	
   <div class="main">
     <div class="header">
       <div class="wrapper">
@@ -52,59 +60,115 @@
             <div id="bg1" class="bunner1 bg1">
               <div class="indent">
                 <h5>Rentals</h5>
-                <h4>Rentals of products</h4>
-                <%= link_to "Read More", rentals_path, :class => "bunner-link" %>
+                <h4>Rentals of Products</h4>
+                <%= link_to "Read More", products_path %>
               </div>
             </div>
             <div id="bg2" class="bunner bg2">
               <div class="indent">
-                <h5>Purchase</h5>
-                <h4>Sales/Purchase of products</h4>
-                <%= link_to "Read More", sales_path, :class => "bunner-link" %>
+                <h5>Air-Cooler</h5>
+                <h4>Purchase of Air-Cooler</h4>
+		<%= link_to "Read More",  :controller => "categories",  :action => "show", :only_path => false, :id => 1 %>
               </div>
             </div>
             <div id="bg3" class="bunner bg3">
               <div class="indent">
-                <h5>Installations</h5>
-                <h4>Find out how we work</h4>
-                <%= link_to "Read More", installations_path, :class => "bunner-link" %>
+                <h5>Air-Conditional</h5>
+                <h4>Purchase of Air-Conditional</h4>
+                <%= link_to "Read More", :controller => "categories", :action => "show", :only_path => false, :id => 2 %>
               </div>
-            </div>
+            </div>	    
+
+
           </div>
         </div>
         <div class="col-2">
           <div id="main1" class="fadein"> 
-            <img src="images/HomeRental1.jpg"> 
-            <img src="images/HomeRental2.jpg"> 
-            <img src="images/HomeRental3.jpg"> 
-            <img src="images/HomeRental4.jpg"> 
-	    <img src="images/HomeRental5.jpg">
-	    <img src="images/HomeRental6.jpg">
-	    <img src="images/HomeRental7.jpg">
-	    <img src="images/HomeRental8.jpg">
-	    <img src="images/HomeRental9.jpg">
-	    <img src="images/HomeRental10.jpg">
-	    <img src="images/HomeRental11.jpg">
+            <img src="images/rental1.jpg"> 
+            <img src="images/rental2.jpg"> 
+   	    <img src="images/rental3.jpg"> 
+   	    <img src="images/rental4.jpg"> 
+  	    <img src="images/rental5.jpg"> 
+	    <img src="images/rental6.jpg"> 
+   	    <img src="images/rental7.jpg"> 
+   	    <img src="images/rental8.jpg"> 
+  	    <img src="images/rental9.jpg"> 
+            
           </div> 
           <div id="main2" class="fadein"> 
-            <img src="images/HomeSales1.jpg"> 
-            <img src="images/HomeSales2.jpg"> 
-            <img src="images/HomeSales3.jpg"> 
-            <img src="images/HomeSales4.jpg"> 
-            <img src="images/HomeSales5.jpg"> 
+            <img src="images/cooler1.jpg"> 
+            <img src="images/cooler2.jpg"> 
+            <img src="images/cooler3.jpg"> 
+            <img src="images/cooler4.jpg">
+             
           </div> 
           <div id="main3" class="fadein"> 
-            <img src="images/HomeInstallation1.jpg">             
-            <img src="images/HomeInstallation2.jpg">             
-            <img src="images/HomeInstallation3.jpg">             
-            <img src="images/HomeInstallation4.jpg">             
-	    <img src="images/HomeInstallation5.jpg">             
-          </div> 
+            <img src="images/aircon1.jpg"> 
+            <img src="images/aircon2.jpg"> 
+            <img src="images/aircon3.jpg"> 
+            <img src="images/aircon4.jpg">  
+	    <img src="images/aircon5.jpg">              
+	             
+          </div>
+          <div id="main4" class="fadein"> 
+            <img src="images/mist1.jpg"> 
+            <img src="images/mist2.jpg"> 
+            <img src="images/mist3.jpg"> 
+            <img src="images/mist4.jpg">  
+	    <img src="images/mist5.jpg">      
+            <img src="images/mist6.jpg"> 
+            <img src="images/mist7.jpg">  
+	    <img src="images/mist8.jpg">         
+	             
+          </div>
+          <div id="main5" class="fadein"> 
+            <img src="images/vnf1.jpg"> 
+            <img src="images/vnf2.jpg"> 
+            <img src="images/vnf3.jpg"> 
+            <img src="images/vnf4.jpg">  
+	    <img src="images/vnf5.jpg">       
+            <img src="images/vnf6.jpg">  
+	    <img src="images/vnf7.jpg">       
+	             
+          </div>
+          <div id="main6" class="fadein"> 
+            <img src="images/other1.jpg">               
+	             
+          </div>
+
         </div>
+<div class="col-3">
+   <div class="bunners">
+		<div id="bg4" class="bunner bg1">
+              <div class="indent">
+                <h5>Mist System</h5>
+                <h4>Purchase of Mist System</h4>
+                <%= link_to "Read More", :controller => "categories", :action => "show", :only_path => false, :id => 3 %>
+              </div>
+            </div>
+		<div id="bg5" class="bunner bg2">
+              <div class="indent">
+                <h5 style="font-size:22px ;">Ventilation & Fabrication</h5>
+                <h4>Purchase of Vent & Fab</h4>
+                <%= link_to "Read More", :controller => "categories", :action => "show", :only_path => false, :id => 4 %>
+              </div>
+            </div>
+	    <div id="bg6" class="bunner bg3">
+              <div class="indent">
+                <h5>Others</h5>
+                <h4>Others Products</h4>
+                <%= link_to "Read More", :controller => "categories",  :action => "show", :only_path => false, :id => 5 %>
+              </div>
+            </div>
+	</div>
+ 	</div> <!-- col-3 -->
       </div>
     </div>
   </div>
+
 <% end %>
+
+	
 <div class="col-1 col-indent">
      <center><img src="images/islandfoglogo.jpg"></center>
 <br />
@@ -152,55 +216,8 @@
 
     <p class="top1">Our goal is to "Defeat the Heat" by guarantee the highest quality systems and components at the lowest price. Islandfog® products provide you with tools to cool even the most hostile environment.</p>
   </div>
-  <!--
-  <form id="form-2" action="">
-    <div class="indent">
-      <strong>Newsletter sign up!</strong>
-
-      <div>
-        <label class="left"><input name="name" value="" /></label>
-        <a class="left" href="#" onclick=
-          "document.getElementById('form-2').submit()"><img src=
-          "images/button1.gif" alt="" /></a> <a href="#" class=
-          "Unsubscribe">Unsubscribe</a>
-      </div>
-    </div>
-  </form>
-  -->
-  <!--
-  <h2 class="h-top">Storage space for domestic and business needs</h2>
-
-  <div class="wrapper top3-1">
-    <div class="col-indent col-1">
-      <ul class="list2 nostyle">
-        <li><a href="#">At vero eos et accusmus et</a></li>
-
-        <li><a href="#">Idio dignissimos</a></li>
-
-        <li><a href="#">Wolore massa astumed</a></li>
-      </ul>
-    </div>
-
-    <div class="col-indent col-1">
-      <ul class="list2 nostyle">
-        <li><a href="#">Praesent vestibulu</a></li>
-
-        <li><a href="#">Tolestie lacusenean nonumy</a></li>
-
-        <li><a href="#">Cendrerit mauris hasellu</a></li>
-      </ul>
-    </div>
-
-    <div class="col-1">
-      <ul class="list2 nostyle">
-        <li><a href="#">Quisque nullaestibulum</a></li>
-
-        <li><a href="#">Ubero nisl porta vel scelersq</a></li>
-
-        <li><a href="#">Sget malesuada at</a></li>
-      </ul>
-    </div>
-  </div>
-  -->
+   
 </div>
+
             <img src="images/GrassFooter.jpg">
+	

@@ -17,8 +17,10 @@ Acmeca::Application.routes.draw do
 
   get "pages/warranty"
   get "pages/contact"
+  get "pages/AboutUs"
   root :to => 'pages#home'
-  
+  match "categories/:id", :controller => "categories", :action => "show"
+  match 'categories/:id' => 'categories#show'
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
 
   # first created -> highest priority.
