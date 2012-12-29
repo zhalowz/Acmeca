@@ -27,10 +27,10 @@
     setInterval(function(){
       var imgs = $$('.fadein img'), 
       visible = imgs.findAll(function(img){ return img.visible(); });
-      if(visible.length>1) visible.last().fade({ duration: .3 });
-      else imgs.last().appear({ duration: .3, 
+      if(visible.length>1) visible.last().fade({ duration: .2 });
+      else imgs.last().appear({ duration: .2, 
         afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
-    }, 3000);
+    }, 2000);
 
     show($('main1'));
 
@@ -111,29 +111,26 @@
 	             
           </div>
           <div id="main4" class="fadein"> 
-            <img src="images/mist1.jpg"> 
-            <img src="images/mist2.jpg"> 
+            <img src="images/mist1.jpg">  
+	    <img src="images/mist2.jpg">                    
             <img src="images/mist3.jpg"> 
             <img src="images/mist4.jpg">  
 	    <img src="images/mist5.jpg">      
             <img src="images/mist6.jpg"> 
-            <img src="images/mist7.jpg">  
-	    <img src="images/mist8.jpg">         
-	             
+            <img src="images/mist7.jpg">	           
+	    <img src="images/mist8.jpg">
           </div>
           <div id="main5" class="fadein"> 
             <img src="images/vnf1.jpg"> 
             <img src="images/vnf2.jpg"> 
             <img src="images/vnf3.jpg"> 
             <img src="images/vnf4.jpg">  
-	    <img src="images/vnf5.jpg">       
-            <img src="images/vnf6.jpg">  
-	    <img src="images/vnf7.jpg">       
 	             
           </div>
           <div id="main6" class="fadein"> 
             <img src="images/other1.jpg">               
-	             
+	    <img src="images/other2.jpg">  
+   	    <img src="images/other3.jpg">  
           </div>
 
         </div>

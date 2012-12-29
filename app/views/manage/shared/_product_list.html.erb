@@ -12,8 +12,9 @@
     </ul>
   </div>
 </div>
-<%= will_paginate @products %>
+
 <div class="col-2">
+<%= will_paginate @products %>
   <% for product in @products %>
     <div class="catalog2-item">
 
@@ -26,8 +27,9 @@
 
     </div>
   <% end %>
-</div>
 <%= will_paginate @products %>
+</div>
+
 <p class="actions"><%= link_to "Back to Manage", manage_index_path %></p>
 
 

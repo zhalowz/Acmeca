@@ -12,15 +12,19 @@ User.create( :email => "acmeca@singnet.com.sg", :password => "foobar", :password
 #These lines below create categories
 
 Category.create( :name => "Air Cooler" )
+Category.create( :name => "Air Cooler (Accessories)" )
 Category.create( :name => "Air Conditional" )
 Category.create( :name => "Mist System" )
+Category.create( :name => "Mist System (Accessories)" )
 Category.create( :name => "Ventilation & Fabrication")
 Category.create( :name => "Others")
 #These lines below create gcategories
 
 Gcategory.create( :name => "Air Cooler (Rental)" )
 Gcategory.create( :name => "Air Cooler (Purchase)" )
-Gcategory.create( :name => "Air Conditional" )
-Gcategory.create( :name => "Misting System")
+Gcategory.create( :name => "Air Conditional (Rental)" )
+Gcategory.create( :name => "Air Conditional (Purchase)" )
+Gcategory.create( :name => "Misting System (Rental)")
+Gcategory.create( :name => "Misting System (Purchase)" )
 Gcategory.create( :name => "Ventilation & Fabrication")
 Gcategory.create( :name => "Others")
