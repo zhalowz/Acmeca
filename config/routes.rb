@@ -21,6 +21,9 @@ Acmeca::Application.routes.draw do
   root :to => 'pages#home'
   match "categories/:id", :controller => "categories", :action => "show"
   match 'categories/:id' => 'categories#show'
+  match "gcategories/:id", :controller => "gcategories", :action => "show"
+  match 'gcategories/:id' => 'gcategories#show'
+
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
 
   # first created -> highest priority.
