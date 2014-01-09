@@ -1,9 +1,15 @@
 Acmeca::Application.routes.draw do
+  
+  devise_for :users
 
   get "installations/index2"
 
   resources :gcategories, :albums, :services, :products, :installations, :categories, :sales, :rentals, :only => [:index, :show]
-
+  
+  resources :albums do
+    resources :photos
+  end
+  
   namespace "manage" do
     resources :gcategories, :albums, :services, :products, :categories, :installations, :rentals, :sales
   end
@@ -17,15 +23,11 @@ Acmeca::Application.routes.draw do
 
   get "pages/warranty"
   get "pages/contact"
-  get "pages/AboutUs"
+  get "pages/aboutus"
   root :to => 'pages#home'
-  match "categories/:id", :controller => "categories", :action => "show"
-  match 'categories/:id' => 'categories#show'
-  match "gcategories/:id", :controller => "gcategories", :action => "show"
-  match 'gcategories/:id' => 'gcategories#show'
-
+  
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'
-
+  # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
@@ -74,11 +76,11 @@ Acmeca::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  # root :to => 'welcome#index'
 
   # See how all your routes lay out with "rake routes"
 
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
-  # match ':controller(/:action(/:id(.:format)))'
+  # match ':controller(/:action(/:id))(.:format)'
 end

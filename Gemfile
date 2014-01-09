@@ -1,25 +1,43 @@
 source 'http://rubygems.org'
-gem 'rails', '3.0.0'
+gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', '1.2.5', :require => 'sqlite3'
-gem 'devise', '1.1.2'
-gem 'paperclip', '2.3.4'
-gem 'RedCloth', '4.2.3'
+gem 'devise', '2.2.3'
+gem 'sqlite3', '1.3.8'
+gem 'paperclip', '~>3.5.2'
+gem 'sprockets'
+gem 'RedCloth', '4.2.9'
 gem 'bhm-google-maps'
-gem 'nifty-generators'
-gem 'mocha'
-gem 'will_paginate', "~> 3.0.pre2"
-gem 'aws-s3'
+gem 'nifty-generators', "~>0.4.6"
+gem "mocha", :group => :test
+gem 'will_paginate', "~> 3.0.5"
+gem 'aws-s3', '0.6.3'
+gem 'aws-sdk'
 gem 'validatable'
+gem 'swf_fu', "~>2.0"
+gem 'devise-encryptable'
+gem 'execjs'
+gem 'thin'
+gem 'mail'
+gem 'pg'
+gem "seed_dump", "~> 0.5.3"
+
+group :assets do
+  gem 'turbo-sprockets-rails3'
+  gem 'compass-rails', '~>1.0.0.rc.2'
+  gem 'sass-rails', "~> 3.2.3"
+  gem 'coffee-rails', "~>3.2.1" 
+  gem 'uglifier', '>= 1.0.3'
+end
+
 group :development do
-  gem 'rspec-rails', '2.0.0.beta.18'
+  gem 'rspec-rails', "~>2.14.0"
 end
 
 group :test do
-  gem 'rspec', '2.0.0.beta.18'
+  gem 'rspec', '2.14.1'
   gem 'spork', '0.8.4'
 end
 
@@ -44,4 +62,4 @@ end
 # group :development, :test do
 #   gem 'webrat'
 # end
-gem "mocha", :group => :test
+

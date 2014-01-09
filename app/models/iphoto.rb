@@ -6,6 +6,7 @@ class Iphoto < ActiveRecord::Base
                     :s3_credentials => File.join(Rails.root,'config','amazon_s3.yml'),
                     :path => ":attachment/:id/:style.:extension"
 
+
   validates :data,  :presence => true
   def self.destroy_pics(installation, iphotos)
     Iphoto.find(iphotos, :conditions => {:installation_id => installation}).each(&:destroy)

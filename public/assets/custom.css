@@ -1,0 +1,159 @@
+.hidden {
+visibility: hidden;
+display: none;
+}
+
+#slideshow {
+  position:relative;
+  height:400px;
+}
+
+#slideshow DIV {
+  position:absolute;
+  top:0;
+  left:0;
+  zindex:8;
+  opacity:0.0;
+  height: 400px;
+  backgroundcolor: #FFF;
+}
+
+#slideshow DIV.active {
+  zindex:10;
+  opacity:1.0;
+  float:center;
+}
+
+#slideshow DIV.lastactive {
+  zindex:9;
+  float:center;
+}
+
+#slideshow DIV IMG {
+  height: 350px;
+  display: block;
+  border: 0;
+  margin-bottom: 10px;
+  float:center;
+}
+
+ul, ol {
+  padding-left: 1.5em;
+  margin-left: 0;
+}
+p {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+}
+img.grass {
+	background:url(../assets/GrassFooter.jpg);
+        background-repeat:repeat-x;
+}
+sub, sup {
+  font-size: 70%;
+}
+
+.fadein img { position:absolute; }
+
+div.img 
+{
+ border: 1px solid #ccc;
+ float: left;
+}
+
+div.desc
+{
+  float: left;
+}
+
+
+
+/********************/
+.catalog1, .catalog2 {
+  margin-top: 1em;
+}
+
+.catalog1-item {
+  display: inline-block;
+  vertical-align: middle;
+  width: 200px;
+  border: 1px solid #ccc;
+  background: #fff;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  text-align: center;
+  font-weight: bold;
+}
+
+.catalog1-item img {
+  margin-bottom: 1em;
+}
+/********************/
+.catalog2-item {
+  margin-bottom: 10px;
+  display: block;
+  overflow: auto;
+  background: #fff;
+  border: 1px solid #ccc;
+}
+
+.catalog2-item img {
+  margin: 10px;
+}
+
+.catalog2-item .details {
+  float: left;
+  margin-top: 10px;
+}
+
+.catalog2-item a {
+  float: left;
+  font-size: 18pt;
+  text-decoration: none;
+}
+
+.product_details {
+  margin-top: 1em;
+}
+
+.product_details img, .product_img {
+  border: 1px solid #ccc;
+  margin-right: 1em;
+  margin-bottom: 1em;
+  float: left;
+}
+
+.pagination, .actions {
+  clear: both;
+}
+
+.manage_box {
+  height: 150px;
+  width: 280px;
+  float: left;
+  margin-right: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+.dhonishow {
+  border: 1px solid #ccc;
+}
+
+.top1 {
+font-size: 115%; 
+line-height: 25px;
+}
+
+.categories {
+  padding: 20px;
+  line-height: 24px;
+  font-size: 14px;
+}
+
+.contacts-left { width: 420px; float: left; }
+
+.field_with_errors > input,
+.field_with_errors > textarea { background: #FBE3E4; }
+.required:before { content: "*"; color: red }

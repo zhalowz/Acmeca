@@ -1,228 +1,165 @@
 <% content_for :page_type do %>page1<% end %>
 
 <% content_for :head do %>
-<script> 
-    function hideAll() {
-    $('main1').addClassName('hidden');
-    $('main1').removeClassName('fadein');
-    $('main2').addClassName('hidden');
-    $('main2').removeClassName('fadein');
-    $('main3').addClassName('hidden');
-    $('main3').removeClassName('fadein');
-    $('main4').addClassName('hidden');
-    $('main4').removeClassName('fadein');
-    $('main5').addClassName('hidden');
-    $('main5').removeClassName('fadein');
-    $('main6').addClassName('hidden');
-    $('main6').removeClassName('fadein');
-    };
+<%= javascript_include_tag "jquery-1.7.1.min.js" %>
+<%= javascript_include_tag "raphael-min.js" %>
+<%= javascript_include_tag "jquery.easing.js" %>
+<%= javascript_include_tag "iview.js" %>
+<script>
+$(document).ready(function(){
+	$('#iview').iView({
+	pauseTime: 4000,
+	directionNav: false,
+	controlNav: true,
+	tooltipY: -15
+	});
+});
+</script>
+<script>
+$(document).ready(function() {	
+//move the image in pixel	
+var move = -15;		
+//zoom percentage, 1.2 =120%	
+var zoom = 1.2;
+//On mouse over those thumbnail	
+$('.item').hover(function() {			
+//Set the width and height according to the zoom percentage		
+width = $('.item').width() * zoom;		
+height = $('.item').height() * zoom;				
+//Move and zoom the image		
+$(this).find('img').stop(false,true).animate({'width':width, 'height':height, 'top':move, 'left':move}, {duration:200});				
+//Display the caption		
+$(this).find('div.caption').stop(false,true).fadeIn(200);
+	},
+	function() {		
+//Reset the image
+$(this).find('img').stop(false,true).animate({'width':$('.item').width(), 'height':$('.item').height(), 'top':'0', 'left':'0'}, {duration:100});	
+		//Hide the caption
+		$(this).find('div.caption').stop(false,true).fadeOut(200);
+	});
 
-    function show(item) {
-    hideAll();
-    item.toggleClassName('hidden');
-    item.toggleClassName('fadein');
-    };
+});
+</script>
 
-    document.observe('dom:loaded',function() {
-    setInterval(function(){
-      var imgs = $$('.fadein img'), 
-      visible = imgs.findAll(function(img){ return img.visible(); });
-      if(visible.length>1) visible.last().fade({ duration: .2 });
-      else imgs.last().appear({ duration: .2, 
-        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
-    }, 2000);
-
-    show($('main1'));
-
-    Event.observe($('bg1'), 'mouseover', function(){show($('main1'));});
-    Event.observe($('bg2'), 'mouseover', function(){show($('main2'));});
-    Event.observe($('bg3'), 'mouseover', function(){show($('main3'));});
-    Event.observe($('bg4'), 'mouseover', function(){show($('main4'));});
-    Event.observe($('bg5'), 'mouseover', function(){show($('main5'));});
-    Event.observe($('bg6'), 'mouseover', function(){show($('main6'));});
-
-    setInterval(function(){
-      var imgs = $$('.fadein img'), 
-      visible = imgs.findAll(function(img){ return img.visible(); });
-      if(visible.length>1) visible.last().fade({ duration: .3 });
-      else imgs.last().appear({ duration: .3, 
-        afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
-    }, 3000);
-  });
-  </script> 
 <% end %>
+
 <% content_for :header do %>	
   <div class="main">
     <div class="header">
-      <div class="wrapper">
-        <div class="col-1">
-          <div class="bunners">
-            <div id="bg1" class="bunner1 bg1">
-              <div class="indent">
-                <h5>Rentals</h5>
-                <h4>Rentals of Products</h4>
-                <%= link_to "Read More", products_path %>
-              </div>
-            </div>
-            <div id="bg2" class="bunner bg2">
-              <div class="indent">
-                <h5>Air-Cooler</h5>
-                <h4>Purchase of Air-Cooler</h4>
-		<%= link_to "Read More",  :controller => "categories",  :action => "show", :only_path => false, :id => 1 %>
-              </div>
-            </div>
-            <div id="bg3" class="bunner bg3">
-              <div class="indent">
-                <h5 style="font-size:22px ;">Air-Conditioner</h5>
-                <h4>Purchase of Air-Conditioner</h4>
-                <%= link_to "Read More", :controller => "categories", :action => "show", :only_path => false, :id => 3 %>
-              </div>
-            </div>	    
+		<div class="container">
+		    <div id="iview">
+			<div data-iview:image="../assets/photo1.jpg" data-iview:transition="slice-top-fade,slice-right-fade">
+				<div class="iview-caption caption1" data-x="80" data-y="40">iView<sup>&trade;</sup></div>
+				<div class="iview-caption" data-x="80" data-y="115" data-transition="wipeRight">The world's most awesome jQuery Image & Content Slider</div>			
+			</div>
 
+			<div data-iview:image="../assets/photo2.jpg" data-iview:transition="zigzag-drop-top,zigzag-drop-bottom" data-iview:pausetime="3000">
+				<div class="iview-caption caption5" data-x="60" data-y="40" data-transition="wipeDown">Captions can be positioned and resized freely</div>				
+			</div>
 
-          </div>
-        </div>
-        <div class="col-2">
-          <div id="main1" class="fadein"> 
-            <img src="images/rental1.jpg"> 
-            <img src="images/rental2.jpg"> 
-   	    <img src="images/rental3.jpg"> 
-   	    <img src="images/rental4.jpg"> 
-  	    <img src="images/rental5.jpg"> 
-	    <img src="images/rental6.jpg">
-   	    <img src="images/rental7.jpg">
-   	    <img src="images/rental8.jpg">   	 
-            <img src="images/rental9.jpg">
-   	    <img src="images/rental10.jpg">
-   	    <img src="images/rental11.jpg"> 
-	    <img src="images/rental12.jpg">
-	    <img src="images/rental13.jpg">
-          </div> 
-          <div id="main2" class="fadein"> 
-            <img src="images/cooler1.jpg"> 
-            <img src="images/cooler2.jpg"> 
-            <img src="images/cooler3.jpg"> 
-            <img src="images/cooler4.jpg">
-            <img src="images/cooler5.jpg"> 
-            <img src="images/cooler6.jpg"> 
-            <img src="images/cooler7.jpg">
-          </div> 
-          <div id="main3" class="fadein"> 
-            <img src="images/aircon1.jpg"> 
-            <img src="images/aircon2.jpg"> 
-            <img src="images/aircon3.jpg"> 
-            <img src="images/aircon4.jpg">  	              
-	             
-          </div>
-          <div id="main4" class="fadein"> 
-            <img src="images/mist1.jpg">  
-	    <img src="images/mist2.jpg">                    
-            <img src="images/mist3.jpg"> 
-            <img src="images/mist4.jpg">  
-	    <img src="images/mist5.jpg">  
-	    <img src="images/rental13.jpg">    
-     	    
-          </div>
-          <div id="main5" class="fadein"> 
-            <img src="images/vnf1.jpg"> 
-            <img src="images/vnf2.jpg"> 
-            <img src="images/vnf3.jpg"> 
-            <img src="images/vnf4.jpg">  
-	    <img src="images/vnf5.jpg"> 
-	             
-          </div>
-          <div id="main6" class="fadein"> 
-            <img src="images/other1.jpg">               
-	    <img src="images/other2.jpg">  
-   	    <img src="images/other3.jpg"> 	
-            <img src="images/other4.jpg">               
-	    <img src="images/other5.jpg">  
-   	    <img src="images/other6.jpg">	    
+			<div data-iview:image="../assets/photo3.jpg">
+				<div class="iview-caption caption4" data-x="50" data-y="80" data-width="312" data-transition="fade">Some of the Options:</div>
+				<div class="iview-caption blackcaption" data-x="50" data-y="135" data-transition="wipeLeft" data-easing="easeInOutElastic">Touch swipe for iOS and Android devices</div>
+				<div class="iview-caption blackcaption" data-x="50" data-y="172" data-transition="wipeLeft" data-easing="easeInOutElastic">Image And Thumbs Fully Resizable</div>				
+			</div>
 
-          </div>
+			<div data-iview:image="../assets/photo4.jpg">
+				<div class="iview-caption caption7" data-x="0" data-y="0" data-width="180" data-height="480" data-transition="wipeRight"><h3>The Responsive Caption</h3>This is the product that you <b><i>all have been waiting for</b></i>!<br><br>Customize this slider with just a little HTML and CSS to your very needs. Give each slider some captions to transport your message.<br><br></div>
+			</div>
 
-        </div>
-<div class="col-3">
-   <div class="bunners">
-		<div id="bg4" class="bunner bg1">
-              <div class="indent">
-                <h5>Mist System</h5>
-                <h4>Purchase of Mist System</h4>
-                <%= link_to "Read More", :controller => "categories", :action => "show", :only_path => false, :id => 4 %>
-              </div>
-            </div>
-		<div id="bg5" class="bunner bg2">
-              <div class="indent">
-                <h5 style="font-size:22px ;">Ventilation & Fabrication</h5>
-                <h4>Purchase of Vent & Fab</h4>
-                <%= link_to "Read More", :controller => "categories", :action => "show", :only_path => false, :id => 6 %>
-              </div>
-            </div>
-	    <div id="bg6" class="bunner bg3">
-              <div class="indent">
-                <h5>Others</h5>
-                <h4>Others Products</h4>
-                <%= link_to "Read More", :controller => "categories",  :action => "show", :only_path => false, :id => 7 %>
-              </div>
-            </div>
-	</div>
- 	</div> <!-- col-3 -->
-      </div>
+			<div data-iview:image="../assets/photo5.jpg">
+				<div class="iview-caption caption6" data-x="60" data-y="150" data-transition="wipeLeft">What are you waiting for?</div>
+				<div class="iview-caption caption6" data-x="160" data-y="230" data-transition="wipeRight">Get it Now!</div>
+			</div>
+		    </div>
+		</div>   
     </div>
-  </div>
-
+</div>
 <% end %>
 
-	
-<div class="col-1 col-indent">
-     <center><img src="images/islandfoglogo.jpg"></center>
-<br />
-  <div class="box">
-    <h3>Our Capabilities</h3>
-
-    <div class="indent">
-
-      <ul class="list nostyle">
-        <li><a>Set-up done in a day</a><span>We are able to set up the event area and delivery can also be made using the shortest possible time. </span></li>
-
-        <li><a>Best Solution</a><span>We will always provide the best cost andbest proposal to solve our clients air quality issues.</span></li>
-
-        <li><a>High Quality</a><span>We will only provide the best quality products and best service to our clients.</span></li>
-
-        <li><a>High Quantity</a><span>Our products stock would always be sufficient to meet our clients needs.</span></li>
-      </ul>
+<div class="col-3">
+    <h1>The best way to cool down in town</h1>
+    <p font-size="18px", line-height="1.2em">Acmeca provides excellent misting & cooling systems for indoor and outdoor cooling. We have the highest quality outdoor cooling fans and mist fans designed specially for your events’ and venues’ needs. We will listen to our client’s needs and go to the extra mile for them to ensure that they enjoy great values and services from us.</p>
+    <div class="item">
+	<img src="assets/HomeRental1.jpg" alt="Cycliner" title="" width="301" height="301"/>
+	<div class="overlay">
+	    <h1 id="red-h">Rentals</h1>	    	   
+	</div>	    
+	<div class="caption" id="red">
+		<h1><%= link_to "Rentals", products_path,{:style=>'color:red;'} %></h1>		
+		<p>Rentals of Products</p>
+	</div>
     </div>
 
-  </div>
+    <div class="item">
+	<img src="assets/HomeRental2.jpg" alt="Banana Moon" title="" width="301" height="301"/>
+	<div class="overlay">
+	    <h1 id="orange-h">Misting</h1>
+	    <h1 id="orange-h">System</h1>
+	</div>	    
+	<div class="caption" id="orange">
+		<h1><%= link_to "Misting", {:controller => "categories", :action => "show", :only_path => false, :id => 4}, :style=>'color:orange;' %></h1>
+		<h1><%= link_to "System", {:controller => "categories", :action => "show", :only_path => false, :id => 4}, :style=>'color:orange;' %></h1>
+		<p>Text goes here!!</p>	</div>
+    </div>
+
+    <div class="item">
+	<img src="assets/HomeRental3.jpg" alt="BlueBuck" title="" width="301" height="301"/>
+	<div class="overlay">
+            <h1 id="blue-h">Air -</h1>
+	    <h1 id="blue-h">Cooler</h1>
+	</div>
+	<div class="caption" id="blue">
+		<h1><%= link_to "Air -",  {:controller => "categories",  :action => "show", :only_path => false, :id => 1}, :style=>'color:blue;' %></h1>
+		<h1><%= link_to "Cooler",  {:controller => "categories",  :action => "show", :only_path => false, :id => 1}, :style=>'color:blue;' %></h1>
+		<p>Purchase of Air-Cooler</p>
+	</div>
+	
+    </div>
+
+    <div class="clear"></div>
+
+    <div class="item">
+	<img src="assets/HomeRental4.jpg" alt="SOSO" title="" width="301" height="301"/>
+	<div class="overlay">
+	    <h1 id="green-h">Air -</h1>
+	    <h1 id="green-h">Conditioner</h1>
+	</div>	    
+	<div class="caption" id="green">
+		<h1><%= link_to "Air -", {:controller => "categories", :action => "show", :only_path => false, :id => 3},:style=>'color:green;' %></h1>
+		<h1><%= link_to "Conditioner", {:controller => "categories", :action => "show", :only_path => false, :id => 3},:style=>'color:green;' %></h1>
+		<p>Text goes here!!</p>
+	</div>
+    </div>
+
+    <div class="item">
+	<img src="assets/HomeRental5.jpg" alt="Buzzsprout" title="" width="301" height="301"/>
+	<div class="overlay">
+	    <h1 id="yellow-h">Ventilation &</h1>
+	    <h1 id="yellow-h">Fabrication</h1>
+	</div>	    
+	<div class="caption" id="yellow">
+		<h1><%= link_to "Ventilation &", {:controller => "categories", :action => "show", :only_path => false, :id => 6},:style=>'color:gold;' %></h1>
+		<h1><%= link_to "Fabrication", {:controller => "categories", :action => "show", :only_path => false, :id => 6},:style=>'color:gold;' %></h1>
+		<p>Text goes here!!</p>
+	</div>
+    </div>
+
+    <div class="item">
+	<img src="assets/HomeRental6.jpg" alt="Sweetcakes" title="" width="301" height="301"/>
+	<div class="overlay">
+	    <h1 id="purple-h">Others</h1>	 
+	</div>	    
+	<div class="caption" id="purple">
+		<h1><%= link_to "Others", {:controller => "categories",  :action => "show", :only_path => false, :id => 7},:style=>'color:purple;' %></h1>		
+		<p>Text goes here!!</p>
+	</div>
+    </div>
+
+    <div class="clear"></div>
+
 </div>
-<div class="col-2">
-  <h2>The best way to cool down in town</h2>
 
-  <div class="wrapper top4">
-    <%#       <a href="#"><img src="images/page1-img1.jpg" alt="" class= %>
-      <%# "imgindent" /></a> %>
-
-    <p class="top1"><strong>Great performance, great value</strong></p>
-
-    <p class="top1">Acmeca provides excellent misting & cooling systems for indoor and outdoor cooling. We have the highest quality outdoor cooling fans and mist fans designed specially for your events’ and venues’ needs. We will listen to our client’s needs and go to the extra mile for them to ensure that they enjoy great values and services from us.</p>
-  </div>
-
-  <div class="wrapper top2">
-    <%#   <a href="#"><img src="images/page1-img2.jpg" alt="" class= %>
-      <%# "imgindent" /></a> %>
-
-    <p class="top1"><strong>We strive for perfection</strong></p>
-
-    <p class="top1">Acmeca constantly challenge ourselves to continue to be a step ahead in terms of quality products and personalized service. We appreciate your continued support and comments.</p>
-  </div>
-  <div class="wrapper top2">
-    <p class="top1"><strong>About us</strong></p>
-    <p class="top1">Acmeca Electrical Trading, was established in 1991 by Mr Phua Ee Sen. In 2008, Acmeca Electrical Electrical Trading was converted to Acmeca Cooling System & Engineering Ptd Ltd. Our Research and Development efforts have resulted in a number of proprietary designs catered for commercial and industrial cooling needs. Acmeca Cooling System & Engineering Ptd Ltd’s brand - Islandfog® products are designed with flexibility and robustness. Our expertise in this industry has stretched over a decade and we will continue to evolve to suit the needs of the market.</p>
-
-    <p class="top1">Our goal is to "Defeat the Heat" by guarantee the highest quality systems and components at the lowest price. Islandfog® products provide you with tools to cool even the most hostile environment.</p>
-  </div>
-   
-</div>
-
-            <img src="images/GrassFooter.jpg">
+            <!-- <img src="assets/GrassFooter.jpg"> -->
+		
 	

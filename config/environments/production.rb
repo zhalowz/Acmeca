@@ -1,4 +1,15 @@
 Acmeca::Application.configure do
+  config.assets.compile = true
+  # Compress JavaScripts and CSS
+  config.assets.compress = false
+ # Precompile *all* assets, except those that start with underscore
+  config.assets.precompile << /(^[^_\/]|\/[^_])[^\/]*$/  
+  # Don't fallback to assets pipeline if a precompiled asset is missed
+  
+ 
+  # Generate digests for assets URLs
+  config.assets.digest = true
+  
   # Settings specified here will take precedence over those in config/environment.rb
 
   # The production environment is meant for finished, "live" apps.
@@ -7,7 +18,7 @@ Acmeca::Application.configure do
 
   # Full error reports are disabled and caching is turned on
   config.consider_all_requests_local       = true
-  config.action_view.debug_rjs             = true
+  #config.action_view.debug_rjs             = true
   config.action_controller.perform_caching = true
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
@@ -19,7 +30,7 @@ Acmeca::Application.configure do
 }
 config.action_mailer.perform_deliveries = true
 config.action_mailer.raise_delivery_errors = false
-config.action_mailer.default_charset = "utf-8"
+#config.action_mailer.default_charset = "utf-8"
 
   # Specifies the header that your server uses for sending files
   config.action_dispatch.x_sendfile_header = "X-Sendfile"
@@ -41,7 +52,7 @@ config.action_mailer.default_charset = "utf-8"
 
   # Disable Rails's static asset server
   # In production, Apache or nginx will already do this
-  config.serve_static_assets = false
+  config.serve_static_assets = true
 
   # Enable serving of images, stylesheets, and javascripts from an asset server
   # config.action_controller.asset_host = "http://assets.example.com"

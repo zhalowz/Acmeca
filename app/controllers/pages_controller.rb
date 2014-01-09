@@ -11,12 +11,12 @@ class PagesController < ApplicationController
 
   def send_mail
     @email = Email.new(params[:email][:name],params[:email][:address],params[:email][:contact],params[:email][:subject],params[:email][:body])
-    if @email.valid?
-      Emailer::deliver_contact_email(@email)
+    if @email.valid?      
+      Emailer.contact_email(@email).deliver
       flash[:success]="Email was succesfully sent."
       redirect_to ('/')
     else
-      render "contact"
+      render :contact
     end
   end
 end

@@ -11,6 +11,7 @@
   </div>
 </div>
 <div class="catalog1">
+<%= will_paginate @albums %>
 <% for album in @albums %>
   <div class="catalog1-item">
     <%= link_to get_first_image(album, :small), album  %>

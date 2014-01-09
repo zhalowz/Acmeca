@@ -1,20 +1,20 @@
 <strong><p>Name:</p></strong>
  
-<p><%= @email_name %></p>
+<p><%= @email_params.name %></p>
 
 <strong><p>Contact Number:</p></strong>
 
-<p><%= @email_contact %></p>
+<p><%= @email_params.contact %></p>
 
 <strong><p>E-Mail Address:</p></strong>
 
-<p><%= @email_address %></p>
+<p><%= @email_params.address %></p>
 
 <Strong><p>Message:</p></strong>
  
-<p><%= @email_body %></p>
+<p><%= @email_params.body %></p>
 
 
 <strong><p>Time:</p></strong>
 
-<p><%= @email_time %></p>
+<p><%= Time.now %></p>

@@ -10,8 +10,8 @@ class Manage::AlbumsController < Manage::BaseController
   end
   
   def new
-    @album = Album.new
-    1.upto(3) { @album.photos.build }
+    @album = Album.new()
+    3.times { @album.photos.build }
     respond_to do |format|
       format.html # new.html.erb
       format.xml  { render :xml => @album }
@@ -34,9 +34,7 @@ class Manage::AlbumsController < Manage::BaseController
 
   def edit
     @album = Album.find(params[:id])
-    if @album.photos.first.nil?
-      1.upto(3) { @album.photos.build }
-    end
+    3.times { @album.photos.build }
   end
 
   def destroy  

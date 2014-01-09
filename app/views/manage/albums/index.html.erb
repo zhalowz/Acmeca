@@ -1,24 +1,3 @@
 <h1>Gallery Display</h1>
 <br/>
-<div class="col-1 col-indent4">
-  <div class="box">
-    <h3>Categories</h3>
-    <ul class="nostyle categories">
-      <li><%= link_to "All", albums_path %></li>
-      <% for gcategory in @gcategories %>
-        <li>
-        <%= link_to gcategory.name, gcategory %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
-<div class="catalog1">
-<% for album in @albums %>
-  <div class="catalog1-item">
-    <%= link_to get_first_image(album, :small), manage_album_path(album) %>
-    <%= link_to album.name, manage_album_path(album) %>
-  </div>
-<% end %>
-</div>
-<%= link_to 'Back', manage_index_path %>
+<%= render "manage/shared/album_list" %>

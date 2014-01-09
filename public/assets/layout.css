@@ -1,0 +1,197 @@
+.main {
+	width:984px; 
+	margin:0 auto; 
+	text-align:left;
+}
+
+#header {
+	height:166px;
+}
+
+#footer {
+	height:75px;
+	background:url(../assets/footer-bg.gif) 0 0 repeat-x;
+}
+
+.col-1, .col-2, .col-4, .col-5 {
+	float:left;
+}
+
+.col-3{
+	float:right;
+}
+
+/* ============================= page1 ===========================*/
+#page1 #header {height:530px;}
+#page1 #content {margin-top:10px; }
+#page1 .col-1 { width:285px;}
+
+#page1 .col-3 { width:984px;	
+		padding-left:50px;	
+		}
+
+
+.col-3	.item {
+	width:301px;
+	height:301px;
+	border:6px solid #222;	
+	margin:15px 15px 15px 0;
+	overflow:hidden;
+	position:relative;
+	float:left;}
+
+.item .caption {	
+	width:301px;
+	height:301px;
+	background:white;	
+	color:white;	
+	position:absolute;
+	left:0;
+	display:none;	
+	}
+#red{
+	background: rgb(255, 0, 0) transparent;
+	background: rgba(255, 0, 0, 0.7); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0000, endColorstr=#FF0000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0000, endColorstr=#FF0000)";	
+}
+
+#orange{
+	background: rgb(255, 102, 0) transparent;
+	background: rgba(255, 102, 0, 0.7); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF6600, endColorstr=#FF6600);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF6600, endColorstr=#FF6600)";
+}
+#blue{
+	background: rgb(0, 0, 255) transparent;
+	background: rgba(0, 0, 255, 0.7); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0000, endColorstr=#FF0000);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FF0000, endColorstr=#FF0000)";
+}
+#green{
+	background: rgb(0, 255, 0) transparent;
+	background: rgba(0, 255, 0, 0.7); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FF00, endColorstr=#00FF00);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#00FF00, endColorstr=#00FF00)";	
+}
+#yellow{
+	background: rgb(255, 204, 0) transparent;
+	background: rgba(255, 204, 0, 0.7); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFCC00, endColorstr=#FFCC00);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#FFCC00, endColorstr=#FFCC00)";	
+}
+#purple{
+	background: rgb(102, 0, 153) transparent;
+	background: rgba(102, 0, 153, 0.7); 
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#660099	 , endColorstr=#660099);
+	-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#660099, endColorstr=#660099)";
+}
+
+.item .caption a {	
+	top: 40px;
+	text-decoration: none;
+	font-size:24px;
+	width: 130px;	
+	position:relative;
+	padding-left: 10px;
+	font-weight: 300;
+	margin-bottom: 5px;
+	line-height: 140%;	
+	display:block;	
+	font-family: "museo", Helvetica, Arial, sans-serif;
+	background:white;
+	}
+	
+.item .caption p {
+	top: 50px;
+	font-size:18px;
+	padding-left: 5px;
+	position:relative;
+	color:white;}
+	
+
+.item .overlay {
+	width:301px;
+	height:301px;	
+	color:white;		
+	position:absolute;
+	left:0;}
+
+.item .overlay h1 {
+	top: 40px;		
+	font-size:24px;
+	width: 130px;
+	color:white;
+	position:relative;
+	padding-left: 10px;
+	font-weight: 300;
+	margin-bottom: 5px;
+	line-height: 140%;	
+	display:block;	
+	font-family: "museo", Helvetica, Arial, sans-serif;
+	}
+#red-h{
+	background:red;
+}
+#orange-h{	
+	background:orange;
+}
+#blue-h{
+	
+	background:blue;
+}
+#green-h{	
+	background:green;	
+}
+#yellow-h{	
+	background:gold;	
+}
+#purple-h{
+	background:purple;
+}
+
+
+.col-3  img {
+	border:0;
+	position:absolute;}
+
+.clear {
+	clear:both;}
+
+
+#page1 .col-2 {width:984px; font-family: "proxima-nova", Helvetica, Arial, sans-serif;}
+#page1 .col-2 .col-1 {width:178px;}
+#page1 .row-2 .col-1 {width:263px;}
+#page1 .col-2 .col-3 {width:178px;}
+#page1 .row-2 .col-3 {width:263px;}
+/* ============================= page2 ===========================*/
+#page2 .col-1 {width:285px;}
+#page2 .col-2 {width:618px;}
+#page2 .col-2 .col-1 {width:178px;}
+/* ============================= page3 ===========================*/
+#page3 .col-1 {width:210px;}
+#page3 .col-2 {width:618px;}
+#page3 .col-3 {width:118px;}
+#page3 .col-4 {width:210px;}
+#page3 .col-5 {width:440px; height:350px;}
+#page3 .col-2 .col-1 {width:178px;}
+#page3 .row-2 .col-1 {width:263px}
+#page3 .row-2 .col-2 {width:578px}
+/* ============================= page4 ===========================*/
+#page4 .col-1 {width:285px;}
+#page4 .col-2 {width:618px;}
+#page4 .col-2 .col-1 {width:178px;}
+#page4 .row-2 .col-1 {width:263px}
+/* ============================= page5 ===========================*/
+#page5 .col-1 {width:285px;}
+#page5 .col-2 {width:618px;}
+#page5 .col-2 .col-1 {width:188px;}
+#page5 .row-2 .col-1 {width:263px}
+#page5 .row-2 .col-2 {width:578px}
+/* ============================= page6 ===========================*/
+#page6 .col-1 {width:285px;}
+#page6 .col-2 {width:618px;}
+#page6 .col-2 .col-1 {width:399px;}
+#page6 .col-2 .col-2 {width:178px;}
+#page6 .row-2 .col-1 {width:263px}
+

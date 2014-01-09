@@ -1,10 +1,2 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <b>Gcategory name:</b>
-  <%= @gcategory.gcategory_name %>
-</p>
-
-
-<%= link_to 'Edit', edit_gcategory_path(@gcategory) %> |
-<%= link_to 'Back', gcategories_path %>
+<h1><%= @gcategory.name %></h1>
+<%= render "manage/shared/album_list" %>
