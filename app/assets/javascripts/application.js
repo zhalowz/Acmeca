@@ -13,4 +13,5 @@
 //= require raphael-min
 //= require swfobject
 //= require flashobject
+//= require scriptaculous
 //= require_tree .

@@ -1,21 +1,22 @@
 <% content_for :head do %>
-<%= javascript_include_tag "effects.js" %>
-  <script> 
-    document.observe('dom:loaded',function() {
-      setInterval(function(){
-        var imgs = $$('.fadein img'), 
-        visible = imgs.findAll(function(img){ return img.visible(); });
-        if(visible.length>1) visible.last().fade({ duration: .3 });
-        else imgs.last().appear({ duration: .3, 
-          afterFinish: function(){ imgs.slice(0,imgs.length-1).invoke('show');  } });
-      }, 3000);
-    });
-  </script>
+<%= javascript_include_tag "jquery-1.7.1.min.js" %>
+<%= javascript_include_tag "raphael-min.js" %>
+<%= javascript_include_tag "jquery.easing.js" %>
+<%= javascript_include_tag "iview.js" %>
+ <script>
+$(document).ready(function(){
+	$('#iview').iView({
+	pauseTime: 4000,
+	directionNav: false,
+	controlNav: true,
+	tooltipY: -15
+	});
+});
+</script>
 <% end %>
 
 <h1>Service & Maintenance</h1>
 <br/>
-
 <div class="col-1 col-indent">
   <div class="box">
     <h3>Menu</h3>
@@ -27,22 +28,17 @@
     </ul>
   </div>
   <div class="col-1">
-    <div id="main1" class="fadein">
-      <img src="/assets/Service1.jpg">
-      <img src="/assets/Service2.jpg">
-      <img src="/assets/Service3.jpg">
-      <img src="/assets/Service4.jpg">
-      <img src="/assets/Service5.jpg">
-      <img src="/assets/Service6.jpg">
-      <img src="/assets/Service7.jpg">
-      <img src="/assets/Service8.jpg">
-      <img src="/assets/Service9.jpg">
-      <img src="/assets/Service10.jpg">
-      <img src="/assets/Service11.jpg">
-      <img src="/assets/Service12.jpg">
+    <div class="container">
+		    <div id="iview">
+			<div data-iview:image="../assets/Service1.jpg" data-iview:transition="slice-top-fade,slice-right-fade">					
+			</div>
+			<div data-iview:image="../assets/Service2.jpg" data-iview:transition="zigzag-drop-top,zigzag-drop-bottom" data-iview:pausetime="3000">								
+			</div>
+			<div data-iview:image="../assets/Service3.jpg">	    
+			</div>
+                    </div>
     </div>
   </div>
-</div> 
 <div class="col-2">
   <% for service in @service %> 
     <strong><h3><%= service.header %></h3></strong>
