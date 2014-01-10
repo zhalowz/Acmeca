@@ -24,6 +24,7 @@ Acmeca::Application.routes.draw do
   get "pages/warranty"
   get "pages/contact"
   get "pages/aboutus"
+  get "pages/about"
   root :to => 'pages#home'
   
   post 'pages/contact', :controller => 'pages', :action => 'send_mail'

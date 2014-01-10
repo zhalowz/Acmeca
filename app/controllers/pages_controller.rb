@@ -7,6 +7,9 @@ class PagesController < ApplicationController
   
   def aboutus
   end
+  
+  def about
+  end
 
   def contact
     @email = Email.new("","","","","")
