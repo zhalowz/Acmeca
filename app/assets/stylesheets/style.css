@@ -582,15 +582,14 @@ div.pagination {
         div.pagination a {
                 border: 1px solid #909090;
                 margin-right:3px;
-                padding:2px 5px;
-                background-image:url(bar.gif);
+                padding:2px 5px;               
                 background-position:bottom;
                 text-decoration: none;
                 color: #c0c0c0;
         }
         div.pagination a:hover, div.meneame a:active {
                 border: 1px solid #f0f0f0; 
-                background-image:url(barinv.gif);
+                
                 background-color:#404040;
                 color: #ffffff;
         }

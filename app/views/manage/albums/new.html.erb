@@ -1,3 +1,6 @@
+<%= javascript_include_tag "jquery-1.2.6.min" %>
+<%= javascript_include_tag "prototype" %>
+<%= javascript_include_tag "jquery.dhonishow-min" %>
 <%= form_for @album, :url => { :action => :create }, :html => { :multipart => true } do |f| %>
   <fieldset>
     <legend>Create album</legend>
