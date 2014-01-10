@@ -1,7 +1,7 @@
 class AddDeviseToUsers < ActiveRecord::Migration\
 
   def self.up
-    drop_table :users
+    #drop_table :users
     create_table(:users) do |t|
       ## Database authenticatable
       t.string :email,              :null => false, :default => ""

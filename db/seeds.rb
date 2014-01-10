@@ -903,10 +903,8 @@ Service.create([
   { :description => "Services that we provide includes : \r\n<br/>\r\n* Installation\r\n* Delivery\r\n* Detailed proposals\r\n* On-site evaluations\r\n* Daily Operations\r\n<br/>", :header => "Types of Services", :created_at => "2012-12-29 08:22:46", :updated_at => "2012-12-29 08:22:46" }
 ], :without_protection => true )
 
-
-User.create( :email => "acmeca@singnet.com.sg", :password => "foobar", :password_confirmation => "foobar" )
-#User.create([
-#  { :email => "acmeca@singnet.com.sg", :encrypted_password => "$2a$10$TLO.P2F7AAoIbwjObYIUGOtyFzMI/AITI6nLRk0yz86VgtJ3CEODu", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2014-01-09 06:52:20", :last_sign_in_at => "2014-01-09 06:52:20", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1" }
-#], :without_protection => true )
+User.create([
+  { :email => "acmeca@singnet.com.sg", :encrypted_password => "$2a$10$TLO.P2F7AAoIbwjObYIUGOtyFzMI/AITI6nLRk0yz86VgtJ3CEODu", :reset_password_token => nil, :reset_password_sent_at => nil, :remember_created_at => nil, :sign_in_count => 1, :current_sign_in_at => "2014-01-09 06:52:20", :last_sign_in_at => "2014-01-09 06:52:20", :current_sign_in_ip => "127.0.0.1", :last_sign_in_ip => "127.0.0.1" }
+], :without_protection => true )
 
 
