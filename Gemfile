@@ -3,9 +3,8 @@ gem 'rails', '3.2.16'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
-
+gem 'sinatra'
 gem 'devise', '2.2.3'
-gem 'sqlite3', '1.3.8'
 gem 'paperclip', '~>3.5.2'
 gem 'sprockets'
 gem 'RedCloth', '4.2.9'
@@ -23,6 +22,7 @@ gem 'thin'
 gem 'mail'
 gem 'pg'
 gem "seed_dump", "~> 0.5.3"
+gem "flashplayer", "~> 9.115.0"
 
 group :assets do
   gem 'turbo-sprockets-rails3'
