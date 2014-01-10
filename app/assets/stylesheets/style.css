@@ -583,7 +583,7 @@ div.pagination {
                 border: 1px solid #909090;
                 margin-right:3px;
                 padding:2px 5px;
-                
+                background-image:url(bar.gif);
                 background-position:bottom;
                 text-decoration: none;
                 color: #c0c0c0;
@@ -1055,4 +1055,3 @@ div.pagination {
 .iview-video-show .iview-video-container a.iview-video-close:hover {
 	background: #444;
 }
-
