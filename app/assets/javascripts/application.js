@@ -1,3 +1,8 @@
+//= require jquery
+//= require jquery_ujs
+//= require jquery-1.2.6
+//= require jquery-1.3.2.min
+//= require jquery-1.7.1.min
 //= require controls
 //= require dragdrop
 //= require effects
@@ -5,13 +10,9 @@
 //= require imagepreloader
 //= require iview
 //= require jquery.easing
-//= require jquery-1.2.6
-//= require jquery-1.3.2.min
-//= require jquery-1.7.1.min
 //= require prototype
 //= require rails
 //= require raphael-min
 //= require swfobject
 //= require flashobject
-//= require scriptaculous
 //= require_tree .

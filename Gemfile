@@ -18,19 +18,18 @@ gem 'validatable'
 gem 'swf_fu', "~>2.0"
 gem 'devise-encryptable'
 gem 'execjs'
+gem 'jquery-rails', '~> 2.1'
 gem 'thin'
 gem 'mail'
 gem 'pg'
 gem "seed_dump", "~> 0.5.3"
 gem "flashplayer", "~> 9.115.0"
+gem 'turbo-sprockets-rails3'
+gem 'compass-rails', '~>1.0.0.rc.2'
+gem 'sass-rails', "~> 3.2.3"
+gem 'coffee-rails', "~>3.2.1" 
+gem 'uglifier', '>= 1.0.3'
 
-group :assets do
-  gem 'turbo-sprockets-rails3'
-  gem 'compass-rails', '~>1.0.0.rc.2'
-  gem 'sass-rails', "~> 3.2.3"
-  gem 'coffee-rails', "~>3.2.1" 
-  gem 'uglifier', '>= 1.0.3'
-end
 
 group :development do
   gem 'rspec-rails', "~>2.14.0"
