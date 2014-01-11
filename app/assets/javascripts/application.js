@@ -1,6 +1,5 @@
 //= require jquery
 //= require jquery_ujs
-//= require jquery-1.2.6
 //= require jquery-1.3.2.min
 //= require jquery-1.7.1.min
 //= require controls
@@ -12,6 +11,8 @@
 //= require jquery.easing
 //= require prototype
 //= require rails
+//= require cufon-replace
+//= require cufon-yui
 //= require raphael-min
 //= require swfobject
 //= require flashobject
