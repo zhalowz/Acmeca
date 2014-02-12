@@ -29,6 +29,7 @@ gem 'compass-rails', '~>1.0.0.rc.2'
 gem 'sass-rails', "~> 3.2.3"
 gem 'coffee-rails', "~>3.2.1" 
 gem 'uglifier', '>= 1.0.3'
+gem 'newrelic_rpm'
 
 
 group :development do
