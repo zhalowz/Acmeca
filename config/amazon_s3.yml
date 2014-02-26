@@ -1,14 +1,14 @@
 development:
-  bucket: acmeca-development
-  access_key_id: AKIAIIR473Y7YVGUZPJQ
-  secret_access_key: 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 
+  bucket: acmeca-cedar-development
+  access_key_id: AKIAJRDXDNBYM2AU4AJA
+  secret_access_key: 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
 
 test:
-  bucket: acmeca-test
-  access_key_id: AKIAIIR473Y7YVGUZPJQ
-  secret_access_key: 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 
+  bucket: acmeca-cedar-test
+  access_key_id: AKIAJRDXDNBYM2AU4AJA
+  secret_access_key: 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 
 
 production:
-  bucket: acmeca-production
-  access_key_id: AKIAIIR473Y7YVGUZPJQ
-  secret_access_key: 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 
+  bucket: acmeca-cedar-production
+  access_key_id: AKIAJRDXDNBYM2AU4AJA
+  secret_access_key: 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 
