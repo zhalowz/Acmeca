@@ -16,7 +16,5 @@ class Product < ActiveRecord::Base
                     :styles => { :small => "200x250!", :large => "350x350>" },
                     :storage => :s3,
                     :s3_credentials => File.join(Rails.root,'config','amazon_s3.yml'),
-                    :path => ":rails_root/public/images/:id/:style/:basename.:extension",
-                    :url => "/images/:id/:style/:basename.:extension"
-
+                    :path => ":attachment/:id/:style.:extension"
 end
