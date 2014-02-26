@@ -9,7 +9,7 @@ class Album < ActiveRecord::Base
 
   validates :name, :presence => true
   
-  has_many :photos, :dependent => :destroy 
+  has_many :photos, :dependent => :destroy           
   accepts_nested_attributes_for :photos, :allow_destroy => true
 
  
