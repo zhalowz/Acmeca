@@ -1,5 +1,5 @@
 source 'http://rubygems.org'
-gem 'rails', '3.2.16'
+gem 'rails', '3.2.17'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -30,7 +30,6 @@ gem 'sass-rails', "~> 3.2.3"
 gem 'coffee-rails', "~>3.2.1" 
 gem 'uglifier', '>= 1.0.3'
 gem 'newrelic_rpm'
-
 
 group :development do
   gem 'rspec-rails', "~>2.14.0"

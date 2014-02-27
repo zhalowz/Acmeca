@@ -10,6 +10,12 @@ class PagesController < ApplicationController
   
   def about
   end
+  
+  def pusher
+    Pusher['test_channel'].trigger('greet', {
+    :greeting => "Hello there!"
+})
+  end
 
   def contact
     @email = Email.new("","","","","")
