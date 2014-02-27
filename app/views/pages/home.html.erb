@@ -44,8 +44,8 @@ $(this).find('img').stop(false,true).animate({'width':$('.item').width(), 'heigh
 <% end %>
 
 <% content_for :header do %>	
-  <div class="main">
     <div class="header">
+	 <div class="main">
 		<div class="container">
 		    <div id="iview">
 			<div data-iview:image="assets/hm3.jpg" data-iview:transition="slice-top-fade,slice-right-fade">
@@ -73,14 +73,19 @@ $(this).find('img').stop(false,true).animate({'width':$('.item').width(), 'heigh
 			</div>
 		    </div>
 		</div>   
+    </div>    
+</div>
+    <br>
+    <div class="bg-blue">
+	<div id="blueban" class="contain">
+		<ul>
+			<li><span class="green">100</span> Different Product</li>
+			<li><span class="green">450</span> Events Done</li>
+			<li><span class="green">90%</span> Energy Efficiency</li>
+		</ul>
+	</div>
     </div>
-</div>
 <% end %>
-
-<div style="background-color:#0D99E4">
-<p><b>This paragraph has its own background color.</b></p>
-</div>
-<br>
 <div class="col-3">
     <h1>The best way to cool down in town</h1>
     <p font-size="18px", line-height="1.2em">Acmeca provides excellent misting & cooling systems for indoor and outdoor cooling. We have the highest quality outdoor cooling fans and mist fans designed specially for your events’ and venues’ needs. We will listen to our client’s needs and go to the extra mile for them to ensure that they enjoy great values and services from us.</p>

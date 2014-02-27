@@ -22,7 +22,7 @@
 }
 
 /* ============================= page1 ===========================*/
-#page1 #header {height:530px;}
+#page1 #header {height:581px;}
 #page1 #content {margin-top:10px; }
 #page1 .col-1 { width:285px;}
 
@@ -164,6 +164,57 @@
 #page1 .row-2 .col-1 {width:263px;}
 #page1 .col-2 .col-3 {width:178px;}
 #page1 .row-2 .col-3 {width:263px;}
+
+
+/* ============================= Home Blue Banner Statement ====================== */
+.bg-blue {
+	border-bottom:4px solid white;
+	border-top:4px solid white;
+	height: 45px;
+	background: #0D99E4; /* Old browsers */
+	background: -moz-linear-gradient(top, #0D99E4 0%, #212121 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0D99E4), color-stop(100%, #212121)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #0D99E4 0%, #212121 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #0D99E4 0%, #212121 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #0D99E4 0%, #212121 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #0D99E4 0%, #212121 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0D99E4', endColorstr='#212121', GradientType=0 ); /* IE6-9 */
+}
+
+.contain{
+	margin: auto;
+	width:100%;
+	position: relative;
+	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
+}
+
+#blueban ul li {
+	color: #fff;
+	font-size: 1.25em; /* 20/16 */
+	float: left;
+	list-style: none;
+	padding-left: 255px;
+	font-weight: 300;
+	line-height: 45px;
+	
+}
+#blueban .green {
+	font-weight: 700;
+}
+
+	.green {
+		color: #9fc52C;
+		}
+		
+#statements p {
+	color: #000;
+	margin: 20px 0;
+	line-height: 150%;
+	font-size: 1em;
+	padding-right: 0;
+}
+
+
 /* ============================= page2 ===========================*/
 #page2 .col-1 {width:285px;}
 #page2 .col-2 {width:618px;}
