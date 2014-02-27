@@ -112,6 +112,11 @@ h3 {
 	letter-spacing:-1px;
         text-align: left;
 }
+
+h4 {
+	background-color:#0B97E6;
+}
+
 .h-border {
 	background:url(../assets/h-border.gif) left bottom repeat-x;
 	padding-bottom:11px;
