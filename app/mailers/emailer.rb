@@ -1,7 +1,7 @@
 class Emailer < ActionMailer::Base
 
   default :from => "no-reply@test.net"
-  default :to => "hu_kai_yuan@hotmail.com"
+  default :to => "acmeca@singnet.com.sg"
 
     def contact_email(email_params)
         #@recipients = "acmeca@singnet.com.sg"
