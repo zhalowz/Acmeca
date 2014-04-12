@@ -183,7 +183,7 @@
 
 .contain{
 	margin: auto;
-	width:100%;
+	
 	position: relative;
 	font-family: "proxima-nova", Helvetica, Arial, sans-serif;
 }
@@ -193,7 +193,8 @@
 	font-size: 1.25em; /* 20/16 */
 	float: left;
 	list-style: none;
-	padding-left: 210px;
+	width: 220px;
+	padding-left:80px;
 	font-weight: 300;
 	line-height: 45px;
 	
@@ -201,7 +202,6 @@
 #blueban .green {
 	font-weight: 700;
 }
-
 	.green {
 		color: #9fc52C;
 		}

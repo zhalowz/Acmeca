@@ -182,9 +182,6 @@ GEM
       rake
       rubigen (= 1.5.2)
       rubyzip (>= 0.9.1)
-    swf_fu (2.0.4)
-      coffee-script
-      rails (>= 3.1)
     thin (1.6.1)
       daemons (>= 1.0.9)
       eventmachine (>= 1.0.0)
@@ -237,7 +234,6 @@ DEPENDENCIES
   sinatra
   spork (= 0.8.4)
   sprockets
-  swf_fu (~> 2.0)
   thin
   turbo-sprockets-rails3
   uglifier (>= 1.0.3)

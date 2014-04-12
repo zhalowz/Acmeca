@@ -796,57 +796,61 @@ div.pagination {
 	background-position: 0px -12px;
 }
 
-.iview-caption {
-	background: url('../assets/hmslider/caption-bg.png');
-	color: #FFF;
-	border-radius: 3px;
-	padding: 10px 15px 10px 10px;
+.iview-caption {	
+	color: #FFF;	
 	font-family: Verdana;
-	font-size: 12px;
-	text-shadow: #000 1px 1px 0px;
+	font-size: 12px;	
 	line-height: 100%;
+	padding-top:2px;
+	padding-bottom:2px;
 }
 
 .iview-caption.caption1 {
+	color: red;	
 	font-size: 36px;
 	font-weight: bold;
 	height: 45px;
 	top: 0px;
+	width:480px;
 }
 
 .iview-caption.caption2 {
-	background: #00b4ff;
-	font-size: 36px;
+	font-size: 18px;
+	width:600px;
 	font-weight: bold;
-	text-shadow: none;
+	color: purple;
 }
 
 .iview-caption.caption3 {
-	background: #FFF;
-	color: #000;
-	font-size: 26px;
-	text-shadow: none;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	width:580px;
 }
 
 .iview-caption.caption4 {
-	font-size: 22px;
+	font-size: 18px;
+	width:600px;
 	font-weight: bold;
-	
-	
+	color: orange;
 }
 
-.iview-caption.caption5 {	
-	box-shadow: rgba(0, 0, 0, 0.7) 10px 10px 15px 0px;
-	font-size: 18px;
+.iview-caption.caption5 {
+	color: red;
+	font-size: 12px;
 	font-weight: bold;
-	text-shadow: none;
+	width:580px;
 }
 
 .iview-caption.caption6 {
 	font-size: 18px;
+	width:600px;
+	font-weight: bold;
+	color: #00b4ff;
 }
 
 .iview-caption.caption7 {
+	background: rgba(0, 0, 0, 0.7);
 	text-align: left;
 	font-size: 11px;
 	color: #888;
@@ -862,9 +866,7 @@ div.pagination {
 	color: #FFF;
 }
 
-.iview-caption.blackcaption {
-	background: #000;
-	box-shadow: rgba(0, 0, 0, 0.7) 10px 10px 15px 0px;
+.iview-caption.blackcaption {	
 	text-shadow: none;
 }
 
