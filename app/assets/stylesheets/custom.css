@@ -152,10 +152,6 @@ line-height: 25px;
   font-size: 14px;
 }
 
-.contacts-left { width: 420px; float: left; }
 
-.field_with_errors > input,
-.field_with_errors > textarea { background: #FBE3E4; }
-.required:before { content: "*"; color: red }
 
 
