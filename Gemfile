@@ -15,7 +15,7 @@ gem 'will_paginate', "~> 3.0.5"
 gem 'aws-s3', '0.6.3'
 gem 'aws-sdk'
 gem 'validatable'
-gem 'swf_fu', "~>2.0"
+#gem 'swf_fu', "~>2.0"
 gem 'devise-encryptable'
 gem 'execjs'
 gem 'jquery-rails', '~> 2.1'
